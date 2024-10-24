@@ -1,0 +1,8 @@
+在Code::Blocks上编译需要加上opengl库，具体操作如下：
+1. 鼠标右键点击工程名字
+2. 在菜单中找到Build Options并点击
+3. 在弹出的对话框的左边选中工程名字而不是Debug/Release
+4. 在弹出的对话框右边点击“Linker settings”
+5. 在Other linker options加上“-l opengl32”
+6. 点击下面的OK按钮
+然后程序即可成功编译

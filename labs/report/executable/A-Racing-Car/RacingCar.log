@@ -1,0 +1,50 @@
+﻿  RacingCar.cpp
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(16,22): warning C4305: “初始化”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(75,15): warning C4305: “=”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(107,22): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(107,17): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(117,22): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(117,17): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(126,22): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(126,17): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(131,39): warning C4305: “+=”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(133,10): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(133,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(133,22): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(133,22): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(134,10): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(134,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(134,29): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(134,29): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(135,11): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(135,11): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(135,30): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(135,30): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(136,11): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(136,11): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(136,23): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(136,23): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(138,23): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(138,18): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(142,39): warning C4305: “+=”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(144,10): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(144,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(144,23): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(144,23): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(145,11): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(145,11): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(145,24): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(145,24): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(146,11): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(146,11): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(146,31): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(146,31): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(147,10): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(147,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(147,30): warning C4838: 从“double”转换到“float”需要收缩转换
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(147,30): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(149,23): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(149,18): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(282,18): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\RacingCar\RacingCar.cpp(338,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  RacingCar.vcxproj -> C:\workplace\Computer_Graphic_EXP\RacingCar\x64\Debug\RacingCar.exe

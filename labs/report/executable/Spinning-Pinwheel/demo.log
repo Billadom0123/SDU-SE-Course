@@ -1,0 +1,61 @@
+﻿  application.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: “APIENTRY”: 宏重定义
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\packages\nupengl.core.0.1.0.1\build\native\include\GLFW\glfw3.h(92,1): message : 参见“APIENTRY”的前一个定义
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(65,28): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(65,22): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(67,25): warning C4244: “参数”: 从“int”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(67,22): warning C4244: “参数”: 从“int”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(67,19): warning C4244: “参数”: 从“int”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(90,13): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(90,35): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(90,55): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(90,69): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(91,13): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(91,27): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(92,13): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(92,28): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(142,15): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(147,38): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(155,38): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(172,38): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(189,38): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(208,25): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(208,16): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(209,26): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(209,17): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(210,29): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(210,24): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(210,17): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(211,28): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(211,23): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(211,16): warning C4305: “参数”: 从“double”到“GLfloat”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(215,74): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(215,68): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(215,62): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(215,57): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(215,52): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(215,47): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(216,75): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(216,70): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(216,64): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(216,59): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(216,53): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(216,48): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(217,78): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(217,73): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(217,68): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(217,63): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(217,58): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(217,53): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(220,41): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(220,35): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(221,40): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(221,34): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(222,42): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(222,36): warning C4305: “参数”: 从“double”到“float”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(233,36): warning C4305: “参数”: 从“double”到“GLclampf”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(233,30): warning C4305: “参数”: 从“double”到“GLclampf”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(233,24): warning C4305: “参数”: 从“double”到“GLclampf”截断
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\src\application.cpp(233,18): warning C4305: “参数”: 从“double”到“GLclampf”截断
+  LINK : 没有找到 C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\x64\Debug\demo.exe 或上一个增量链接没有生成它；正在执行完全链接
+  demo.vcxproj -> C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\x64\Debug\demo.exe

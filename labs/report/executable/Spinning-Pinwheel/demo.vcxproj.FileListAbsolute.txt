@@ -1,0 +1,3 @@
+C:\work place\computer_network_exp\demo\x64\Debug\demo.exe
+C:\work place\computer_graphic_exp\exp\Spinning-Pinwheel\x64\Debug\demo.exe
+C:\workplace\Computer_Graphic_EXP\Spinning-Pinwheel\x64\Debug\demo.exe

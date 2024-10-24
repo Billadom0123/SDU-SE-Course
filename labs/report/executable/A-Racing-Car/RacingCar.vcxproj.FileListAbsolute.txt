@@ -1,0 +1,2 @@
+C:\workplace\Computer_Graphic_EXP\RacingCar\x64\Debug\RacingCar.exe
+C:\work_place\computer_graphic_exp\exp\RacingCar\x64\Debug\RacingCar.exe
