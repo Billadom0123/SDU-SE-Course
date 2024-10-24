@@ -1,0 +1,13 @@
+2020版《操作系统原理 实用实验教程》中实验七(内存页面置换算法实验)的示例代码存在以下问题：
+
+1. 编译报错
+头文件vmrp.h中的iomanip.h应改为iomanip
+并在头文件vmrp.h最前面增加下面一行：
+using namespace std;
+
+2. vmrp.cc中Fifo算法在某些输入数据的情况下，比如：
+Please input page numbers :12
+Please input reference page string :2 3 2 1 5 2 4 5 3 2 5 2
+Please input page frames :3
+打印出来的部分页号为-1。
+应在打印PageFrames[i]前，增加条件判断 if(PageFrames[i] >= 0)

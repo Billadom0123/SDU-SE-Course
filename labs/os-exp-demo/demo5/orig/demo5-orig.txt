@@ -1,0 +1,25 @@
+2020版《操作系统原理 实用实验教程》中实验五(进程互斥实验)的示例代码存在以下问题：
+
+
+1. control.c的主循环逻辑上有问题，导致control显示的运行状态混乱，与读者写者问题不相符，需修改。
+
+
+2. 所有msgrcv及msgsnd函数消息长度参数用错了。
+比如：
+msgsnd(quest_id,&msg_arg,sizeof(msg_arg),0);
+应改为：
+msgsnd(quest_id, &msg_arg, sizeof(msg_arg.mid), 0);
+
+msgrcv的长度参数也类似。
+
+
+3. reader.c主循环最后一条语句，msgsnd的最后一个参数有bug：
+msgsnd(quest_id,&msg_arg,sizeof(msg_arg),quest_flg);
+应改为：
+msgsnd(quest_id, &msg_arg, sizeof(msg_arg.mid), 0);
+
+
+4. 在头文件ipc.h中定义全局变量，而多个.c文件include进了ipc.h，导致高版本gcc(比如gcc 11.2.0)报告重复定义的错误。
+
+
+5. 头文件ipc.h中缺少#include <unistd.h>，导致高版本gcc(比如gcc 9.3.0)报错。
