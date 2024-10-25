@@ -1,0 +1,2131 @@
+uims:
+  menu:
+    - name: major
+      title: 专业管理
+    - name: studentQuery
+      title: 学生查询
+  page:
+    - name: myAttendance
+      type: table
+      title: 我的考勤
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: courseName
+          label: 课程名称
+        - type: text
+          prop: classTime
+          label: 上课时间
+        - type: text
+          prop: attendance
+          label: 是否出勤
+        - type: link
+          prop: myCourse
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myAttendanceEdit
+      type: form
+      title: 我的考勤管理
+      item:
+        - type: date
+          prop: classTime
+          label: 上课时间
+        - type: select
+          prop: attendance
+          label: 是否出勤
+          option:
+            - value: 1
+              label: 是
+            - value: 2
+              label: 否
+    - name: studentQuery
+      type: table
+      title: 学生查询
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: link
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: birthday
+          label: 出生日期
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: grade
+          label: 年级
+        - type: text
+          prop: class
+          label: 班级
+        - type: link
+          prop: StudentDetails
+          label: 详细信息
+          #- type: link
+          #prop: clazz
+          #label: 返回
+          #- type: opers
+          #label: 操作
+          #opers:
+          #- name: edit
+          #- name: delete
+      query:
+        - type: input
+          prop: info
+          label: 请输入专业编号、年级、班级和学号，以空格分割
+    - name: gradeStatistic
+      type: table
+      title: 年级信息统计
+      item:
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: link
+          prop: gradeStudentAchievement
+          label: 年级学生成绩单
+        - type: link
+          prop: gradeStudentHomework
+          label: 年级学生作业情况
+        - type: link
+          prop: gradeStudentHonor
+          label: 年级学生荣誉信息
+        - type: link
+          prop: gradeStudentLog
+          label: 年级学生花销信息
+        - type: link
+          prop: gradeStudentLeave
+          label: 年级学生外出请假信息
+        - type: link
+          prop: grade
+          label: 返回
+    - name: gradeStudentAchievement
+      type: table
+      title: 年级学生必修课课程
+      item:
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: link
+          prop: courseName
+          label: 课程名称
+        - type: link
+          prop: gradeStatistic
+          label: 返回
+    - name: gradeStudentAchievementCourse
+      type: table
+      title: 年级学生必修课课程成绩单
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名
+        - type: text
+          prop: score
+          label: 成绩
+        - type: text
+          prop: average
+          label: 平均分
+        - type: text
+          prop: rank
+          label: 排名
+        - type: link
+          prop: gradeStudentAchievement
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: gradeStudentAchievementCourseEdit
+      type: form
+      item:
+        - type: input
+          prop: studentNum
+          label: 学号
+        - type: input
+          prop: score
+          label: 成绩
+    - name: gradeStudentHomework
+      type: table
+      title: 年级学生作业情况
+      item:
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: link
+          prop: courseName
+          label: 课程名称
+        - type: link
+          prop: gradeStatistic
+          label: 返回
+    - name: gradeStudentHomeworkCourse
+      type: table
+      title: 年级学生作业情况统计
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名
+        - type: text
+          prop: homeworkScore
+          label: 作业成绩
+        - type: text
+          prop: submitcondition
+          label: 提交情况
+        - type: link
+          prop: gradeStudentHomework
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: gradeStudentHomeworkCourseEdit
+      type: form
+      item:
+        - type: input
+          prop: studentNum
+          label: 学号
+        - type: input
+          prop: homeworkScore
+          label: 作业成绩
+    - name: gradeStudentHonor
+      type: table
+      title: 年级学生荣誉信息
+      item:
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: link
+          prop: title
+          label: 称号
+        - type: link
+          prop: gradeStatistic
+          label: 返回
+    - name: gradeStudentHonorDetail
+      type: table
+      title: 年级学生荣誉学生名单
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: title
+          label: 称号
+        - type: text
+          prop: reward
+          label: 奖励
+        - type: link
+          prop: gradeStudentHonor
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: gradeStudentHonorDetailEdit
+      type: form
+      item:
+        - type: input
+          prop: studentNum
+          label: 学号
+          ##- type: input
+          ##prop: title
+          ##label: 称号
+          ##- type: input
+          ##prop: reward
+          ##label: 奖励
+    - name: gradeStudentLog
+      type: table
+      title: 年级学生花销信息
+      item:
+        - type: text
+          prop: gradenum
+          label: 年级
+        - type: text
+          prop: clazznum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: consume
+          label: 花销
+        - type: text
+          prop: consumeTime
+          label: 支出时间
+        - type: link
+          prop: gradeStatistic
+          label: 返回
+    - name: gradeStudentLeave
+      type: table
+      title: 年级学生外出请假信息
+      item:
+        - type: text
+          prop: gradenum
+          label: 年级
+        - type: text
+          prop: clazznum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: outtime
+          label: 外出时间
+        - type: text
+          prop: backtime
+          label: 返回时间
+        - type: text
+          prop: reason
+          label: 原因
+        - type: link
+          prop: gradeStatistic
+          label: 返回
+    - name: classStudentLeave
+      type: table
+      title: 班级学生外出请假信息
+      item:
+        - type: text
+          prop: classnum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: outtime
+          label: 外出时间
+        - type: text
+          prop: backtime
+          label: 返回时间
+        - type: text
+          prop: reason
+          label: 原因
+        - type: link
+          prop: clazzStatistic
+          label: 返回
+    - name: classStudentLog
+      type: table
+      title: 班级学生花销信息
+      item:
+        - type: text
+          prop: classnum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: consume
+          label: 花销
+        - type: text
+          prop: consumeTime
+          label: 支出时间
+        - type: link
+          prop: clazzStatistic
+          label: 返回
+    - name: classStudentAchievementCourse
+      type: table
+      title: 班级学生必修课课程成绩单
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名
+        - type: text
+          prop: score
+          label: 成绩
+        - type: text
+          prop: average
+          label: 平均分
+        - type: text
+          prop: rank
+          label: 排名
+        - type: link
+          prop: classStudentAchievement
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: classStudentAchievementCourseEdit
+      type: form
+      item:
+        - type: input
+          prop: studentNum
+          label: 学号
+        - type: input
+          prop: score
+          label: 成绩
+    - name: classStudentAchievement
+      type: table
+      title: 班级学生必修课课程
+      item:
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: link
+          prop: courseName
+          label: 课程名
+        - type: link
+          prop: clazzStatistic
+          label: 返回
+    - name: classStudentHomeworkCourse
+      type: table
+      title: 班级学生作业情况
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名
+        - type: text
+          prop: homeworkScore
+          label: 作业成绩
+        - type: text
+          prop: submitcondition
+          label: 提交情况
+        - type: link
+          prop: classStudentHomework
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: classStudentHomeworkCourseEdit
+      type: form
+      item:
+        - type: input
+          prop: studentNum
+          label: 学号
+        - type: input
+          prop: homeworkScore
+          label: 成绩
+    - name: classStudentHomework
+      type: table
+      title: 班级学生必修课作业统计
+      item:
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: link
+          prop: courseName
+          label: 课程名
+        - type: link
+          prop: clazzStatistic
+          label: 返回
+    - name: classStudentHonorDetail
+      type: table
+      title: 班级学生荣誉学生名单
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: title
+          label: 称号
+        - type: text
+          prop: reward
+          label: 奖励
+        - type: link
+          prop: classStudentHonor
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: classStudentHonorDetailEdit
+      type: form
+      item:
+        - type: input
+          prop: studentNum
+          label: 学号
+          ##- type: input
+          ##prop: title
+          ##label: 称号
+          ##- type: input
+          ##prop: reward
+          ##label: 奖励
+    - name: classStudentHonor
+      type: table
+      title: 班级学生荣誉情况
+      item:
+        - type: text
+          prop: classNum
+          label: 班级
+          ##- type: text
+          ##prop: studentNum
+          ##label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: link #此页面将导航到班级内获得此荣誉的名单
+          prop: title
+          label: 称号
+          ##- type: text
+          ##prop: reward
+          ##label: 奖励
+        - type: link
+          prop: clazzStatistic
+          label: 返回
+    - name: clazzStatistic
+      type: table
+      title: 班级信息统计
+      item:
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: link
+          prop: classStudentAchievement
+          label: 班级学生成绩单
+        - type: link
+          prop: classStudentHomework
+          label: 班级学生作业情况
+          #- type: link
+          #prop: classStudentCourse
+          #label: 班级学生选课情况
+        - type: link
+          prop: classStudentHonor
+          label: 班级学生荣誉情况
+        - type: link
+          prop: classStudentLog
+          label: 班级学生花销信息
+        - type: link
+          prop: classStudentLeave
+          label: 班级学生外出请假信息
+        - type: link
+          prop: clazzStudentInnovation
+          label: 班级创新统计
+        - type: link
+          prop: clazzStudentActivity
+          label: 班级活动统计
+        - type: link
+          prop: clazz
+          label: 返回
+    - name: StudentDetails
+      type: table
+      title: 详细信息
+      item:
+        #- type: text
+          #prop: studentNum
+          #label: 学号
+        - type: link
+          prop: studentName
+          label: 姓名
+        - type: link
+          prop: myCourse
+          label: 我的课程
+        - type: link
+          prop: myAchievement
+          label: 我的成绩
+        - type: link
+          prop: myHomework
+          label: 我的作业成绩
+        - type: link
+          prop: honor
+          label: 我的荣誉
+        - type: link
+          prop: myLog
+          label: 花销信息
+        - type: link
+          prop: myLeave
+          label: 外出请假信息
+        - type: link
+          prop: myInfo
+          label: 我的基本信息
+        - type: link
+          prop: myInnovation
+          label: 我的创新
+        - type: link
+          prop: myActivity
+          label: 我的活动
+        #这里加自己的超链
+        - type: link
+          prop: student
+          label: 返回
+    - name: courseAchievement
+      type: table
+      title: 课程成绩
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名
+        - type: text
+          prop: score
+          label: 成绩
+        - type: text
+          prop: average
+          label: 平均分
+        - type: text
+          prop: rank
+          label: 排名
+        - type: link
+          prop: course
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: courseAchievementEdit
+      type: form
+      item:
+        #- type: input
+        #prop: majorNum
+        #label: 专业编号
+        #- type: input
+        #prop: gradeNum
+        #label: 年级
+        - type: input
+          prop: classNum
+          label: 班级
+        - type: input
+          prop: studentNum
+          label: 学号
+        - type: input
+          prop: courseNum
+          label: 课程号
+        - type: input
+          prop: score
+          label: 成绩
+    - name: myAchievement
+      type: table
+      title: 我的成绩
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名
+        - type: text
+          prop: score
+          label: 成绩
+        - type: link
+          prop: StudentDetails
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myAchievementEdit
+      type: form
+      title: 我的成绩信息
+      item:
+        #- type: input
+        #prop: majorNum
+        #label: 专业编号
+        #- type: input
+        #prop: gradeNum
+        #label: 年级
+        #- type: input
+        #prop: classNum
+        #label: 班级
+        #- type: input
+        #prop: studentNum
+        #label: 学号
+        - type: select
+          prop: courseId
+          label: 课程号
+        - type: input
+          prop: score
+          label: 成绩
+    - name: myCourse
+      type: table
+      title: 我的课程
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名
+        - type: link
+          prop: myAttendance
+          label: 课程考勤
+        - type: link
+          prop: StudentDetails
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myCourseEdit
+      type: form
+      title: 我的课程信息
+      item:
+        - type: select
+          prop: courseId
+          label: 课程
+    - name: course
+      type: table
+      title: 课程管理
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名称
+        - type: text
+          prop: credit
+          label: 学分
+        - type: link
+          prop: courseAchievement
+          label: 课程成绩
+        - type: text
+          prop: studentNumber
+          label: 选课人数
+        - type: link
+          prop: resource
+          label: 课程资源
+        - type: link
+          prop: grade
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+      query:
+        - type: input
+          prop: numName
+          label: 请输入课程号或课程名称
+    - name: courseEdit
+      type: form
+      title: 课程信息
+      item:
+        #- type: input
+        #prop: majorNum
+        #label: 专业编号
+        #- type: input
+        #prop: gradeNum
+        #label: 年级
+        - type: input
+          prop: courseNum
+          label: 课程号
+        - type: input
+          prop: courseName
+          label: 课程名称
+        - type: input
+          prop: credit
+          label: 学分
+    - name: student
+      type: table
+      title: 学生管理
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: link
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: birthday
+          label: 出生日期
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: grade
+          label: 年级
+        - type: text
+          prop: class
+          label: 班级
+        - type: link
+          prop: StudentDetails
+          label: 详细信息
+        - type: link
+          prop: clazz
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+      query:
+        - type: input
+          prop: numName
+          label: 请输入学号或姓名
+    - name: studentEdit
+      type: form
+      title: 学生信息
+      item:
+        - type: input
+          prop: studentNum
+          label: 学号
+        - type: input
+          prop: studentName
+          label: 姓名
+        - type: select
+          prop: sex
+          label: 性别
+          option:
+            - value: 1
+              label: 男
+            - value: 2
+              label: 女
+        - type: input
+          prop: age
+          label: 年龄
+        - type: date
+          prop: birthday
+          label: 出生日期
+          #- type: input
+          #prop: majorNum
+          #label: 专业
+          #- type: input
+          #prop: grade
+          #label: 年级
+          #- type: input
+          #prop: class
+          #label: 班级
+    - name: major
+      type: table
+      title: 专业管理
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: link
+          prop: majorName
+          label: 专业名称
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+      query:
+        - type: input
+          prop: numName
+          label: 请输入专业编号或专业名称
+    - name: majorEdit
+      type: form
+      title: 专业信息
+      item:
+        - type: input
+          prop: majorNum
+          label: 专业编号
+        - type: input
+          prop: majorName
+          label: 专业名称
+    - name: grade
+      type: table
+      title: 年级信息
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: link
+          prop: gradeNum
+          label: 年级
+        - type: link
+          prop: course
+          label: 课程
+        - type: link
+          prop: gradeStatistic
+          label: 年级信息统计
+        - type: link
+          prop: major
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: gradeEdit
+      type: form
+      title: 年级信息
+      item:
+        #- type: input
+        #prop: majorNum
+        #label: 专业编号
+        - type: input
+          prop: gradeNum
+          label: 年级
+    - name: clazz
+      type: table
+      title: 班级信息
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: link
+          prop: classNum
+          label: 班级
+        - type: link
+          prop: clazzStatistic
+          label: 班级信息统计
+        - type: link
+          prop: grade
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: clazzEdit
+      type: form
+      title: 班级管理
+      item:
+        #- type: input
+        #prop: majorNum
+        #label: 专业编号
+        #- type: input
+        #prop: gradeNum
+        #label: 年级
+        - type: input
+          prop: classNum
+          label: 班级
+    - name: myLeave
+      type: table
+      title: 外出请假信息
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: outtime
+          label: 外出时间
+        - type: text
+          prop: backtime
+          label: 返回时间
+        - type: text
+          prop: reason
+          label: 请假原因
+        - type: link
+          prop: StudentDetails
+          label: 返回
+        - type: opers
+          prop: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myLeaveEdit
+      type: form
+      title: 外出请假信息管理
+      item:
+        - type: input
+          prop: reason
+          label: 请假原因
+        - type: date
+          prop: outtime
+          label: 外出时间
+        - type: date
+          prop: backtime
+          label: 返回时间
+    - name: myLog
+      type: table
+      title: 花销信息
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: consume
+          label: 花销
+        - type: text
+          prop: consumeTime
+          label: 支出时间
+        - type: link
+          prop: StudentDetails
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myLogEdit
+      type: form
+      title: 花销信息管理
+      item:
+        - type: input
+          prop: consume
+          label: 花销
+        - type: date
+          prop: consumeTime
+          label: 支出时间
+    - name: resource
+      type: table
+      title: 课程资源
+      showAdd: 1
+      item:
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名称
+        - type: text
+          prop: textBooks
+          label: 课本
+        - type: text
+          prop: courseWare
+          label: 课件
+        - type: text
+          prop: reference
+          label: 参考资料
+        - type: link
+          prop: course
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: resourceEdit
+      type: form
+      title: 课程资源信息
+      item:
+        - type: input
+          prop: textBooks
+          label: 课本
+        - type: input
+          prop: courseWare
+          label: 课件
+        - type: input
+          prop: reference
+          label: 参考资料
+    - name: honor
+      type: table
+      title: 我的荣誉
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: title
+          label: 称号
+        - type: text
+          prop: reward
+          label: 奖励
+        - type: link
+          prop: StudentDetails
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: honorEdit
+      type: form
+      title: 荣誉信息
+      item:
+        - type: input
+          prop: title
+          label: 称号
+        - type: input
+          prop: reward
+          label: 奖励
+    - name: myHomework
+      type: table
+      title: 我的作业成绩
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名
+        - type: text
+          prop: homeworkScore
+          label: 作业成绩
+        - type: link
+          prop: StudentDetails
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myHomeworkEdit
+      type: form
+      title: 作业成绩信息
+      item:
+        #- type: input
+        #prop: majorNum
+        #label: 专业编号
+        #- type: input
+        #prop: gradeNum
+        #label: 年级
+        #- type: input
+        #prop: classNum
+        #label: 班级
+        #- type: input
+        #prop: studentNum
+        #label: 学号
+        - type: select
+          prop: courseId
+          label: 课程号 #這裏的value值就是課程的主鍵（都是按照myCourse改的
+        - type: input
+          prop: homeworkScore
+          label: 作业成绩
+    - name: myInfo
+      type: table
+      title: 我的基本信息
+      showAdd: 1
+      item:
+        - type: text
+          prop: majorNum
+          label: 专业编号
+        - type: text
+          prop: majorName
+          label: 专业名称
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: hometown
+          label: 祖籍
+        - type: text
+          prop: contact
+          label: 联系方式
+        - type: text
+          prop: political
+          label: 政治面貌
+        - type: text
+          prop: ethnic
+          label: 民族
+        - type: link
+          prop: StudentDetails
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+      query:
+        - type: input
+          prop: numName
+          label: 请输入姓名
+    - name: myInfoEdit
+      type: form
+      title: 基本信息
+      item:
+        - type: input
+          prop: hometown
+          label: 祖籍
+        - type: input
+          prop: contact
+          label: 联系方式
+        - type: input
+          prop: political
+          label: 政治面貌
+        - type: input
+          prop: ethnic
+          label: 民族
+    - name: myInnovation
+      type: table
+      title: 我的创新
+      item:
+        - type: link
+          prop: myPractice
+          label: 我的社会实践
+        - type: link
+          prop: myCompetition
+          label: 我的学科竞赛
+        - type: link
+          prop: mySciAchieve
+          label: 我的科研成果
+        - type: link
+          prop: myInoProject
+          label: 我的创新项目
+        - type: link
+          prop: myLecture
+          label: 我的讲座
+        - type: link
+          prop: myInternship
+          label: 我的实习经历
+        - type: link
+          prop: StudentDetails
+          label: 返回
+    - name: myPractice
+      type: table
+      title: 我的社会实践
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: practice
+          label: 社会实践
+        - type: link
+          prop: myInnovation
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myPracticeEdit
+      type: form
+      title: 我的社会实践信息
+      item:
+        - type: input
+          prop: practice
+          label: 社会实践
+    - name: myCompetition
+      type: table
+      title: 我的学科竞赛
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: competition
+          label: 学科竞赛
+        - type: link
+          prop: myInnovation
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myCompetitionEdit
+      type: form
+      title: 我的学科竞赛信息
+      item:
+        - type: input
+          prop: competition
+          label: 学科竞赛
+    - name: mySciAchieve
+      type: table
+      title: 我的科研成果
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sciAchieve
+          label: 科研成果
+        - type: link
+          prop: myInnovation
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: mySciAchieveEdit
+      type: form
+      title: 我的科研成果信息
+      item:
+        - type: input
+          prop: sciAchieve
+          label: 科研成果
+    - name: myInoProject
+      type: table
+      title: 我的创新项目
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: inoProject
+          label: 创新项目
+        - type: link
+          prop: myInnovation
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myInoProjectEdit
+      type: form
+      title: 我的创新项目信息
+      item:
+        - type: input
+          prop: inoProject
+          label: 创新项目
+    - name: myLecture
+      type: table
+      title: 我的讲座
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: lecture
+          label: 讲座
+        - type: link
+          prop: myInnovation
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myLectureEdit
+      type: form
+      title: 我的讲座信息
+      item:
+        - type: input
+          prop: lecture
+          label: 讲座
+    - name: myInternship
+      type: table
+      title: 我的实习经历
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: internship
+          label: 实习经历
+        - type: link
+          prop: myInnovation
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myInternshipEdit
+      type: form
+      title: 我的实习经历信息
+      item:
+        - type: input
+          prop: internship
+          label: 实习经历
+    - name: myActivity
+      type: table
+      title: 我的活动
+      item:
+        - type: link
+          prop: myPE
+          label: 体育运动
+        - type: link
+          prop: myPerformance
+          label: 文艺表演
+        - type: link
+          prop: myTravel
+          label: 研学旅行
+        - type: link
+          prop: myParty
+          label: 聚会
+        - type: link
+          prop: StudentDetails
+          label: 返回
+    - name: myPE
+      type: table
+      title: 我的体育运动
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: PE
+          label: 体育运动
+        - type: link
+          prop: myActivity
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myPEEdit
+      type: form
+      title: 我的体育运动信息
+      item:
+        - type: input
+          prop: PE
+          label: 体育运动
+    - name: myPerformance
+      type: table
+      title: 我的文艺表演
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: performance
+          label: 文艺表演
+        - type: link
+          prop: myActivity
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myPerformanceEdit
+      type: form
+      title: 我的文艺表演信息
+      item:
+        - type: input
+          prop: performance
+          label: 文艺表演
+    - name: myParty
+      type: table
+      title: 我的聚会
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: party
+          label: 聚会
+        - type: link
+          prop: myActivity
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myPartyEdit
+      type: form
+      title: 我的聚会信息
+      item:
+        - type: input
+          prop: party
+          label: 聚会
+    - name: myTravel
+      type: table
+      title: 我的研学旅行
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: travel
+          label: 研学旅行
+        - type: link
+          prop: myActivity
+          label: 返回
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+    - name: myTravelEdit
+      type: form
+      title: 我的研学旅行信息
+      item:
+        - type: input
+          prop: travel
+          label: 研学旅行
+    - name: clazzStudentActivity
+      type: table
+      title: 班级活动统计
+      item:
+        - type: link
+          prop: clazzStudentPE
+          label: 体育活动
+        - type: link
+          prop: performance
+          label: 文艺表演
+        - type: link
+          prop: travel
+          label: 研学旅行
+        - type: link
+          prop: party
+          label: 聚会
+        - type: link
+          prop: clazzStatistic
+          label: 返回
+    - name: clazzStudentPE
+      type: table
+      title: 班级体育活动统计
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: majorName
+          label: 专业
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: PE
+          label: 体育活动
+        - type: link
+          prop: clazzStudentActivity
+          label: 返回
+      query:
+        type: input
+        prop: PE
+        label: 请输入体育活动
+    - name: clazzStudentPerformance
+      type: table
+      title: 班级文艺表演统计
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: majorName
+          label: 专业
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: performance
+          label: 文艺表演
+        - type: link
+          prop: clazzStudentActivity
+          label: 返回
+      query:
+        type: input
+        prop: performance
+        label: 请输入文艺表演
+    - name: clazzStudentTravel
+      type: table
+      title: 班级研学旅行统计
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: majorName
+          label: 专业
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: travel
+          label: 研学旅行
+        - type: link
+          prop: clazzStudentActivity
+          label: 返回
+      query:
+        type: input
+        prop: travel
+        label: 请输入研学旅行
+    - name: clazzStudentParty
+      type: table
+      title: 班级聚会活动统计
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: majorName
+          label: 专业
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: party
+          label: 聚会活动
+        - type: link
+          prop: clazzStudentActivity
+          label: 返回
+      query:
+        type: input
+        prop: party
+        label: 请输入聚会活动
+    - name: clazzStudentInnovation
+      type: table
+      title: 班级创新统计
+      item:
+        - type: link
+          prop: clazzStudentPractice
+          label: 社会实践
+        - type: link
+          prop: competition
+          label: 学科竞赛
+        - type: link
+          prop: sciAchieve
+          label: 科研成果
+        - type: link
+          prop: inoProject
+          label: 创新项目
+        - type: link
+          prop: lecture
+          label: 讲座
+        - type: link
+          prop: internship
+          label: 实习经历
+        - type: link
+          prop: clazzStatistic
+          label: 返回
+    - name: clazzStudentPractice
+      type: table
+      title: 班级社会实践统计
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: majorName
+          label: 专业
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: practice
+          label: 社会实践
+        - type: link
+          prop: clazzStudentInnovation
+          label: 返回
+      query:
+        type: input
+        prop: practice
+        label: 请输入社会实践
+    - name: clazzStudentCompetition
+      type: table
+      title: 班级学科竞赛统计
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: majorName
+          label: 专业
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: competition
+          label: 学科竞赛
+        - type: link
+          prop: clazzStudentInnovation
+          label: 返回
+      query:
+        type: input
+        prop: competition
+        label: 请输入学科竞赛
+    - name: clazzStudentSciAchieve
+      type: table
+      title: 班级科研成果统计
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: majorName
+          label: 专业
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: sciAchieve
+          label: 科研成果
+        - type: link
+          prop: clazzStudentInnovation
+          label: 返回
+      query:
+        type: input
+        prop: sciAchieve
+        label: 请输入科研成果
+    - name: clazzStudentInoProject
+      type: table
+      title: 班级创新项目统计
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: majorName
+          label: 专业
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: inoProject
+          label: 创新项目
+        - type: link
+          prop: clazzStudentInnovation
+          label: 返回
+      query:
+        type: input
+        prop: inoProject
+        label: 请输入创新项目
+    - name: clazzStudentLecture
+      type: table
+      title: 班级讲座统计
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: majorName
+          label: 专业
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: lecture
+          label: 讲座
+        - type: link
+          prop: clazzStudentInnovation
+          label: 返回
+      query:
+        type: input
+        prop: lecture
+        label: 请输入讲座
+    - name: clazzStudentInternship
+      type: table
+      title: 班级实习经历统计
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: majorName
+          label: 专业
+        - type: text
+          prop: gradeNum
+          label: 年级
+        - type: text
+          prop: classNum
+          label: 班级
+        - type: text
+          prop: internship
+          label: 实习经历
+        - type: link
+          prop: clazzStudentInnovation
+          label: 返回
+      query:
+        type: input
+        prop: internship
+        label: 请输入实习经历
