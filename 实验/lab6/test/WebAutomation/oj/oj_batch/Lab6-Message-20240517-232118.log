@@ -1,0 +1,822 @@
+==============================================================================
+20240517 23:21:19.620 - INFO - + START SUITE: Lab6 [ ]
+==============================================================================
+20240517 23:21:19.624 - INFO - +- START SUITE: Lab6.WebAutomation [ ]
+==============================================================================
+20240517 23:21:20.021 - INFO - +-- START SUITE: Lab6.WebAutomation.OJ [ ]
+==============================================================================
+20240517 23:21:20.022 - INFO - +--- START TEST: AC [ ]
+------------------------------------------------------------------------------
+20240517 23:21:20.023 - INFO - +---- START KEYWORD: general.login [ ${username} | ${password} ]
+20240517 23:21:20.026 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240517 23:21:20.029 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240517 23:21:28.175 - DEBUG - Opened browser with session id bf9daf29-14f9-4c07-951a-15d55326bbe1.
+20240517 23:21:28.177 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (8150)
+20240517 23:21:28.177 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240517 23:21:28.183 - INFO - Typing text '202100300063' into text field 'id = username'.
+20240517 23:21:28.798 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (621)
+20240517 23:21:28.799 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240517 23:21:28.802 - INFO - Typing password into text field 'id = password'.
+20240517 23:21:28.915 - INFO - Temporally setting log level to: NONE
+20240517 23:21:28.916 - INFO - Log level changed from INFO to NONE.
+20240517 23:21:28.997 - INFO - Log level changed from NONE to INFO.
+20240517 23:21:28.998 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (199)
+20240517 23:21:28.999 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240517 23:21:29.001 - INFO - Clicking button 'name = submit'.
+20240517 23:21:29.265 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (265)
+20240517 23:21:29.265 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240517 23:21:29.266 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240517 23:21:29.269 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240517 23:21:29.351 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (85)
+20240517 23:21:29.352 - INFO - ${alert} = True
+20240517 23:21:29.355 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (89)
+20240517 23:21:29.356 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240517 23:21:29.361 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240517 23:21:29.363 - INFO - 用户202100300063登录成功
+20240517 23:21:29.364 - INFO - +------ END KEYWORD: BuiltIn.Log (2)
+20240517 23:21:29.364 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (8)
+20240517 23:21:29.365 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Cookie [ ${header} ]
+20240517 23:21:29.379 - INFO - ${token} = name=PHPSESSID
+value=o53h1o7iuost24hjql5cd1pu03
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:21:29.380 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Cookie (15)
+20240517 23:21:29.381 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${token} ]
+20240517 23:21:29.381 - INFO - Returning from the enclosing user keyword.
+20240517 23:21:29.382 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (0)
+20240517 23:21:29.382 - INFO - ${token} = name=PHPSESSID
+value=o53h1o7iuost24hjql5cd1pu03
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:21:29.383 - INFO - +---- END KEYWORD: general.login (9359)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:21:29.383 - INFO - +---- START KEYWORD: general.submit code [ 1008 | ${1008_AC} | 2 ]
+20240517 23:21:29.384 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${submit}?id=${id} ]
+20240517 23:21:29.386 - INFO - ${submit_url} = http://211.87.224.235:8800/submitpage.php?id=1008
+20240517 23:21:29.388 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (3)
+20240517 23:21:29.388 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${submit_url} ]
+20240517 23:21:29.392 - INFO - Opening url 'http://211.87.224.235:8800/submitpage.php?id=1008'
+20240517 23:21:30.106 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (717)
+20240517 23:21:30.108 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ id = language | ${lang} ]
+20240517 23:21:30.110 - INFO - Selecting options from selection list 'id = language' by index 2.
+20240517 23:21:30.346 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (239)
+20240517 23:21:30.347 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElement [ tag = textarea ]
+20240517 23:21:30.361 - INFO - ${text_area} = <selenium.webdriver.remote.webelement.WebElement (session="bf9daf29-14f9-4c07-951a-15d55326bbe1", element="76b29166-f72b-416e-bda6-53caa825aa40")>
+20240517 23:21:30.361 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElement (15)
+20240517 23:21:30.362 - INFO - +----- START KEYWORD: BuiltIn.Catenate [ SEPARATOR=; | arguments[0].style.opacity = 1;arguments[0].style.left = 0; ]
+20240517 23:21:30.362 - INFO - ${js_code} = arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+20240517 23:21:30.363 - INFO - +----- END KEYWORD: BuiltIn.Catenate (0)
+20240517 23:21:30.363 - INFO - +----- START KEYWORD: SeleniumLibrary.Execute Javascript [ ${js_code} | ARGUMENTS | ${text_area} ]
+20240517 23:21:30.364 - INFO - Executing JavaScript:
+arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+By using argument:
+'<selenium.webdriver.remote.webelement.WebElement (session="bf9daf29-14f9-4c07-951a-15d55326bbe1", element="76b29166-f72b-416e-bda6-53caa825aa40")>'
+20240517 23:21:30.376 - INFO - +----- END KEYWORD: SeleniumLibrary.Execute Javascript (13)
+20240517 23:21:30.377 - INFO - +----- START KEYWORD: SeleniumLibrary.Scroll Element Into View [ ${text_area} ]
+20240517 23:21:30.668 - INFO - +----- END KEYWORD: SeleniumLibrary.Scroll Element Into View (292)
+20240517 23:21:30.669 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ tag = textarea | ${code} ]
+20240517 23:21:30.670 - INFO - Typing text 'import java.io.BufferedReader;import java.io.IOException;import java.io.InputStreamReader;import java.util.*;/*4 10 3 0 10 0 4 02 0 0 00 0 1 0 */public class Main{    public static Integer[] str2nums(String s){        return Arrays.stream(s.split(" ")).map(Integer::parseInt).toArray(Integer[]::new);    }    public static void main(String[] args) throws IOException {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        Integer[] ns = str2nums(br.readLine());        int n = ns[0];        int s = ns[1];        Integer[][] graph = new Integer[n][];        for (int i = 0; i < n; i++) {            graph[i] = str2nums(br.readLine());        }        List<Integer[]> res = trivialDijkstra(graph, s);        Integer[] dis = res.get(0);        StringBuilder sb = new StringBuilder();        for (Integer distance : dis) {            if(distance==null){                sb.append(-1);            }else if(distance==0){                continue;            }else{                sb.append(distance);            }            sb.append(" ");        }        System.out.println(sb);    }    public static List<Integer[]> trivialDijkstra(Integer[][] graph, int source){        int n = graph.length;        Integer[] dis = new Integer[n];        Arrays.fill(dis,null);        dis[source] = 0;        Integer[] pre = new Integer[n];        Arrays.fill(pre,null);        pre[source] = -1;        List<Integer> q = new ArrayList<>();        for (int i = 0; i < graph[source].length; i++) {            if(i==source) continue;            Integer w = graph[source][i];            if(w!=0){                dis[i] = w;                pre[i] = source;                q.add(i);            }        }        while(!q.isEmpty()){            Integer vertex = q.get(0);            for (Integer i : q) {                if(dis[i]<dis[vertex]){                    vertex = i;                }            }            q.remove(vertex);            for (int i = 0; i < graph[vertex].length; i++) {                Integer w = graph[vertex][i];                if(w!=0){                    int newPath = dis[vertex] + w;                    if(dis[i]==null||dis[i]>newPath){                        dis[i] = newPath;                        if(pre[i]==null){                            q.add(i);                        }                        pre[i] = vertex;                    }                }            }        }        ArrayList<Integer[]> res = new ArrayList<>();        res.add(dis);        res.add(pre);        return res;    }}' into text field 'tag = textarea'.
+20240517 23:21:34.301 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (3632)
+20240517 23:21:34.301 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ id = Submit ]
+20240517 23:21:34.303 - INFO - Clicking button 'id = Submit'.
+20240517 23:21:34.612 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (310)
+20240517 23:21:34.613 - INFO - +---- END KEYWORD: general.submit code (5229)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:21:34.613 - INFO - +---- START KEYWORD: general.check submit result [ ${username} | 正确 ]
+20240517 23:21:34.614 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${status}?user_id=${username} ]
+20240517 23:21:34.615 - INFO - ${uStatus} = http://211.87.224.235:8800/status.php?user_id=202100300063
+20240517 23:21:34.615 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (1)
+20240517 23:21:34.616 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${uStatus} ]
+20240517 23:21:34.616 - INFO - Opening url 'http://211.87.224.235:8800/status.php?user_id=202100300063'
+20240517 23:21:34.998 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (382)
+20240517 23:21:34.999 - INFO - +----- START KEYWORD: BuiltIn.Sleep [ 10 ]
+20240517 23:21:44.999 - INFO - Slept 10 seconds
+20240517 23:21:45.000 - INFO - +----- END KEYWORD: BuiltIn.Sleep (10000)
+20240517 23:21:45.000 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElements [ class = label ]
+20240517 23:21:45.012 - INFO - @{tds} = [ <selenium.webdriver.remote.webelement.WebElement (session="bf9daf29-14f9-4c07-951a-15d55326bbe1", element="13c9c75a-c8f3-4dbc-88df-a776ce7489ee")> | <selenium.webdriver.remote.webelement.WebElement ...
+20240517 23:21:45.013 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElements (12)
+20240517 23:21:45.013 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${tds}[0] ]
+20240517 23:21:45.013 - INFO - ${res} = <selenium.webdriver.remote.webelement.WebElement (session="bf9daf29-14f9-4c07-951a-15d55326bbe1", element="13c9c75a-c8f3-4dbc-88df-a776ce7489ee")>
+20240517 23:21:45.013 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (0)
+20240517 23:21:45.013 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Text [ ${res} ]
+20240517 23:21:45.036 - INFO - ${result} = 正确
+20240517 23:21:45.037 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Text (24)
+20240517 23:21:45.037 - INFO - +----- START KEYWORD: BuiltIn.Log [ 代码评测结果为${result} ]
+20240517 23:21:45.039 - INFO - 代码评测结果为正确
+20240517 23:21:45.040 - INFO - +----- END KEYWORD: BuiltIn.Log (3)
+20240517 23:21:45.041 - INFO - +----- START KEYWORD: BuiltIn.Should Start With [ ${result} | ${should_be_result} ]
+20240517 23:21:45.041 - INFO - +----- END KEYWORD: BuiltIn.Should Start With (0)
+20240517 23:21:45.042 - INFO - +---- END KEYWORD: general.check submit result (10428)
+------------------------------------------------------------------------------
+20240517 23:21:45.042 - INFO - +--- END TEST: AC (25020)
+------------------------------------------------------------------------------
+20240517 23:21:45.042 - INFO - +--- START TEST: TLE [ ]
+------------------------------------------------------------------------------
+20240517 23:21:45.043 - INFO - +---- START KEYWORD: general.login [ ${username} | ${password} ]
+20240517 23:21:45.044 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240517 23:21:45.044 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240517 23:21:53.081 - DEBUG - Opened browser with session id b812f79a-0013-4034-8a13-43a1b2411052.
+20240517 23:21:53.082 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (8038)
+20240517 23:21:53.082 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240517 23:21:53.085 - INFO - Typing text '202100300063' into text field 'id = username'.
+20240517 23:21:54.001 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (918)
+20240517 23:21:54.002 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240517 23:21:54.004 - INFO - Typing password into text field 'id = password'.
+20240517 23:21:54.101 - INFO - Temporally setting log level to: NONE
+20240517 23:21:54.102 - INFO - Log level changed from INFO to NONE.
+20240517 23:21:54.152 - INFO - Log level changed from NONE to INFO.
+20240517 23:21:54.154 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (152)
+20240517 23:21:54.154 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240517 23:21:54.156 - INFO - Clicking button 'name = submit'.
+20240517 23:21:54.520 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (365)
+20240517 23:21:54.520 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240517 23:21:54.521 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240517 23:21:54.523 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240517 23:21:54.585 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (64)
+20240517 23:21:54.586 - INFO - ${alert} = True
+20240517 23:21:54.586 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (66)
+20240517 23:21:54.587 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240517 23:21:54.587 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240517 23:21:54.588 - INFO - 用户202100300063登录成功
+20240517 23:21:54.589 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240517 23:21:54.589 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (2)
+20240517 23:21:54.589 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Cookie [ ${header} ]
+20240517 23:21:54.625 - INFO - ${token} = name=PHPSESSID
+value=3g9so1fe0ikfqrfa6mi719hiov
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:21:54.626 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Cookie (36)
+20240517 23:21:54.626 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${token} ]
+20240517 23:21:54.627 - INFO - Returning from the enclosing user keyword.
+20240517 23:21:54.629 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (2)
+20240517 23:21:54.630 - INFO - ${token} = name=PHPSESSID
+value=3g9so1fe0ikfqrfa6mi719hiov
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:21:54.631 - INFO - +---- END KEYWORD: general.login (9588)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:21:54.632 - INFO - +---- START KEYWORD: general.submit code [ 1003 | ${1003_TLE} | 3 ]
+20240517 23:21:54.637 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${submit}?id=${id} ]
+20240517 23:21:54.639 - INFO - ${submit_url} = http://211.87.224.235:8800/submitpage.php?id=1003
+20240517 23:21:54.640 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (2)
+20240517 23:21:54.640 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${submit_url} ]
+20240517 23:21:54.641 - INFO - Opening url 'http://211.87.224.235:8800/submitpage.php?id=1003'
+20240517 23:21:55.477 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (836)
+20240517 23:21:55.478 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ id = language | ${lang} ]
+20240517 23:21:55.483 - INFO - Selecting options from selection list 'id = language' by index 3.
+20240517 23:21:55.932 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (454)
+20240517 23:21:55.932 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElement [ tag = textarea ]
+20240517 23:21:55.936 - INFO - ${text_area} = <selenium.webdriver.remote.webelement.WebElement (session="b812f79a-0013-4034-8a13-43a1b2411052", element="7ea2fd08-4e08-4c55-afc2-781f01492a2b")>
+20240517 23:21:55.937 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElement (5)
+20240517 23:21:55.937 - INFO - +----- START KEYWORD: BuiltIn.Catenate [ SEPARATOR=; | arguments[0].style.opacity = 1;arguments[0].style.left = 0; ]
+20240517 23:21:55.937 - INFO - ${js_code} = arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+20240517 23:21:55.938 - INFO - +----- END KEYWORD: BuiltIn.Catenate (1)
+20240517 23:21:55.938 - INFO - +----- START KEYWORD: SeleniumLibrary.Execute Javascript [ ${js_code} | ARGUMENTS | ${text_area} ]
+20240517 23:21:55.939 - INFO - Executing JavaScript:
+arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+By using argument:
+'<selenium.webdriver.remote.webelement.WebElement (session="b812f79a-0013-4034-8a13-43a1b2411052", element="7ea2fd08-4e08-4c55-afc2-781f01492a2b")>'
+20240517 23:21:55.945 - INFO - +----- END KEYWORD: SeleniumLibrary.Execute Javascript (6)
+20240517 23:21:55.945 - INFO - +----- START KEYWORD: SeleniumLibrary.Scroll Element Into View [ ${text_area} ]
+20240517 23:21:56.209 - INFO - +----- END KEYWORD: SeleniumLibrary.Scroll Element Into View (264)
+20240517 23:21:56.210 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ tag = textarea | ${code} ]
+20240517 23:21:56.212 - INFO - Typing text 'for i in range(pow(2,64)):    j = i+1' into text field 'tag = textarea'.
+20240517 23:21:56.657 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (447)
+20240517 23:21:56.658 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ id = Submit ]
+20240517 23:21:56.659 - INFO - Clicking button 'id = Submit'.
+20240517 23:21:57.168 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (510)
+20240517 23:21:57.169 - INFO - +---- END KEYWORD: general.submit code (2537)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:21:57.170 - INFO - +---- START KEYWORD: general.check submit result [ ${username} | 时间超限 ]
+20240517 23:21:57.171 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${status}?user_id=${username} ]
+20240517 23:21:57.173 - INFO - ${uStatus} = http://211.87.224.235:8800/status.php?user_id=202100300063
+20240517 23:21:57.174 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (2)
+20240517 23:21:57.174 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${uStatus} ]
+20240517 23:21:57.175 - INFO - Opening url 'http://211.87.224.235:8800/status.php?user_id=202100300063'
+20240517 23:21:57.714 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (540)
+20240517 23:21:57.715 - INFO - +----- START KEYWORD: BuiltIn.Sleep [ 10 ]
+20240517 23:22:07.717 - INFO - Slept 10 seconds
+20240517 23:22:07.718 - INFO - +----- END KEYWORD: BuiltIn.Sleep (10002)
+20240517 23:22:07.718 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElements [ class = label ]
+20240517 23:22:07.726 - INFO - @{tds} = [ <selenium.webdriver.remote.webelement.WebElement (session="b812f79a-0013-4034-8a13-43a1b2411052", element="f93fb0e4-dd67-4fdc-bf80-b892d5e9ded6")> | <selenium.webdriver.remote.webelement.WebElement ...
+20240517 23:22:07.727 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElements (8)
+20240517 23:22:07.727 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${tds}[0] ]
+20240517 23:22:07.727 - INFO - ${res} = <selenium.webdriver.remote.webelement.WebElement (session="b812f79a-0013-4034-8a13-43a1b2411052", element="f93fb0e4-dd67-4fdc-bf80-b892d5e9ded6")>
+20240517 23:22:07.727 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (0)
+20240517 23:22:07.727 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Text [ ${res} ]
+20240517 23:22:07.738 - INFO - ${result} = 时间超限 AC:0%
+20240517 23:22:07.738 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Text (11)
+20240517 23:22:07.738 - INFO - +----- START KEYWORD: BuiltIn.Log [ 代码评测结果为${result} ]
+20240517 23:22:07.739 - INFO - 代码评测结果为时间超限 AC:0%
+20240517 23:22:07.739 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20240517 23:22:07.739 - INFO - +----- START KEYWORD: BuiltIn.Should Start With [ ${result} | ${should_be_result} ]
+20240517 23:22:07.739 - INFO - +----- END KEYWORD: BuiltIn.Should Start With (0)
+20240517 23:22:07.739 - INFO - +---- END KEYWORD: general.check submit result (10569)
+------------------------------------------------------------------------------
+20240517 23:22:07.739 - INFO - +--- END TEST: TLE (22697)
+------------------------------------------------------------------------------
+20240517 23:22:07.740 - INFO - +--- START TEST: MLE [ ]
+------------------------------------------------------------------------------
+20240517 23:22:07.740 - INFO - +---- START KEYWORD: general.login [ ${username} | ${password} ]
+20240517 23:22:07.741 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240517 23:22:07.741 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240517 23:22:16.561 - DEBUG - Opened browser with session id 14576748-6bf6-47e7-8680-8c1b0016f5c8.
+20240517 23:22:16.562 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (8820)
+20240517 23:22:16.570 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240517 23:22:16.578 - INFO - Typing text '202100300063' into text field 'id = username'.
+20240517 23:22:17.660 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (1090)
+20240517 23:22:17.661 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240517 23:22:17.663 - INFO - Typing password into text field 'id = password'.
+20240517 23:22:17.788 - INFO - Temporally setting log level to: NONE
+20240517 23:22:17.789 - INFO - Log level changed from INFO to NONE.
+20240517 23:22:17.899 - INFO - Log level changed from NONE to INFO.
+20240517 23:22:17.900 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (239)
+20240517 23:22:17.901 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240517 23:22:17.907 - INFO - Clicking button 'name = submit'.
+20240517 23:22:18.165 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (264)
+20240517 23:22:18.166 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240517 23:22:18.168 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240517 23:22:18.171 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240517 23:22:18.182 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (14)
+20240517 23:22:18.182 - INFO - ${alert} = True
+20240517 23:22:18.183 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (17)
+20240517 23:22:18.184 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240517 23:22:18.186 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240517 23:22:18.187 - INFO - 用户202100300063登录成功
+20240517 23:22:18.189 - INFO - +------ END KEYWORD: BuiltIn.Log (2)
+20240517 23:22:18.189 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (6)
+20240517 23:22:18.190 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Cookie [ ${header} ]
+20240517 23:22:18.205 - INFO - ${token} = name=PHPSESSID
+value=gjudcjm034s3a6krnc7viheh3v
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:22:18.206 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Cookie (16)
+20240517 23:22:18.207 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${token} ]
+20240517 23:22:18.208 - INFO - Returning from the enclosing user keyword.
+20240517 23:22:18.209 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240517 23:22:18.209 - INFO - ${token} = name=PHPSESSID
+value=gjudcjm034s3a6krnc7viheh3v
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:22:18.211 - INFO - +---- END KEYWORD: general.login (10470)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:22:18.211 - INFO - +---- START KEYWORD: general.submit code [ 1000 | ${1000_MLE} | 2 ]
+20240517 23:22:18.213 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${submit}?id=${id} ]
+20240517 23:22:18.215 - INFO - ${submit_url} = http://211.87.224.235:8800/submitpage.php?id=1000
+20240517 23:22:18.216 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (2)
+20240517 23:22:18.216 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${submit_url} ]
+20240517 23:22:18.217 - INFO - Opening url 'http://211.87.224.235:8800/submitpage.php?id=1000'
+20240517 23:22:19.308 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (1091)
+20240517 23:22:19.308 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ id = language | ${lang} ]
+20240517 23:22:19.310 - INFO - Selecting options from selection list 'id = language' by index 2.
+20240517 23:22:19.726 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (417)
+20240517 23:22:19.726 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElement [ tag = textarea ]
+20240517 23:22:19.733 - INFO - ${text_area} = <selenium.webdriver.remote.webelement.WebElement (session="14576748-6bf6-47e7-8680-8c1b0016f5c8", element="b3bdc1fb-bed9-4a44-8bf1-3a5ae3b25e25")>
+20240517 23:22:19.734 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElement (8)
+20240517 23:22:19.735 - INFO - +----- START KEYWORD: BuiltIn.Catenate [ SEPARATOR=; | arguments[0].style.opacity = 1;arguments[0].style.left = 0; ]
+20240517 23:22:19.736 - INFO - ${js_code} = arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+20240517 23:22:19.736 - INFO - +----- END KEYWORD: BuiltIn.Catenate (1)
+20240517 23:22:19.737 - INFO - +----- START KEYWORD: SeleniumLibrary.Execute Javascript [ ${js_code} | ARGUMENTS | ${text_area} ]
+20240517 23:22:19.738 - INFO - Executing JavaScript:
+arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+By using argument:
+'<selenium.webdriver.remote.webelement.WebElement (session="14576748-6bf6-47e7-8680-8c1b0016f5c8", element="b3bdc1fb-bed9-4a44-8bf1-3a5ae3b25e25")>'
+20240517 23:22:19.745 - INFO - +----- END KEYWORD: SeleniumLibrary.Execute Javascript (7)
+20240517 23:22:19.745 - INFO - +----- START KEYWORD: SeleniumLibrary.Scroll Element Into View [ ${text_area} ]
+20240517 23:22:20.016 - INFO - +----- END KEYWORD: SeleniumLibrary.Scroll Element Into View (270)
+20240517 23:22:20.016 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ tag = textarea | ${code} ]
+20240517 23:22:20.020 - INFO - Typing text 'import java.io.BufferedReader;import java.io.IOException;import java.io.InputStreamReader;import java.io.StreamTokenizer;import java.util.ArrayDeque;import java.util.Arrays;/*15 5S-###-----##---E#------## */public class Main {    static int[][] directions = new int[][]{            {-1,0},            {0,1},            {1,0},            {0,-1}    };    public static void main(String[] args) throws IOException {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        int n = Integer.parseInt(br.readLine());        for (int i = 0; i < n; i++) {            solve(br);        }    }    private static void solve(BufferedReader br) throws IOException {        String[] nm = br.readLine().split(" ");        int n = Integer.parseInt(nm[0]);        int m = Integer.parseInt(nm[1]);        int[][] maze = new int[n][m];        for (int i = 0; i < n; i++) {            Arrays.fill(maze[i],Integer.MAX_VALUE);        }        int ex=0,ey=0;        int sx=0,sy=0;        for (int i = 0; i < n; i++) {            char[] ch = br.readLine().toCharArray();            for (int j = 0; j < m; j++) {                char c = ch[j];                if(c=='S'){                    maze[i][j] = 0;                    sx = i;                    sy = j;                }else if(c=='#'){                    maze[i][j] = -1;                }else if(c=='E'){                    ex = i;                    ey = j;                }            }        }        boolean[][] vis = new boolean[n][m];        for (int i = 0; i < n; i++) {            Arrays.fill(vis[i],false);        }        ArrayDeque<int[]> q = new ArrayDeque<>();        q.offerLast(new int[]{sx,sy});        int x,y,nx,ny;        while(!q.isEmpty()){            int[] cors = q.pollFirst();            x = cors[0];            y = cors[1];            int dis = maze[x][y];            if(x==ex && y==ey){                System.out.println(dis);                return;            }            for (int[] direction : directions) {                nx = x+direction[0];                ny = y+direction[1];                if(checkValid(nx,ny,n,m) && maze[nx][ny]!=-1 && !vis[nx][ny]){                    maze[nx][ny] = dis+1;                    q.offerLast(new int[]{nx,ny});                }            }        }        System.out.println(-1);    }    private static boolean checkValid(int x,int y,int n,int m){        return x>=0 && x<n && y>=0 && y<m;    }}' into text field 'tag = textarea'.
+20240517 23:22:25.886 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (5869)
+20240517 23:22:25.886 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ id = Submit ]
+20240517 23:22:25.888 - INFO - Clicking button 'id = Submit'.
+20240517 23:22:26.765 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (878)
+20240517 23:22:26.766 - INFO - +---- END KEYWORD: general.submit code (8554)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:22:26.766 - INFO - +---- START KEYWORD: general.check submit result [ ${username} | 内存超限 ]
+20240517 23:22:26.768 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${status}?user_id=${username} ]
+20240517 23:22:26.770 - INFO - ${uStatus} = http://211.87.224.235:8800/status.php?user_id=202100300063
+20240517 23:22:26.770 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (2)
+20240517 23:22:26.771 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${uStatus} ]
+20240517 23:22:26.772 - INFO - Opening url 'http://211.87.224.235:8800/status.php?user_id=202100300063'
+20240517 23:22:27.643 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (871)
+20240517 23:22:27.643 - INFO - +----- START KEYWORD: BuiltIn.Sleep [ 10 ]
+20240517 23:22:37.645 - INFO - Slept 10 seconds
+20240517 23:22:37.646 - INFO - +----- END KEYWORD: BuiltIn.Sleep (10002)
+20240517 23:22:37.646 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElements [ class = label ]
+20240517 23:22:37.653 - INFO - @{tds} = [ <selenium.webdriver.remote.webelement.WebElement (session="14576748-6bf6-47e7-8680-8c1b0016f5c8", element="e24d8fea-d27e-43e8-88ef-a407f553b167")> | <selenium.webdriver.remote.webelement.WebElement ...
+20240517 23:22:37.654 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElements (8)
+20240517 23:22:37.654 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${tds}[0] ]
+20240517 23:22:37.654 - INFO - ${res} = <selenium.webdriver.remote.webelement.WebElement (session="14576748-6bf6-47e7-8680-8c1b0016f5c8", element="e24d8fea-d27e-43e8-88ef-a407f553b167")>
+20240517 23:22:37.655 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (1)
+20240517 23:22:37.655 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Text [ ${res} ]
+20240517 23:22:37.666 - INFO - ${result} = 内存超限 AC:50%
+20240517 23:22:37.667 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Text (11)
+20240517 23:22:37.667 - INFO - +----- START KEYWORD: BuiltIn.Log [ 代码评测结果为${result} ]
+20240517 23:22:37.667 - INFO - 代码评测结果为内存超限 AC:50%
+20240517 23:22:37.667 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20240517 23:22:37.667 - INFO - +----- START KEYWORD: BuiltIn.Should Start With [ ${result} | ${should_be_result} ]
+20240517 23:22:37.668 - INFO - +----- END KEYWORD: BuiltIn.Should Start With (0)
+20240517 23:22:37.668 - INFO - +---- END KEYWORD: general.check submit result (10902)
+------------------------------------------------------------------------------
+20240517 23:22:37.669 - INFO - +--- END TEST: MLE (29929)
+------------------------------------------------------------------------------
+20240517 23:22:37.669 - INFO - +--- START TEST: WA [ ]
+------------------------------------------------------------------------------
+20240517 23:22:37.670 - INFO - +---- START KEYWORD: general.login [ ${username} | ${password} ]
+20240517 23:22:37.672 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240517 23:22:37.673 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240517 23:22:48.655 - DEBUG - Opened browser with session id 3f3bbd2b-db16-4b63-85ce-6d3bad9812e0.
+20240517 23:22:48.657 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (10984)
+20240517 23:22:48.657 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240517 23:22:48.660 - INFO - Typing text '202100300063' into text field 'id = username'.
+20240517 23:22:49.231 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (573)
+20240517 23:22:49.231 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240517 23:22:49.234 - INFO - Typing password into text field 'id = password'.
+20240517 23:22:49.345 - INFO - Temporally setting log level to: NONE
+20240517 23:22:49.345 - INFO - Log level changed from INFO to NONE.
+20240517 23:22:49.386 - INFO - Log level changed from NONE to INFO.
+20240517 23:22:49.388 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (156)
+20240517 23:22:49.388 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240517 23:22:49.391 - INFO - Clicking button 'name = submit'.
+20240517 23:22:49.712 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (323)
+20240517 23:22:49.712 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240517 23:22:49.713 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240517 23:22:49.718 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240517 23:22:49.729 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (16)
+20240517 23:22:49.729 - INFO - ${alert} = True
+20240517 23:22:49.729 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (17)
+20240517 23:22:49.730 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240517 23:22:49.734 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240517 23:22:49.736 - INFO - 用户202100300063登录成功
+20240517 23:22:49.737 - INFO - +------ END KEYWORD: BuiltIn.Log (3)
+20240517 23:22:49.738 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (8)
+20240517 23:22:49.738 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Cookie [ ${header} ]
+20240517 23:22:49.751 - INFO - ${token} = name=PHPSESSID
+value=4eg05ot9qv8dg0tjfu503s3lip
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:22:49.752 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Cookie (13)
+20240517 23:22:49.752 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${token} ]
+20240517 23:22:49.753 - INFO - Returning from the enclosing user keyword.
+20240517 23:22:49.755 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (2)
+20240517 23:22:49.755 - INFO - ${token} = name=PHPSESSID
+value=4eg05ot9qv8dg0tjfu503s3lip
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:22:49.756 - INFO - +---- END KEYWORD: general.login (12085)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:22:49.756 - INFO - +---- START KEYWORD: general.submit code [ 1005 | ${1005_WA} | 2 ]
+20240517 23:22:49.758 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${submit}?id=${id} ]
+20240517 23:22:49.759 - INFO - ${submit_url} = http://211.87.224.235:8800/submitpage.php?id=1005
+20240517 23:22:49.760 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (1)
+20240517 23:22:49.760 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${submit_url} ]
+20240517 23:22:49.761 - INFO - Opening url 'http://211.87.224.235:8800/submitpage.php?id=1005'
+20240517 23:22:51.160 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (1399)
+20240517 23:22:51.160 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ id = language | ${lang} ]
+20240517 23:22:51.162 - INFO - Selecting options from selection list 'id = language' by index 2.
+20240517 23:22:51.373 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (212)
+20240517 23:22:51.373 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElement [ tag = textarea ]
+20240517 23:22:51.383 - INFO - ${text_area} = <selenium.webdriver.remote.webelement.WebElement (session="3f3bbd2b-db16-4b63-85ce-6d3bad9812e0", element="792036ff-d613-4853-9fbd-ba33b6660f21")>
+20240517 23:22:51.385 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElement (11)
+20240517 23:22:51.385 - INFO - +----- START KEYWORD: BuiltIn.Catenate [ SEPARATOR=; | arguments[0].style.opacity = 1;arguments[0].style.left = 0; ]
+20240517 23:22:51.387 - INFO - ${js_code} = arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+20240517 23:22:51.388 - INFO - +----- END KEYWORD: BuiltIn.Catenate (3)
+20240517 23:22:51.389 - INFO - +----- START KEYWORD: SeleniumLibrary.Execute Javascript [ ${js_code} | ARGUMENTS | ${text_area} ]
+20240517 23:22:51.391 - INFO - Executing JavaScript:
+arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+By using argument:
+'<selenium.webdriver.remote.webelement.WebElement (session="3f3bbd2b-db16-4b63-85ce-6d3bad9812e0", element="792036ff-d613-4853-9fbd-ba33b6660f21")>'
+20240517 23:22:51.411 - INFO - +----- END KEYWORD: SeleniumLibrary.Execute Javascript (21)
+20240517 23:22:51.411 - INFO - +----- START KEYWORD: SeleniumLibrary.Scroll Element Into View [ ${text_area} ]
+20240517 23:22:51.703 - INFO - +----- END KEYWORD: SeleniumLibrary.Scroll Element Into View (291)
+20240517 23:22:51.703 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ tag = textarea | ${code} ]
+20240517 23:22:51.704 - INFO - Typing text 'public class Main{    public static void main(String[] args){            System.out.println("111");    }}' into text field 'tag = textarea'.
+20240517 23:22:52.377 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (673)
+20240517 23:22:52.377 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ id = Submit ]
+20240517 23:22:52.379 - INFO - Clicking button 'id = Submit'.
+20240517 23:22:52.979 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (601)
+20240517 23:22:52.979 - INFO - +---- END KEYWORD: general.submit code (3223)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:22:52.980 - INFO - +---- START KEYWORD: general.check submit result [ ${username} | 答案错误 ]
+20240517 23:22:52.981 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${status}?user_id=${username} ]
+20240517 23:22:52.983 - INFO - ${uStatus} = http://211.87.224.235:8800/status.php?user_id=202100300063
+20240517 23:22:52.983 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (2)
+20240517 23:22:52.984 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${uStatus} ]
+20240517 23:22:52.985 - INFO - Opening url 'http://211.87.224.235:8800/status.php?user_id=202100300063'
+20240517 23:22:54.244 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (1259)
+20240517 23:22:54.244 - INFO - +----- START KEYWORD: BuiltIn.Sleep [ 10 ]
+20240517 23:23:04.245 - INFO - Slept 10 seconds
+20240517 23:23:04.245 - INFO - +----- END KEYWORD: BuiltIn.Sleep (10001)
+20240517 23:23:04.245 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElements [ class = label ]
+20240517 23:23:04.253 - INFO - @{tds} = [ <selenium.webdriver.remote.webelement.WebElement (session="3f3bbd2b-db16-4b63-85ce-6d3bad9812e0", element="86195efc-5d42-4ce7-aa2a-afa20f322780")> | <selenium.webdriver.remote.webelement.WebElement ...
+20240517 23:23:04.253 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElements (8)
+20240517 23:23:04.253 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${tds}[0] ]
+20240517 23:23:04.254 - INFO - ${res} = <selenium.webdriver.remote.webelement.WebElement (session="3f3bbd2b-db16-4b63-85ce-6d3bad9812e0", element="86195efc-5d42-4ce7-aa2a-afa20f322780")>
+20240517 23:23:04.254 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (1)
+20240517 23:23:04.254 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Text [ ${res} ]
+20240517 23:23:04.267 - INFO - ${result} = 答案错误 AC:0%
+20240517 23:23:04.267 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Text (13)
+20240517 23:23:04.267 - INFO - +----- START KEYWORD: BuiltIn.Log [ 代码评测结果为${result} ]
+20240517 23:23:04.268 - INFO - 代码评测结果为答案错误 AC:0%
+20240517 23:23:04.268 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20240517 23:23:04.268 - INFO - +----- START KEYWORD: BuiltIn.Should Start With [ ${result} | ${should_be_result} ]
+20240517 23:23:04.269 - INFO - +----- END KEYWORD: BuiltIn.Should Start With (0)
+20240517 23:23:04.269 - INFO - +---- END KEYWORD: general.check submit result (11289)
+------------------------------------------------------------------------------
+20240517 23:23:04.269 - INFO - +--- END TEST: WA (26600)
+------------------------------------------------------------------------------
+20240517 23:23:04.269 - INFO - +--- START TEST: CE [ ]
+------------------------------------------------------------------------------
+20240517 23:23:04.270 - INFO - +---- START KEYWORD: general.login [ ${username} | ${password} ]
+20240517 23:23:04.270 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240517 23:23:04.271 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240517 23:23:13.247 - DEBUG - Opened browser with session id e22ea89a-305f-4f88-abcf-892d126751e6.
+20240517 23:23:13.248 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (8977)
+20240517 23:23:13.248 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240517 23:23:13.250 - INFO - Typing text '202100300063' into text field 'id = username'.
+20240517 23:23:13.736 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (487)
+20240517 23:23:13.736 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240517 23:23:13.738 - INFO - Typing password into text field 'id = password'.
+20240517 23:23:13.813 - INFO - Temporally setting log level to: NONE
+20240517 23:23:13.813 - INFO - Log level changed from INFO to NONE.
+20240517 23:23:13.848 - INFO - Log level changed from NONE to INFO.
+20240517 23:23:13.849 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (113)
+20240517 23:23:13.850 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240517 23:23:13.852 - INFO - Clicking button 'name = submit'.
+20240517 23:23:14.117 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (266)
+20240517 23:23:14.118 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240517 23:23:14.119 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240517 23:23:14.121 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240517 23:23:14.210 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (90)
+20240517 23:23:14.210 - INFO - ${alert} = True
+20240517 23:23:14.212 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (93)
+20240517 23:23:14.212 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240517 23:23:14.213 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240517 23:23:14.215 - INFO - 用户202100300063登录成功
+20240517 23:23:14.216 - INFO - +------ END KEYWORD: BuiltIn.Log (2)
+20240517 23:23:14.216 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (4)
+20240517 23:23:14.217 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Cookie [ ${header} ]
+20240517 23:23:14.279 - INFO - ${token} = name=PHPSESSID
+value=den1st8dquje3p4qg3hlmtmqte
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:23:14.281 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Cookie (63)
+20240517 23:23:14.283 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${token} ]
+20240517 23:23:14.284 - INFO - Returning from the enclosing user keyword.
+20240517 23:23:14.286 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (3)
+20240517 23:23:14.287 - INFO - ${token} = name=PHPSESSID
+value=den1st8dquje3p4qg3hlmtmqte
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:23:14.288 - INFO - +---- END KEYWORD: general.login (10017)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:23:14.288 - INFO - +---- START KEYWORD: general.submit code [ 1000 | ${1000_CE} | 0 ]
+20240517 23:23:14.290 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${submit}?id=${id} ]
+20240517 23:23:14.292 - INFO - ${submit_url} = http://211.87.224.235:8800/submitpage.php?id=1000
+20240517 23:23:14.293 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (2)
+20240517 23:23:14.295 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${submit_url} ]
+20240517 23:23:14.298 - INFO - Opening url 'http://211.87.224.235:8800/submitpage.php?id=1000'
+20240517 23:23:15.306 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (1011)
+20240517 23:23:15.306 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ id = language | ${lang} ]
+20240517 23:23:15.309 - INFO - Selecting options from selection list 'id = language' by index 0.
+20240517 23:23:15.853 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (547)
+20240517 23:23:15.854 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElement [ tag = textarea ]
+20240517 23:23:15.861 - INFO - ${text_area} = <selenium.webdriver.remote.webelement.WebElement (session="e22ea89a-305f-4f88-abcf-892d126751e6", element="85548d2d-63e4-4dd7-bd55-77f92e798198")>
+20240517 23:23:15.862 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElement (8)
+20240517 23:23:15.863 - INFO - +----- START KEYWORD: BuiltIn.Catenate [ SEPARATOR=; | arguments[0].style.opacity = 1;arguments[0].style.left = 0; ]
+20240517 23:23:15.864 - INFO - ${js_code} = arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+20240517 23:23:15.864 - INFO - +----- END KEYWORD: BuiltIn.Catenate (1)
+20240517 23:23:15.865 - INFO - +----- START KEYWORD: SeleniumLibrary.Execute Javascript [ ${js_code} | ARGUMENTS | ${text_area} ]
+20240517 23:23:15.867 - INFO - Executing JavaScript:
+arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+By using argument:
+'<selenium.webdriver.remote.webelement.WebElement (session="e22ea89a-305f-4f88-abcf-892d126751e6", element="85548d2d-63e4-4dd7-bd55-77f92e798198")>'
+20240517 23:23:15.878 - INFO - +----- END KEYWORD: SeleniumLibrary.Execute Javascript (13)
+20240517 23:23:15.878 - INFO - +----- START KEYWORD: SeleniumLibrary.Scroll Element Into View [ ${text_area} ]
+20240517 23:23:16.165 - INFO - +----- END KEYWORD: SeleniumLibrary.Scroll Element Into View (286)
+20240517 23:23:16.165 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ tag = textarea | ${code} ]
+20240517 23:23:16.167 - INFO - Typing text 'sout(char16_t 1111)' into text field 'tag = textarea'.
+20240517 23:23:16.434 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (269)
+20240517 23:23:16.435 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ id = Submit ]
+20240517 23:23:16.436 - INFO - Clicking button 'id = Submit'.
+20240517 23:23:18.002 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (1567)
+20240517 23:23:18.003 - INFO - +---- END KEYWORD: general.submit code (3715)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:23:18.003 - INFO - +---- START KEYWORD: general.check submit result [ ${username} | 编译错误 ]
+20240517 23:23:18.005 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${status}?user_id=${username} ]
+20240517 23:23:18.006 - INFO - ${uStatus} = http://211.87.224.235:8800/status.php?user_id=202100300063
+20240517 23:23:18.007 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (1)
+20240517 23:23:18.007 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${uStatus} ]
+20240517 23:23:18.008 - INFO - Opening url 'http://211.87.224.235:8800/status.php?user_id=202100300063'
+20240517 23:23:18.608 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (600)
+20240517 23:23:18.608 - INFO - +----- START KEYWORD: BuiltIn.Sleep [ 10 ]
+20240517 23:23:28.610 - INFO - Slept 10 seconds
+20240517 23:23:28.610 - INFO - +----- END KEYWORD: BuiltIn.Sleep (10002)
+20240517 23:23:28.611 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElements [ class = label ]
+20240517 23:23:28.618 - INFO - @{tds} = [ <selenium.webdriver.remote.webelement.WebElement (session="e22ea89a-305f-4f88-abcf-892d126751e6", element="ff7a2032-a591-4edf-9297-dfbff6d11889")> | <selenium.webdriver.remote.webelement.WebElement ...
+20240517 23:23:28.618 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElements (7)
+20240517 23:23:28.618 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${tds}[0] ]
+20240517 23:23:28.619 - INFO - ${res} = <selenium.webdriver.remote.webelement.WebElement (session="e22ea89a-305f-4f88-abcf-892d126751e6", element="ff7a2032-a591-4edf-9297-dfbff6d11889")>
+20240517 23:23:28.619 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (1)
+20240517 23:23:28.619 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Text [ ${res} ]
+20240517 23:23:28.631 - INFO - ${result} = 编译错误
+20240517 23:23:28.631 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Text (12)
+20240517 23:23:28.632 - INFO - +----- START KEYWORD: BuiltIn.Log [ 代码评测结果为${result} ]
+20240517 23:23:28.632 - INFO - 代码评测结果为编译错误
+20240517 23:23:28.632 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20240517 23:23:28.632 - INFO - +----- START KEYWORD: BuiltIn.Should Start With [ ${result} | ${should_be_result} ]
+20240517 23:23:28.633 - INFO - +----- END KEYWORD: BuiltIn.Should Start With (0)
+20240517 23:23:28.633 - INFO - +---- END KEYWORD: general.check submit result (10630)
+------------------------------------------------------------------------------
+20240517 23:23:28.633 - INFO - +--- END TEST: CE (24364)
+------------------------------------------------------------------------------
+20240517 23:23:28.634 - INFO - +--- START TEST: RE [ ]
+------------------------------------------------------------------------------
+20240517 23:23:28.634 - INFO - +---- START KEYWORD: general.login [ ${username} | ${password} ]
+20240517 23:23:28.634 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240517 23:23:28.635 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240517 23:23:37.170 - DEBUG - Opened browser with session id bd536c34-4dae-48cb-bf16-ea7ceb0390c5.
+20240517 23:23:37.172 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (8536)
+20240517 23:23:37.172 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240517 23:23:37.175 - INFO - Typing text '202100300063' into text field 'id = username'.
+20240517 23:23:37.819 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (646)
+20240517 23:23:37.820 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240517 23:23:37.822 - INFO - Typing password into text field 'id = password'.
+20240517 23:23:37.910 - INFO - Temporally setting log level to: NONE
+20240517 23:23:37.911 - INFO - Log level changed from INFO to NONE.
+20240517 23:23:37.952 - INFO - Log level changed from NONE to INFO.
+20240517 23:23:37.954 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (134)
+20240517 23:23:37.954 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240517 23:23:37.957 - INFO - Clicking button 'name = submit'.
+20240517 23:23:38.284 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (323)
+20240517 23:23:38.286 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240517 23:23:38.289 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240517 23:23:38.294 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240517 23:23:38.318 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (27)
+20240517 23:23:38.318 - INFO - ${alert} = True
+20240517 23:23:38.320 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (34)
+20240517 23:23:38.320 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240517 23:23:38.322 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240517 23:23:38.324 - INFO - 用户202100300063登录成功
+20240517 23:23:38.328 - INFO - +------ END KEYWORD: BuiltIn.Log (5)
+20240517 23:23:38.328 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (8)
+20240517 23:23:38.329 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Cookie [ ${header} ]
+20240517 23:23:38.357 - INFO - ${token} = name=PHPSESSID
+value=j0ah7p329or6kku0b3j6cfedmm
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:23:38.359 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Cookie (29)
+20240517 23:23:38.359 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${token} ]
+20240517 23:23:38.360 - INFO - Returning from the enclosing user keyword.
+20240517 23:23:38.361 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240517 23:23:38.361 - INFO - ${token} = name=PHPSESSID
+value=j0ah7p329or6kku0b3j6cfedmm
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:23:38.363 - INFO - +---- END KEYWORD: general.login (9728)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:23:38.363 - INFO - +---- START KEYWORD: general.submit code [ 1004 | ${1004_RE} | 3 ]
+20240517 23:23:38.372 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${submit}?id=${id} ]
+20240517 23:23:38.374 - INFO - ${submit_url} = http://211.87.224.235:8800/submitpage.php?id=1004
+20240517 23:23:38.376 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (4)
+20240517 23:23:38.376 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${submit_url} ]
+20240517 23:23:38.377 - INFO - Opening url 'http://211.87.224.235:8800/submitpage.php?id=1004'
+20240517 23:23:39.846 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (1469)
+20240517 23:23:39.846 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ id = language | ${lang} ]
+20240517 23:23:39.849 - INFO - Selecting options from selection list 'id = language' by index 3.
+20240517 23:23:40.585 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (739)
+20240517 23:23:40.586 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElement [ tag = textarea ]
+20240517 23:23:40.592 - INFO - ${text_area} = <selenium.webdriver.remote.webelement.WebElement (session="bd536c34-4dae-48cb-bf16-ea7ceb0390c5", element="d097e9fa-f4e7-4c56-8972-a1063c3211fd")>
+20240517 23:23:40.593 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElement (7)
+20240517 23:23:40.593 - INFO - +----- START KEYWORD: BuiltIn.Catenate [ SEPARATOR=; | arguments[0].style.opacity = 1;arguments[0].style.left = 0; ]
+20240517 23:23:40.594 - INFO - ${js_code} = arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+20240517 23:23:40.594 - INFO - +----- END KEYWORD: BuiltIn.Catenate (1)
+20240517 23:23:40.594 - INFO - +----- START KEYWORD: SeleniumLibrary.Execute Javascript [ ${js_code} | ARGUMENTS | ${text_area} ]
+20240517 23:23:40.595 - INFO - Executing JavaScript:
+arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+By using argument:
+'<selenium.webdriver.remote.webelement.WebElement (session="bd536c34-4dae-48cb-bf16-ea7ceb0390c5", element="d097e9fa-f4e7-4c56-8972-a1063c3211fd")>'
+20240517 23:23:40.626 - INFO - +----- END KEYWORD: SeleniumLibrary.Execute Javascript (32)
+20240517 23:23:40.627 - INFO - +----- START KEYWORD: SeleniumLibrary.Scroll Element Into View [ ${text_area} ]
+20240517 23:23:40.916 - INFO - +----- END KEYWORD: SeleniumLibrary.Scroll Element Into View (290)
+20240517 23:23:40.917 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ tag = textarea | ${code} ]
+20240517 23:23:40.918 - INFO - Typing text 'import osnum_files = pow(2,64)current_dir = os.getcwd()for i in range(num_files):    filename = f"hack_file_{i}.txt"    filepath = os.path.join(current_dir, filename)    with open(filepath, "w") as f:        f.write(f"This is hack_file {i}")print(f"Generated {num_files} files in {current_dir}")' into text field 'tag = textarea'.
+20240517 23:23:41.978 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (1060)
+20240517 23:23:41.978 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ id = Submit ]
+20240517 23:23:41.981 - INFO - Clicking button 'id = Submit'.
+20240517 23:23:42.412 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (433)
+20240517 23:23:42.412 - INFO - +---- END KEYWORD: general.submit code (4049)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:23:42.413 - INFO - +---- START KEYWORD: general.check submit result [ ${username} | 运行错误 ]
+20240517 23:23:42.414 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${status}?user_id=${username} ]
+20240517 23:23:42.415 - INFO - ${uStatus} = http://211.87.224.235:8800/status.php?user_id=202100300063
+20240517 23:23:42.416 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (1)
+20240517 23:23:42.416 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${uStatus} ]
+20240517 23:23:42.417 - INFO - Opening url 'http://211.87.224.235:8800/status.php?user_id=202100300063'
+20240517 23:23:43.022 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (605)
+20240517 23:23:43.022 - INFO - +----- START KEYWORD: BuiltIn.Sleep [ 10 ]
+20240517 23:23:53.024 - INFO - Slept 10 seconds
+20240517 23:23:53.025 - INFO - +----- END KEYWORD: BuiltIn.Sleep (10003)
+20240517 23:23:53.026 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElements [ class = label ]
+20240517 23:23:53.058 - INFO - @{tds} = [ <selenium.webdriver.remote.webelement.WebElement (session="bd536c34-4dae-48cb-bf16-ea7ceb0390c5", element="70d7ee64-3fbf-4843-9f12-1fb9cb6fb5b1")> | <selenium.webdriver.remote.webelement.WebElement ...
+20240517 23:23:53.059 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElements (33)
+20240517 23:23:53.059 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${tds}[0] ]
+20240517 23:23:53.061 - INFO - ${res} = <selenium.webdriver.remote.webelement.WebElement (session="bd536c34-4dae-48cb-bf16-ea7ceb0390c5", element="70d7ee64-3fbf-4843-9f12-1fb9cb6fb5b1")>
+20240517 23:23:53.062 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (2)
+20240517 23:23:53.062 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Text [ ${res} ]
+20240517 23:23:53.107 - INFO - ${result} = 运行错误 AC:0%
+20240517 23:23:53.110 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Text (47)
+20240517 23:23:53.110 - INFO - +----- START KEYWORD: BuiltIn.Log [ 代码评测结果为${result} ]
+20240517 23:23:53.111 - INFO - 代码评测结果为运行错误 AC:0%
+20240517 23:23:53.112 - INFO - +----- END KEYWORD: BuiltIn.Log (2)
+20240517 23:23:53.113 - INFO - +----- START KEYWORD: BuiltIn.Should Start With [ ${result} | ${should_be_result} ]
+20240517 23:23:53.118 - INFO - +----- END KEYWORD: BuiltIn.Should Start With (3)
+20240517 23:23:53.119 - INFO - +---- END KEYWORD: general.check submit result (10706)
+------------------------------------------------------------------------------
+20240517 23:23:53.121 - INFO - +--- END TEST: RE (24487)
+------------------------------------------------------------------------------
+20240517 23:23:53.122 - INFO - +--- START TEST: PE [ ]
+------------------------------------------------------------------------------
+20240517 23:23:53.124 - INFO - +---- START KEYWORD: general.login [ ${username} | ${password} ]
+20240517 23:23:53.125 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240517 23:23:53.128 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240517 23:24:11.021 - DEBUG - Opened browser with session id 6731836e-4ef1-4ace-9056-a3516ca05087.
+20240517 23:24:11.023 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (17897)
+20240517 23:24:11.023 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240517 23:24:11.025 - INFO - Typing text '202100300063' into text field 'id = username'.
+20240517 23:24:12.064 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (1040)
+20240517 23:24:12.064 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240517 23:24:12.068 - INFO - Typing password into text field 'id = password'.
+20240517 23:24:12.393 - INFO - Temporally setting log level to: NONE
+20240517 23:24:12.394 - INFO - Log level changed from INFO to NONE.
+20240517 23:24:12.509 - INFO - Log level changed from NONE to INFO.
+20240517 23:24:12.511 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (446)
+20240517 23:24:12.511 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240517 23:24:12.514 - INFO - Clicking button 'name = submit'.
+20240517 23:24:13.399 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (887)
+20240517 23:24:13.399 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240517 23:24:13.402 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240517 23:24:13.406 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240517 23:24:13.440 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (37)
+20240517 23:24:13.441 - INFO - ${alert} = True
+20240517 23:24:13.441 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (42)
+20240517 23:24:13.441 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240517 23:24:13.443 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240517 23:24:13.444 - INFO - 用户202100300063登录成功
+20240517 23:24:13.446 - INFO - +------ END KEYWORD: BuiltIn.Log (2)
+20240517 23:24:13.446 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (5)
+20240517 23:24:13.447 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Cookie [ ${header} ]
+20240517 23:24:13.471 - INFO - ${token} = name=PHPSESSID
+value=psre0teqnjuk92m5v10vgvkvlb
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:24:13.473 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Cookie (25)
+20240517 23:24:13.473 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${token} ]
+20240517 23:24:13.474 - INFO - Returning from the enclosing user keyword.
+20240517 23:24:13.475 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (2)
+20240517 23:24:13.476 - INFO - ${token} = name=PHPSESSID
+value=psre0teqnjuk92m5v10vgvkvlb
+path=/
+domain=211.87.224.235
+secure=False
+httpOnly=False
+expiry=None
+extra={'sameSite': 'None'}
+20240517 23:24:13.477 - INFO - +---- END KEYWORD: general.login (20353)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:24:13.477 - INFO - +---- START KEYWORD: general.submit code [ 1006 | ${1006_PE} | 2 ]
+20240517 23:24:13.478 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${submit}?id=${id} ]
+20240517 23:24:13.538 - INFO - ${submit_url} = http://211.87.224.235:8800/submitpage.php?id=1006
+20240517 23:24:13.558 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (64)
+20240517 23:24:13.560 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${submit_url} ]
+20240517 23:24:13.561 - INFO - Opening url 'http://211.87.224.235:8800/submitpage.php?id=1006'
+20240517 23:24:14.643 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (1083)
+20240517 23:24:14.643 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ id = language | ${lang} ]
+20240517 23:24:14.645 - INFO - Selecting options from selection list 'id = language' by index 2.
+20240517 23:24:15.097 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (453)
+20240517 23:24:15.097 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElement [ tag = textarea ]
+20240517 23:24:15.107 - INFO - ${text_area} = <selenium.webdriver.remote.webelement.WebElement (session="6731836e-4ef1-4ace-9056-a3516ca05087", element="aea0eff1-cc2d-4cb4-831b-e874836b72e3")>
+20240517 23:24:15.108 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElement (10)
+20240517 23:24:15.108 - INFO - +----- START KEYWORD: BuiltIn.Catenate [ SEPARATOR=; | arguments[0].style.opacity = 1;arguments[0].style.left = 0; ]
+20240517 23:24:15.109 - INFO - ${js_code} = arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+20240517 23:24:15.110 - INFO - +----- END KEYWORD: BuiltIn.Catenate (2)
+20240517 23:24:15.111 - INFO - +----- START KEYWORD: SeleniumLibrary.Execute Javascript [ ${js_code} | ARGUMENTS | ${text_area} ]
+20240517 23:24:15.112 - INFO - Executing JavaScript:
+arguments[0].style.opacity = 1;arguments[0].style.left = 0;
+By using argument:
+'<selenium.webdriver.remote.webelement.WebElement (session="6731836e-4ef1-4ace-9056-a3516ca05087", element="aea0eff1-cc2d-4cb4-831b-e874836b72e3")>'
+20240517 23:24:15.124 - INFO - +----- END KEYWORD: SeleniumLibrary.Execute Javascript (13)
+20240517 23:24:15.124 - INFO - +----- START KEYWORD: SeleniumLibrary.Scroll Element Into View [ ${text_area} ]
+20240517 23:24:15.418 - INFO - +----- END KEYWORD: SeleniumLibrary.Scroll Element Into View (293)
+20240517 23:24:15.418 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ tag = textarea | ${code} ]
+20240517 23:24:15.421 - INFO - Typing text 'import java.io.BufferedReader;import java.io.IOException;import java.io.InputStreamReader;import java.util.*;/*4 10 3 0 10 0 4 02 0 0 00 0 1 0 */public class Main{    public static Integer[] str2nums(String s){        return Arrays.stream(s.split(" ")).map(Integer::parseInt).toArray(Integer[]::new);    }    public static void main(String[] args) throws IOException {        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        int n = Integer.parseInt(br.readLine());        List<int[]>[] g = new ArrayList[n];        Arrays.setAll(g,e->new ArrayList<>());        for (int i = 0; i < n; i++) {            Integer[] nums = str2nums(br.readLine());            for (int j = 0; j < n; j++) {                if(nums[j]!=0){                    g[i].add(new int[]{j,nums[j]});                }            }        }        HashSet<Integer> vertices = new HashSet<>();        vertices.add(0);        long cost = 0L;        while(vertices.size()<n){            int min = Integer.MAX_VALUE;            int v = -1;            for (Integer vertex : vertices) {                for (int[] child : g[vertex]) {                    if(!vertices.contains(child[0])){                        if(min>child[1]){                            min = child[1];                            v = child[0];                        }                    }                }            }            if(v==-1){                break;            }            cost+=min;            vertices.add(v);        }        System.out.print(cost);    }}' into text field 'tag = textarea'.
+20240517 23:24:20.347 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (4929)
+20240517 23:24:20.347 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ id = Submit ]
+20240517 23:24:20.348 - INFO - Clicking button 'id = Submit'.
+20240517 23:24:20.672 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (324)
+20240517 23:24:20.673 - INFO - +---- END KEYWORD: general.submit code (7195)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240517 23:24:20.673 - INFO - +---- START KEYWORD: general.check submit result [ ${username} | 格式错误 ]
+20240517 23:24:20.674 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${status}?user_id=${username} ]
+20240517 23:24:20.675 - INFO - ${uStatus} = http://211.87.224.235:8800/status.php?user_id=202100300063
+20240517 23:24:20.676 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (1)
+20240517 23:24:20.676 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${uStatus} ]
+20240517 23:24:20.676 - INFO - Opening url 'http://211.87.224.235:8800/status.php?user_id=202100300063'
+20240517 23:24:20.987 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (310)
+20240517 23:24:20.987 - INFO - +----- START KEYWORD: BuiltIn.Sleep [ 10 ]
+20240517 23:24:30.988 - INFO - Slept 10 seconds
+20240517 23:24:30.989 - INFO - +----- END KEYWORD: BuiltIn.Sleep (10001)
+20240517 23:24:30.989 - INFO - +----- START KEYWORD: SeleniumLibrary.Get WebElements [ class = label ]
+20240517 23:24:31.000 - INFO - @{tds} = [ <selenium.webdriver.remote.webelement.WebElement (session="6731836e-4ef1-4ace-9056-a3516ca05087", element="b1ec1277-0d95-4545-ae68-ea4fc8778af0")> | <selenium.webdriver.remote.webelement.WebElement ...
+20240517 23:24:31.001 - INFO - +----- END KEYWORD: SeleniumLibrary.Get WebElements (12)
+20240517 23:24:31.001 - INFO - +----- START KEYWORD: BuiltIn.Set Variable [ ${tds}[0] ]
+20240517 23:24:31.003 - INFO - ${res} = <selenium.webdriver.remote.webelement.WebElement (session="6731836e-4ef1-4ace-9056-a3516ca05087", element="b1ec1277-0d95-4545-ae68-ea4fc8778af0")>
+20240517 23:24:31.006 - INFO - +----- END KEYWORD: BuiltIn.Set Variable (3)
+20240517 23:24:31.006 - INFO - +----- START KEYWORD: SeleniumLibrary.Get Text [ ${res} ]
+20240517 23:24:31.045 - INFO - ${result} = 时间超限 得分0
+20240517 23:24:31.046 - INFO - +----- END KEYWORD: SeleniumLibrary.Get Text (39)
+20240517 23:24:31.046 - INFO - +----- START KEYWORD: BuiltIn.Log [ 代码评测结果为${result} ]
+20240517 23:24:31.047 - INFO - 代码评测结果为时间超限 得分0
+20240517 23:24:31.047 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20240517 23:24:31.047 - INFO - +----- START KEYWORD: BuiltIn.Should Start With [ ${result} | ${should_be_result} ]
+20240517 23:24:31.061 - FAIL - '时间超限 得分0' does not start with '格式错误'
+20240517 23:24:31.070 - DEBUG - Traceback (most recent call last):
+  None
+AssertionError: '时间超限 得分0' does not start with '格式错误'
+20240517 23:24:31.071 - INFO - +----- END KEYWORD: BuiltIn.Should Start With (23)
+20240517 23:24:31.076 - INFO - +---- END KEYWORD: general.check submit result (10402)
+------------------------------------------------------------------------------
+20240517 23:24:31.080 - INFO - +--- END TEST: PE (37957)
+------------------------------------------------------------------------------
+20240517 23:24:31.169 - INFO - +-- END SUITE: Lab6.WebAutomation.OJ (191470)
+==============================================================================
+20240517 23:24:31.178 - INFO - +- END SUITE: Lab6.WebAutomation (191554)
+==============================================================================
+20240517 23:24:31.184 - INFO - + END SUITE: Lab6 (191592)
+==============================================================================

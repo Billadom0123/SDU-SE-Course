@@ -1,0 +1,598 @@
+==============================================================================
+20240518 13:45:24.623 - INFO - + START SUITE: Lab6 [ ]
+==============================================================================
+20240518 13:45:24.623 - INFO - +- START SUITE: Lab6.WebAutomation [ ]
+==============================================================================
+20240518 13:45:24.898 - INFO - +-- START SUITE: Lab6.WebAutomation.ModifyInfo [ ]
+==============================================================================
+20240518 13:45:24.903 - INFO - +--- START TEST: success [ ]
+------------------------------------------------------------------------------
+20240518 13:45:24.903 - INFO - +---- START KEYWORD: general.login [ 20021209 | 1234567 ]
+20240518 13:45:24.903 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240518 13:45:24.903 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240518 13:45:30.056 - DEBUG - Opened browser with session id a4ca2982-ed07-4e21-ab50-47f293ac6c57.
+20240518 13:45:30.057 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5154)
+20240518 13:45:30.057 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240518 13:45:30.059 - INFO - Typing text '20021209' into text field 'id = username'.
+20240518 13:45:30.244 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (186)
+20240518 13:45:30.244 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240518 13:45:30.245 - INFO - Typing password into text field 'id = password'.
+20240518 13:45:30.284 - INFO - Temporally setting log level to: NONE
+20240518 13:45:30.285 - INFO - Log level changed from INFO to NONE.
+20240518 13:45:30.311 - INFO - Log level changed from NONE to INFO.
+20240518 13:45:30.312 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (67)
+20240518 13:45:30.312 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 13:45:30.312 - INFO - Clicking button 'name = submit'.
+20240518 13:45:30.412 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (100)
+20240518 13:45:30.412 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 13:45:30.413 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 13:45:30.413 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 13:45:30.434 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (20)
+20240518 13:45:30.434 - INFO - ${alert} = True
+20240518 13:45:30.437 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (24)
+20240518 13:45:30.437 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240518 13:45:30.439 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240518 13:45:30.440 - INFO - 用户20021209登录成功
+20240518 13:45:30.440 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 13:45:30.440 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (3)
+20240518 13:45:30.440 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 13:45:30.440 - INFO - Returning from the enclosing user keyword.
+20240518 13:45:30.441 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 13:45:30.441 - INFO - ${alert} = True
+20240518 13:45:30.441 - INFO - +---- END KEYWORD: general.login (5538)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:30.441 - INFO - +---- START KEYWORD: general.modify info [ nick lyh | 1234567 | 1234567 | 1234567 | 山东小学 | 2761991408@qq.com | 20021209 ]
+20240518 13:45:30.442 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${modify_info} ]
+20240518 13:45:30.442 - INFO - Opening url 'http://211.87.224.235:8800/modifypage.php'
+20240518 13:45:30.617 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (174)
+20240518 13:45:30.617 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 13:45:30.618 - INFO - Typing text 'nick lyh' into text field 'name = nick'.
+20240518 13:45:30.711 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (93)
+20240518 13:45:30.711 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = opassword | ${opwd} ]
+20240518 13:45:30.712 - INFO - Typing text '1234567' into text field 'name = opassword'.
+20240518 13:45:30.754 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (42)
+20240518 13:45:30.754 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = npassword | ${npwd} ]
+20240518 13:45:30.756 - INFO - Typing text '1234567' into text field 'name = npassword'.
+20240518 13:45:30.797 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (42)
+20240518 13:45:30.797 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${rpt} ]
+20240518 13:45:30.798 - INFO - Typing text '1234567' into text field 'name = rptpassword'.
+20240518 13:45:31.024 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (226)
+20240518 13:45:31.024 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 13:45:31.025 - INFO - Typing text '山东小学' into text field 'name = school'.
+20240518 13:45:31.083 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (59)
+20240518 13:45:31.083 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 13:45:31.086 - INFO - Typing text '2761991408@qq.com' into text field 'name = email'.
+20240518 13:45:31.131 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (48)
+20240518 13:45:31.132 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 13:45:31.133 - INFO - Clicking button 'name = submit'.
+20240518 13:45:31.430 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (298)
+20240518 13:45:31.431 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 13:45:31.432 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 13:45:31.432 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 13:45:31.490 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (59)
+20240518 13:45:31.491 - INFO - ${alert} = True
+20240518 13:45:31.491 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (60)
+20240518 13:45:31.491 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}修改成功 | ELSE | Log | 用户${uname}修改失败 ]
+20240518 13:45:31.492 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}修改成功 ]
+20240518 13:45:31.492 - INFO - 用户20021209修改成功
+20240518 13:45:31.492 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
+20240518 13:45:31.493 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (1)
+20240518 13:45:31.493 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 13:45:31.493 - INFO - Returning from the enclosing user keyword.
+20240518 13:45:31.493 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (0)
+20240518 13:45:31.493 - INFO - ${alert} = True
+20240518 13:45:31.494 - INFO - +---- END KEYWORD: general.modify info (1053)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:31.494 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ True ]
+20240518 13:45:31.494 - DEBUG - Argument types are:
+<class 'str'>
+20240518 13:45:31.494 - INFO - ${res} = True
+20240518 13:45:31.495 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:31.495 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 13:45:31.495 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 13:45:31.495 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (0)
+------------------------------------------------------------------------------
+20240518 13:45:31.496 - INFO - +--- END TEST: success (6598)
+------------------------------------------------------------------------------
+20240518 13:45:31.496 - INFO - +--- START TEST: pwd_err [ ]
+------------------------------------------------------------------------------
+20240518 13:45:31.497 - INFO - +---- START KEYWORD: general.login [ 20021209 | 1234567 ]
+20240518 13:45:31.497 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240518 13:45:31.498 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240518 13:45:36.660 - DEBUG - Opened browser with session id 01a7d82a-88f9-459b-9ac2-031f4a338a28.
+20240518 13:45:36.669 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5172)
+20240518 13:45:36.670 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240518 13:45:36.671 - INFO - Typing text '20021209' into text field 'id = username'.
+20240518 13:45:36.865 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (195)
+20240518 13:45:36.866 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240518 13:45:36.867 - INFO - Typing password into text field 'id = password'.
+20240518 13:45:36.901 - INFO - Temporally setting log level to: NONE
+20240518 13:45:36.901 - INFO - Log level changed from INFO to NONE.
+20240518 13:45:36.936 - INFO - Log level changed from NONE to INFO.
+20240518 13:45:36.937 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (71)
+20240518 13:45:36.937 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 13:45:36.938 - INFO - Clicking button 'name = submit'.
+20240518 13:45:37.028 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (91)
+20240518 13:45:37.029 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 13:45:37.029 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 13:45:37.030 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 13:45:37.051 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (22)
+20240518 13:45:37.051 - INFO - ${alert} = True
+20240518 13:45:37.051 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (22)
+20240518 13:45:37.052 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240518 13:45:37.052 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240518 13:45:37.052 - INFO - 用户20021209登录成功
+20240518 13:45:37.053 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 13:45:37.053 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (1)
+20240518 13:45:37.053 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 13:45:37.054 - INFO - Returning from the enclosing user keyword.
+20240518 13:45:37.054 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 13:45:37.054 - INFO - ${alert} = True
+20240518 13:45:37.055 - INFO - +---- END KEYWORD: general.login (5557)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:37.055 - INFO - +---- START KEYWORD: general.modify info [ nick lyh | 123456 | 123456 | 123456 | 山东小学 | 2761991408@qq.com | 20021209 ]
+20240518 13:45:37.056 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${modify_info} ]
+20240518 13:45:37.056 - INFO - Opening url 'http://211.87.224.235:8800/modifypage.php'
+20240518 13:45:37.230 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (173)
+20240518 13:45:37.230 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 13:45:37.232 - INFO - Typing text 'nick lyh' into text field 'name = nick'.
+20240518 13:45:37.344 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (113)
+20240518 13:45:37.344 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = opassword | ${opwd} ]
+20240518 13:45:37.345 - INFO - Typing text '123456' into text field 'name = opassword'.
+20240518 13:45:37.370 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (26)
+20240518 13:45:37.370 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = npassword | ${npwd} ]
+20240518 13:45:37.372 - INFO - Typing text '123456' into text field 'name = npassword'.
+20240518 13:45:37.409 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (38)
+20240518 13:45:37.409 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${rpt} ]
+20240518 13:45:37.411 - INFO - Typing text '123456' into text field 'name = rptpassword'.
+20240518 13:45:37.452 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (43)
+20240518 13:45:37.452 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 13:45:37.454 - INFO - Typing text '山东小学' into text field 'name = school'.
+20240518 13:45:37.505 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (52)
+20240518 13:45:37.505 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 13:45:37.507 - INFO - Typing text '2761991408@qq.com' into text field 'name = email'.
+20240518 13:45:37.568 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (63)
+20240518 13:45:37.568 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 13:45:37.569 - INFO - Clicking button 'name = submit'.
+20240518 13:45:37.732 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (164)
+20240518 13:45:37.732 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 13:45:37.733 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 13:45:37.734 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 13:45:37.784 - WARN - Keyword 'Capture Page Screenshot' could not be run on failure: Message: [Exception... "Data conversion failed because significant data would be lost"  nsresult: "0x80460003 (NS_ERROR_LOSS_OF_SIGNIFICANT_DATA)"  location: "<unknown>"  data: no]
+20240518 13:45:37.785 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: Old Password Wrong
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 13:45:37.787 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: Old Password Wrong
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 13:45:37.788 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (54)
+20240518 13:45:37.788 - INFO - ${alert} = False
+20240518 13:45:37.789 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (56)
+20240518 13:45:37.789 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}修改成功 | ELSE | Log | 用户${uname}修改失败 ]
+20240518 13:45:37.790 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}修改失败 ]
+20240518 13:45:37.791 - INFO - 用户20021209修改失败
+20240518 13:45:37.793 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 13:45:37.794 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (4)
+20240518 13:45:37.794 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 13:45:37.795 - INFO - Returning from the enclosing user keyword.
+20240518 13:45:37.796 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 13:45:37.796 - INFO - ${alert} = False
+20240518 13:45:37.796 - INFO - +---- END KEYWORD: general.modify info (741)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:37.796 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 13:45:37.797 - DEBUG - Argument types are:
+<class 'str'>
+20240518 13:45:37.797 - INFO - ${res} = False
+20240518 13:45:37.798 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:37.798 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 13:45:37.798 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 13:45:37.798 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (0)
+------------------------------------------------------------------------------
+20240518 13:45:37.799 - INFO - +--- END TEST: pwd_err (6303)
+------------------------------------------------------------------------------
+20240518 13:45:37.800 - INFO - +--- START TEST: npwd_too_short [ ]
+------------------------------------------------------------------------------
+20240518 13:45:37.801 - INFO - +---- START KEYWORD: general.login [ 20021209 | 1234567 ]
+20240518 13:45:37.802 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240518 13:45:37.803 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240518 13:45:43.391 - DEBUG - Opened browser with session id b4fdafc8-ef00-4a8a-a0d4-8713a7203adc.
+20240518 13:45:43.392 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5590)
+20240518 13:45:43.393 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240518 13:45:43.396 - INFO - Typing text '20021209' into text field 'id = username'.
+20240518 13:45:43.626 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (233)
+20240518 13:45:43.626 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240518 13:45:43.627 - INFO - Typing password into text field 'id = password'.
+20240518 13:45:43.655 - INFO - Temporally setting log level to: NONE
+20240518 13:45:43.655 - INFO - Log level changed from INFO to NONE.
+20240518 13:45:43.674 - INFO - Log level changed from NONE to INFO.
+20240518 13:45:43.674 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (48)
+20240518 13:45:43.675 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 13:45:43.675 - INFO - Clicking button 'name = submit'.
+20240518 13:45:43.791 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (116)
+20240518 13:45:43.792 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 13:45:43.792 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 13:45:43.794 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 13:45:43.811 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (18)
+20240518 13:45:43.811 - INFO - ${alert} = True
+20240518 13:45:43.811 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (20)
+20240518 13:45:43.812 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240518 13:45:43.813 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240518 13:45:43.813 - INFO - 用户20021209登录成功
+20240518 13:45:43.815 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 13:45:43.817 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (4)
+20240518 13:45:43.818 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 13:45:43.819 - INFO - Returning from the enclosing user keyword.
+20240518 13:45:43.820 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (2)
+20240518 13:45:43.820 - INFO - ${alert} = True
+20240518 13:45:43.821 - INFO - +---- END KEYWORD: general.login (6020)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:43.821 - INFO - +---- START KEYWORD: general.modify info [ nick lyh | 1234567 | 123 | 123 | 山东小学 | 2761991408@qq.com | 20021209 ]
+20240518 13:45:43.823 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${modify_info} ]
+20240518 13:45:43.823 - INFO - Opening url 'http://211.87.224.235:8800/modifypage.php'
+20240518 13:45:44.059 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (236)
+20240518 13:45:44.059 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 13:45:44.060 - INFO - Typing text 'nick lyh' into text field 'name = nick'.
+20240518 13:45:44.099 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (39)
+20240518 13:45:44.099 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = opassword | ${opwd} ]
+20240518 13:45:44.100 - INFO - Typing text '1234567' into text field 'name = opassword'.
+20240518 13:45:44.125 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (25)
+20240518 13:45:44.125 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = npassword | ${npwd} ]
+20240518 13:45:44.127 - INFO - Typing text '123' into text field 'name = npassword'.
+20240518 13:45:44.169 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (44)
+20240518 13:45:44.170 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${rpt} ]
+20240518 13:45:44.170 - INFO - Typing text '123' into text field 'name = rptpassword'.
+20240518 13:45:44.206 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (35)
+20240518 13:45:44.206 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 13:45:44.208 - INFO - Typing text '山东小学' into text field 'name = school'.
+20240518 13:45:44.239 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (33)
+20240518 13:45:44.239 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 13:45:44.240 - INFO - Typing text '2761991408@qq.com' into text field 'name = email'.
+20240518 13:45:44.274 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (35)
+20240518 13:45:44.274 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 13:45:44.275 - INFO - Clicking button 'name = submit'.
+20240518 13:45:44.420 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (146)
+20240518 13:45:44.421 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 13:45:44.421 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 13:45:44.422 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 13:45:44.663 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-1.png"><img src="selenium-screenshot-1.png" width="800px"></a>
+20240518 13:45:44.663 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: Password should be Longer than 6!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 13:45:44.665 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: Password should be Longer than 6!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 13:45:44.667 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (245)
+20240518 13:45:44.667 - INFO - ${alert} = False
+20240518 13:45:44.667 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (246)
+20240518 13:45:44.667 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}修改成功 | ELSE | Log | 用户${uname}修改失败 ]
+20240518 13:45:44.668 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}修改失败 ]
+20240518 13:45:44.668 - INFO - 用户20021209修改失败
+20240518 13:45:44.669 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
+20240518 13:45:44.669 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (2)
+20240518 13:45:44.669 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 13:45:44.669 - INFO - Returning from the enclosing user keyword.
+20240518 13:45:44.669 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (0)
+20240518 13:45:44.670 - INFO - ${alert} = False
+20240518 13:45:44.670 - INFO - +---- END KEYWORD: general.modify info (849)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:44.670 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 13:45:44.671 - DEBUG - Argument types are:
+<class 'str'>
+20240518 13:45:44.671 - INFO - ${res} = False
+20240518 13:45:44.671 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:44.671 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 13:45:44.671 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 13:45:44.672 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (1)
+------------------------------------------------------------------------------
+20240518 13:45:44.673 - INFO - +--- END TEST: npwd_too_short (6873)
+------------------------------------------------------------------------------
+20240518 13:45:44.673 - INFO - +--- START TEST: rpt_err [ ]
+------------------------------------------------------------------------------
+20240518 13:45:44.674 - INFO - +---- START KEYWORD: general.login [ 20021209 | 1234567 ]
+20240518 13:45:44.675 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240518 13:45:44.676 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240518 13:45:50.599 - DEBUG - Opened browser with session id cebadc89-af73-4225-bbf0-9c3003398218.
+20240518 13:45:50.600 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5924)
+20240518 13:45:50.600 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240518 13:45:50.601 - INFO - Typing text '20021209' into text field 'id = username'.
+20240518 13:45:50.949 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (348)
+20240518 13:45:50.949 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240518 13:45:50.950 - INFO - Typing password into text field 'id = password'.
+20240518 13:45:50.973 - INFO - Temporally setting log level to: NONE
+20240518 13:45:50.974 - INFO - Log level changed from INFO to NONE.
+20240518 13:45:51.025 - INFO - Log level changed from NONE to INFO.
+20240518 13:45:51.026 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (76)
+20240518 13:45:51.026 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 13:45:51.027 - INFO - Clicking button 'name = submit'.
+20240518 13:45:51.248 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (221)
+20240518 13:45:51.248 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 13:45:51.248 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 13:45:51.249 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 13:45:51.278 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (27)
+20240518 13:45:51.278 - INFO - ${alert} = True
+20240518 13:45:51.280 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (31)
+20240518 13:45:51.280 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240518 13:45:51.282 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240518 13:45:51.283 - INFO - 用户20021209登录成功
+20240518 13:45:51.284 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 13:45:51.284 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (4)
+20240518 13:45:51.285 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 13:45:51.286 - INFO - Returning from the enclosing user keyword.
+20240518 13:45:51.287 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 13:45:51.287 - INFO - ${alert} = True
+20240518 13:45:51.289 - INFO - +---- END KEYWORD: general.login (6614)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:51.289 - INFO - +---- START KEYWORD: general.modify info [ nick lyh | 1234567 | 123456 | 1234567 | 山东小学 | 2761991408@qq.com | 20021209 ]
+20240518 13:45:51.291 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${modify_info} ]
+20240518 13:45:51.297 - INFO - Opening url 'http://211.87.224.235:8800/modifypage.php'
+20240518 13:45:51.620 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (328)
+20240518 13:45:51.620 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 13:45:51.621 - INFO - Typing text 'nick lyh' into text field 'name = nick'.
+20240518 13:45:51.736 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (116)
+20240518 13:45:51.737 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = opassword | ${opwd} ]
+20240518 13:45:51.738 - INFO - Typing text '1234567' into text field 'name = opassword'.
+20240518 13:45:51.786 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (49)
+20240518 13:45:51.787 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = npassword | ${npwd} ]
+20240518 13:45:51.788 - INFO - Typing text '123456' into text field 'name = npassword'.
+20240518 13:45:51.834 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (46)
+20240518 13:45:51.834 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${rpt} ]
+20240518 13:45:51.836 - INFO - Typing text '1234567' into text field 'name = rptpassword'.
+20240518 13:45:52.118 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (284)
+20240518 13:45:52.118 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 13:45:52.119 - INFO - Typing text '山东小学' into text field 'name = school'.
+20240518 13:45:52.191 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (71)
+20240518 13:45:52.191 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 13:45:52.194 - INFO - Typing text '2761991408@qq.com' into text field 'name = email'.
+20240518 13:45:52.250 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (57)
+20240518 13:45:52.250 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 13:45:52.253 - INFO - Clicking button 'name = submit'.
+20240518 13:45:52.448 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (198)
+20240518 13:45:52.448 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 13:45:52.448 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 13:45:52.449 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 13:45:52.501 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-2.png"><img src="selenium-screenshot-2.png" width="800px"></a>
+20240518 13:45:52.501 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: Two Passwords Not Same!
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 13:45:52.503 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: Two Passwords Not Same!
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 13:45:52.504 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (55)
+20240518 13:45:52.504 - INFO - ${alert} = False
+20240518 13:45:52.504 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (56)
+20240518 13:45:52.505 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}修改成功 | ELSE | Log | 用户${uname}修改失败 ]
+20240518 13:45:52.507 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}修改失败 ]
+20240518 13:45:52.508 - INFO - 用户20021209修改失败
+20240518 13:45:52.509 - INFO - +------ END KEYWORD: BuiltIn.Log (2)
+20240518 13:45:52.509 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (4)
+20240518 13:45:52.510 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 13:45:52.510 - INFO - Returning from the enclosing user keyword.
+20240518 13:45:52.511 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (0)
+20240518 13:45:52.511 - INFO - ${alert} = False
+20240518 13:45:52.511 - INFO - +---- END KEYWORD: general.modify info (1222)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:52.511 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 13:45:52.512 - DEBUG - Argument types are:
+<class 'str'>
+20240518 13:45:52.512 - INFO - ${res} = False
+20240518 13:45:52.512 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:52.512 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 13:45:52.513 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 13:45:52.513 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (1)
+------------------------------------------------------------------------------
+20240518 13:45:52.514 - INFO - +--- END TEST: rpt_err (7840)
+------------------------------------------------------------------------------
+20240518 13:45:52.514 - INFO - +--- START TEST: school_too_long [ ]
+------------------------------------------------------------------------------
+20240518 13:45:52.515 - INFO - +---- START KEYWORD: general.login [ 20021209 | 1234567 ]
+20240518 13:45:52.516 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240518 13:45:52.517 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240518 13:45:58.774 - DEBUG - Opened browser with session id c763192c-bc40-4890-b660-13e7d011bff7.
+20240518 13:45:58.775 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (6258)
+20240518 13:45:58.775 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240518 13:45:58.776 - INFO - Typing text '20021209' into text field 'id = username'.
+20240518 13:45:59.077 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (302)
+20240518 13:45:59.078 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240518 13:45:59.080 - INFO - Typing password into text field 'id = password'.
+20240518 13:45:59.143 - INFO - Temporally setting log level to: NONE
+20240518 13:45:59.143 - INFO - Log level changed from INFO to NONE.
+20240518 13:45:59.177 - INFO - Log level changed from NONE to INFO.
+20240518 13:45:59.178 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (100)
+20240518 13:45:59.178 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 13:45:59.180 - INFO - Clicking button 'name = submit'.
+20240518 13:45:59.359 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (181)
+20240518 13:45:59.359 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 13:45:59.360 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 13:45:59.360 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 13:45:59.426 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (66)
+20240518 13:45:59.427 - INFO - ${alert} = True
+20240518 13:45:59.427 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (68)
+20240518 13:45:59.427 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240518 13:45:59.428 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240518 13:45:59.429 - INFO - 用户20021209登录成功
+20240518 13:45:59.430 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 13:45:59.432 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (3)
+20240518 13:45:59.432 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 13:45:59.433 - INFO - Returning from the enclosing user keyword.
+20240518 13:45:59.434 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 13:45:59.434 - INFO - ${alert} = True
+20240518 13:45:59.434 - INFO - +---- END KEYWORD: general.login (6919)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:45:59.434 - INFO - +---- START KEYWORD: general.modify info [ nick lyh | 1234567 | 1234567 | 1234567 | 山东大学小学中学幼儿园大学四位一体学校 | 2761991408@qq.com | 20021209 ]
+20240518 13:45:59.435 - INFO - +----- START KEYWORD: SeleniumLibrary.Go To [ ${modify_info} ]
+20240518 13:45:59.436 - INFO - Opening url 'http://211.87.224.235:8800/modifypage.php'
+20240518 13:45:59.727 - INFO - +----- END KEYWORD: SeleniumLibrary.Go To (292)
+20240518 13:45:59.728 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 13:45:59.730 - INFO - Typing text 'nick lyh' into text field 'name = nick'.
+20240518 13:45:59.960 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (232)
+20240518 13:45:59.961 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = opassword | ${opwd} ]
+20240518 13:45:59.962 - INFO - Typing text '1234567' into text field 'name = opassword'.
+20240518 13:45:59.993 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (32)
+20240518 13:45:59.993 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = npassword | ${npwd} ]
+20240518 13:45:59.995 - INFO - Typing text '1234567' into text field 'name = npassword'.
+20240518 13:46:00.047 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (54)
+20240518 13:46:00.048 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${rpt} ]
+20240518 13:46:00.050 - INFO - Typing text '1234567' into text field 'name = rptpassword'.
+20240518 13:46:00.342 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (293)
+20240518 13:46:00.342 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 13:46:00.344 - INFO - Typing text '山东大学小学中学幼儿园大学四位一体学校' into text field 'name = school'.
+20240518 13:46:00.537 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (195)
+20240518 13:46:00.538 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 13:46:00.539 - INFO - Typing text '2761991408@qq.com' into text field 'name = email'.
+20240518 13:46:00.737 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (198)
+20240518 13:46:00.737 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 13:46:00.738 - INFO - Clicking button 'name = submit'.
+20240518 13:46:01.373 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (635)
+20240518 13:46:01.373 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 13:46:01.374 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 13:46:01.375 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 13:46:01.438 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (63)
+20240518 13:46:01.438 - INFO - ${alert} = True
+20240518 13:46:01.439 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (65)
+20240518 13:46:01.439 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}修改成功 | ELSE | Log | 用户${uname}修改失败 ]
+20240518 13:46:01.440 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}修改成功 ]
+20240518 13:46:01.441 - INFO - 用户20021209修改成功
+20240518 13:46:01.441 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 13:46:01.442 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (3)
+20240518 13:46:01.442 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 13:46:01.442 - INFO - Returning from the enclosing user keyword.
+20240518 13:46:01.443 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 13:46:01.444 - INFO - ${alert} = True
+20240518 13:46:01.444 - INFO - +---- END KEYWORD: general.modify info (2010)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:46:01.444 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 13:46:01.445 - DEBUG - Argument types are:
+<class 'str'>
+20240518 13:46:01.445 - INFO - ${res} = False
+20240518 13:46:01.445 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 13:46:01.446 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 13:46:01.451 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 13:46:01.453 - FAIL - True != False
+20240518 13:46:01.454 - DEBUG - Traceback (most recent call last):
+  None
+AssertionError: True != False
+20240518 13:46:01.455 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (8)
+------------------------------------------------------------------------------
+20240518 13:46:01.456 - INFO - +--- END TEST: school_too_long (8941)
+------------------------------------------------------------------------------
+20240518 13:46:01.462 - INFO - +-- END SUITE: Lab6.WebAutomation.ModifyInfo (36834)
+==============================================================================
+20240518 13:46:01.466 - INFO - +- END SUITE: Lab6.WebAutomation (36840)
+==============================================================================
+20240518 13:46:01.475 - INFO - + END SUITE: Lab6 (36862)
+==============================================================================

@@ -1,0 +1,15 @@
+int  main() 
+{
+    // freopen("/config/workspace/answer/test.in","r",stdin);
+    // freopen("/config/workspace/answer/test.out","w",stdout);
+    char t[max];
+    cin >> t;
+    int len = strlen(t);
+    int next[len];
+    getNext(t,next);
+    for(int i=0;i<len;i++){
+        cout << next[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}

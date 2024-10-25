@@ -1,0 +1,7 @@
+command: robot -A C:\Users\ADMINI~1\AppData\Local\Temp\RIDEes89yndm.d\argfile.txt --listener D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py:57505:False D:\workSpace\st\lab6
+
+[ SENDING STOP SIGNAL ]
+
+
+
+Test finished 20240518 16:29:04

@@ -1,0 +1,554 @@
+==============================================================================
+20240518 12:58:14.699 - INFO - + START SUITE: Lab6 [ ]
+==============================================================================
+20240518 12:58:14.701 - INFO - +- START SUITE: Lab6.WebAutomation [ ]
+==============================================================================
+20240518 12:58:14.924 - INFO - +-- START SUITE: Lab6.WebAutomation.Register [ ]
+==============================================================================
+20240518 12:58:14.924 - INFO - +--- START TEST: success [ ]
+------------------------------------------------------------------------------
+20240518 12:58:14.933 - INFO - +---- START KEYWORD: general.register [ 20021209 | nickname | 123456 | 123456 | sdu | 3054117680@qq.com ]
+20240518 12:58:14.935 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${register} | ${ff} ]
+20240518 12:58:14.935 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.
+20240518 12:58:20.182 - DEBUG - Opened browser with session id cf6411bc-3c55-4d9d-9741-909fb1ff8502.
+20240518 12:58:20.183 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5249)
+20240518 12:58:20.183 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uname} ]
+20240518 12:58:20.185 - INFO - Typing text '20021209' into text field 'name = user_id'.
+20240518 12:58:20.391 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (208)
+20240518 12:58:20.391 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 12:58:20.392 - INFO - Typing text 'nickname' into text field 'name = nick'.
+20240518 12:58:20.462 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (71)
+20240518 12:58:20.462 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = password | ${pwd} ]
+20240518 12:58:20.464 - INFO - Typing text '123456' into text field 'name = password'.
+20240518 12:58:20.501 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (38)
+20240518 12:58:20.501 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${repeat} ]
+20240518 12:58:20.502 - INFO - Typing text '123456' into text field 'name = rptpassword'.
+20240518 12:58:20.643 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (142)
+20240518 12:58:20.643 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 12:58:20.645 - INFO - Typing text 'sdu' into text field 'name = school'.
+20240518 12:58:20.713 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (68)
+20240518 12:58:20.714 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 12:58:20.716 - INFO - Typing text '3054117680@qq.com' into text field 'name = email'.
+20240518 12:58:20.771 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (57)
+20240518 12:58:20.772 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:58:20.772 - INFO - Clicking button 'name = submit'.
+20240518 12:58:21.003 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (230)
+20240518 12:58:21.003 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:58:21.003 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:58:21.004 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:58:21.010 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (7)
+20240518 12:58:21.010 - INFO - ${alert} = True
+20240518 12:58:21.010 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (7)
+20240518 12:58:21.011 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}登录成功 | ELSE | Log | 用户${uname}登陆失败 ]
+20240518 12:58:21.013 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}登录成功 ]
+20240518 12:58:21.016 - INFO - 用户20021209登录成功
+20240518 12:58:21.017 - INFO - +------ END KEYWORD: BuiltIn.Log (4)
+20240518 12:58:21.018 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (8)
+20240518 12:58:21.018 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:58:21.019 - INFO - Returning from the enclosing user keyword.
+20240518 12:58:21.019 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 12:58:21.020 - INFO - ${alert} = True
+20240518 12:58:21.021 - INFO - +---- END KEYWORD: general.register (6087)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:21.021 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ True ]
+20240518 12:58:21.021 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:58:21.022 - INFO - ${res} = True
+20240518 12:58:21.022 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:21.022 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:58:21.023 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:58:21.024 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (1)
+------------------------------------------------------------------------------
+20240518 12:58:21.024 - INFO - +--- END TEST: success (6100)
+------------------------------------------------------------------------------
+20240518 12:58:21.025 - INFO - +--- START TEST: uname_format_err [ ]
+------------------------------------------------------------------------------
+20240518 12:58:21.025 - INFO - +---- START KEYWORD: general.register [ 안녕하세요 | nickname | 123456 | 123456 | sdu | 3054117680@qq.com ]
+20240518 12:58:21.026 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${register} | ${ff} ]
+20240518 12:58:21.029 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.
+20240518 12:58:26.311 - DEBUG - Opened browser with session id 3c6d1079-8623-4889-92ab-25f14f70f27d.
+20240518 12:58:26.311 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5285)
+20240518 12:58:26.312 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uname} ]
+20240518 12:58:26.313 - INFO - Typing text '안녕하세요' into text field 'name = user_id'.
+20240518 12:58:26.570 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (258)
+20240518 12:58:26.570 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 12:58:26.571 - INFO - Typing text 'nickname' into text field 'name = nick'.
+20240518 12:58:26.645 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (75)
+20240518 12:58:26.646 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = password | ${pwd} ]
+20240518 12:58:26.647 - INFO - Typing text '123456' into text field 'name = password'.
+20240518 12:58:26.708 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (61)
+20240518 12:58:26.708 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${repeat} ]
+20240518 12:58:26.709 - INFO - Typing text '123456' into text field 'name = rptpassword'.
+20240518 12:58:26.814 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (106)
+20240518 12:58:26.829 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 12:58:26.829 - INFO - Typing text 'sdu' into text field 'name = school'.
+20240518 12:58:26.885 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (55)
+20240518 12:58:26.885 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 12:58:26.890 - INFO - Typing text '3054117680@qq.com' into text field 'name = email'.
+20240518 12:58:26.955 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (70)
+20240518 12:58:26.955 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:58:26.956 - INFO - Clicking button 'name = submit'.
+20240518 12:58:27.144 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (189)
+20240518 12:58:27.144 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:58:27.144 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:58:27.145 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:58:27.224 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-1.png"><img src="selenium-screenshot-1.png" width="800px"></a>
+20240518 12:58:27.225 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: User ID can only contain NUMBERs & LETTERs!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:58:27.378 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: User ID can only contain NUMBERs & LETTERs!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:58:27.379 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (234)
+20240518 12:58:27.379 - INFO - ${alert} = False
+20240518 12:58:27.379 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (235)
+20240518 12:58:27.379 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}登录成功 | ELSE | Log | 用户${uname}登陆失败 ]
+20240518 12:58:27.380 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}登陆失败 ]
+20240518 12:58:27.380 - INFO - 用户안녕하세요登陆失败
+20240518 12:58:27.381 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 12:58:27.381 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (2)
+20240518 12:58:27.382 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:58:27.382 - INFO - Returning from the enclosing user keyword.
+20240518 12:58:27.382 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (0)
+20240518 12:58:27.383 - INFO - ${alert} = False
+20240518 12:58:27.383 - INFO - +---- END KEYWORD: general.register (6358)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:27.384 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 12:58:27.384 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:58:27.385 - INFO - ${res} = False
+20240518 12:58:27.386 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (2)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:27.387 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:58:27.388 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:58:27.388 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (1)
+------------------------------------------------------------------------------
+20240518 12:58:27.389 - INFO - +--- END TEST: uname_format_err (6364)
+------------------------------------------------------------------------------
+20240518 12:58:27.389 - INFO - +--- START TEST: uname_too_short [ ]
+------------------------------------------------------------------------------
+20240518 12:58:27.390 - INFO - +---- START KEYWORD: general.register [ 1 | nickname | 123456 | 123456 | sdu | 3054117680@qq.com ]
+20240518 12:58:27.391 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${register} | ${ff} ]
+20240518 12:58:27.392 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.
+20240518 12:58:32.766 - DEBUG - Opened browser with session id f0231ae6-b492-4253-a38a-e5723e834f3c.
+20240518 12:58:32.767 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5376)
+20240518 12:58:32.767 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uname} ]
+20240518 12:58:32.768 - INFO - Typing text '1' into text field 'name = user_id'.
+20240518 12:58:32.975 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (207)
+20240518 12:58:32.975 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 12:58:32.977 - INFO - Typing text 'nickname' into text field 'name = nick'.
+20240518 12:58:33.032 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (57)
+20240518 12:58:33.032 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = password | ${pwd} ]
+20240518 12:58:33.034 - INFO - Typing text '123456' into text field 'name = password'.
+20240518 12:58:33.096 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (63)
+20240518 12:58:33.096 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${repeat} ]
+20240518 12:58:33.097 - INFO - Typing text '123456' into text field 'name = rptpassword'.
+20240518 12:58:33.206 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (109)
+20240518 12:58:33.206 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 12:58:33.208 - INFO - Typing text 'sdu' into text field 'name = school'.
+20240518 12:58:33.239 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (33)
+20240518 12:58:33.239 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 12:58:33.240 - INFO - Typing text '3054117680@qq.com' into text field 'name = email'.
+20240518 12:58:33.294 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (54)
+20240518 12:58:33.294 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:58:33.295 - INFO - Clicking button 'name = submit'.
+20240518 12:58:33.500 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (206)
+20240518 12:58:33.500 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:58:33.500 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:58:33.501 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:58:33.569 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-2.png"><img src="selenium-screenshot-2.png" width="800px"></a>
+20240518 12:58:33.569 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog:  用户名至少3位字符!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:58:33.572 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog:  用户名至少3位字符!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:58:33.572 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (72)
+20240518 12:58:33.573 - INFO - ${alert} = False
+20240518 12:58:33.574 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (73)
+20240518 12:58:33.574 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}登录成功 | ELSE | Log | 用户${uname}登陆失败 ]
+20240518 12:58:33.576 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}登陆失败 ]
+20240518 12:58:33.577 - INFO - 用户1登陆失败
+20240518 12:58:33.579 - INFO - +------ END KEYWORD: BuiltIn.Log (2)
+20240518 12:58:33.579 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (5)
+20240518 12:58:33.580 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:58:33.581 - INFO - Returning from the enclosing user keyword.
+20240518 12:58:33.582 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 12:58:33.582 - INFO - ${alert} = False
+20240518 12:58:33.583 - INFO - +---- END KEYWORD: general.register (6193)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:33.583 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 12:58:33.584 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:58:33.584 - INFO - ${res} = False
+20240518 12:58:33.585 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:33.585 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:58:33.585 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:58:33.586 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (1)
+------------------------------------------------------------------------------
+20240518 12:58:33.587 - INFO - +--- END TEST: uname_too_short (6197)
+------------------------------------------------------------------------------
+20240518 12:58:33.588 - INFO - +--- START TEST: pwd_too_short [ ]
+------------------------------------------------------------------------------
+20240518 12:58:33.588 - INFO - +---- START KEYWORD: general.register [ 20021209 | nickname | 123 | 123 | sdu | 3054117680@qq.com ]
+20240518 12:58:33.590 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${register} | ${ff} ]
+20240518 12:58:33.591 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.
+20240518 12:58:39.523 - DEBUG - Opened browser with session id f00d4992-744c-41b9-8ac1-e491bc6caba4.
+20240518 12:58:39.524 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5933)
+20240518 12:58:39.524 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uname} ]
+20240518 12:58:39.526 - INFO - Typing text '20021209' into text field 'name = user_id'.
+20240518 12:58:39.717 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (192)
+20240518 12:58:39.717 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 12:58:39.719 - INFO - Typing text 'nickname' into text field 'name = nick'.
+20240518 12:58:39.803 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (86)
+20240518 12:58:39.804 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = password | ${pwd} ]
+20240518 12:58:39.804 - INFO - Typing text '123' into text field 'name = password'.
+20240518 12:58:39.835 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (31)
+20240518 12:58:39.835 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${repeat} ]
+20240518 12:58:39.836 - INFO - Typing text '123' into text field 'name = rptpassword'.
+20240518 12:58:39.905 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (70)
+20240518 12:58:39.906 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 12:58:39.908 - INFO - Typing text 'sdu' into text field 'name = school'.
+20240518 12:58:40.044 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (137)
+20240518 12:58:40.044 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 12:58:40.045 - INFO - Typing text '3054117680@qq.com' into text field 'name = email'.
+20240518 12:58:40.094 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (49)
+20240518 12:58:40.094 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:58:40.094 - INFO - Clicking button 'name = submit'.
+20240518 12:58:40.325 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (231)
+20240518 12:58:40.325 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:58:40.325 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:58:40.326 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:58:40.414 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-3.png"><img src="selenium-screenshot-3.png" width="800px"></a>
+20240518 12:58:40.415 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: 密码至少6位! 
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:58:40.419 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: 密码至少6位! 
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:58:40.420 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (95)
+20240518 12:58:40.420 - INFO - ${alert} = False
+20240518 12:58:40.421 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (96)
+20240518 12:58:40.421 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}登录成功 | ELSE | Log | 用户${uname}登陆失败 ]
+20240518 12:58:40.422 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}登陆失败 ]
+20240518 12:58:40.423 - INFO - 用户20021209登陆失败
+20240518 12:58:40.424 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 12:58:40.424 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (3)
+20240518 12:58:40.425 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:58:40.425 - INFO - Returning from the enclosing user keyword.
+20240518 12:58:40.426 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (0)
+20240518 12:58:40.426 - INFO - ${alert} = False
+20240518 12:58:40.427 - INFO - +---- END KEYWORD: general.register (6838)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:40.427 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 12:58:40.428 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:58:40.428 - INFO - ${res} = False
+20240518 12:58:40.429 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:40.429 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:58:40.430 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:58:40.431 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (1)
+------------------------------------------------------------------------------
+20240518 12:58:40.434 - INFO - +--- END TEST: pwd_too_short (6844)
+------------------------------------------------------------------------------
+20240518 12:58:40.434 - INFO - +--- START TEST: pwd_rpt_err [ ]
+------------------------------------------------------------------------------
+20240518 12:58:40.436 - INFO - +---- START KEYWORD: general.register [ 20021209 | nickname | 123456 | 1234567 | sdu | 3054117680@qq.com ]
+20240518 12:58:40.437 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${register} | ${ff} ]
+20240518 12:58:40.439 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.
+20240518 12:58:46.859 - DEBUG - Opened browser with session id c43f0e10-08a8-41d9-818e-af914065cd85.
+20240518 12:58:46.861 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (6423)
+20240518 12:58:46.861 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uname} ]
+20240518 12:58:46.863 - INFO - Typing text '20021209' into text field 'name = user_id'.
+20240518 12:58:47.184 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (322)
+20240518 12:58:47.184 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 12:58:47.185 - INFO - Typing text 'nickname' into text field 'name = nick'.
+20240518 12:58:47.241 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (57)
+20240518 12:58:47.242 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = password | ${pwd} ]
+20240518 12:58:47.244 - INFO - Typing text '123456' into text field 'name = password'.
+20240518 12:58:47.331 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (88)
+20240518 12:58:47.331 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${repeat} ]
+20240518 12:58:47.333 - INFO - Typing text '1234567' into text field 'name = rptpassword'.
+20240518 12:58:47.539 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (206)
+20240518 12:58:47.539 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 12:58:47.545 - INFO - Typing text 'sdu' into text field 'name = school'.
+20240518 12:58:47.662 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (121)
+20240518 12:58:47.663 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 12:58:47.666 - INFO - Typing text '3054117680@qq.com' into text field 'name = email'.
+20240518 12:58:47.762 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (99)
+20240518 12:58:47.762 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:58:47.763 - INFO - Clicking button 'name = submit'.
+20240518 12:58:48.054 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (292)
+20240518 12:58:48.055 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:58:48.056 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:58:48.058 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:58:48.141 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-4.png"><img src="selenium-screenshot-4.png" width="800px"></a>
+20240518 12:58:48.142 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: 两次输入的密码不一致!!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:58:48.145 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: 两次输入的密码不一致!!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:58:48.146 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (89)
+20240518 12:58:48.146 - INFO - ${alert} = False
+20240518 12:58:48.147 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (92)
+20240518 12:58:48.147 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}登录成功 | ELSE | Log | 用户${uname}登陆失败 ]
+20240518 12:58:48.148 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}登陆失败 ]
+20240518 12:58:48.148 - INFO - 用户20021209登陆失败
+20240518 12:58:48.149 - INFO - +------ END KEYWORD: BuiltIn.Log (0)
+20240518 12:58:48.149 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (2)
+20240518 12:58:48.149 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:58:48.149 - INFO - Returning from the enclosing user keyword.
+20240518 12:58:48.150 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 12:58:48.150 - INFO - ${alert} = False
+20240518 12:58:48.150 - INFO - +---- END KEYWORD: general.register (7714)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:48.151 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 12:58:48.151 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:58:48.151 - INFO - ${res} = False
+20240518 12:58:48.152 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:48.152 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:58:48.152 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:58:48.152 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (0)
+------------------------------------------------------------------------------
+20240518 12:58:48.153 - INFO - +--- END TEST: pwd_rpt_err (7719)
+------------------------------------------------------------------------------
+20240518 12:58:48.154 - INFO - +--- START TEST: school_too_long [ ]
+------------------------------------------------------------------------------
+20240518 12:58:48.154 - INFO - +---- START KEYWORD: general.register [ 20021209 | nickname | 123456 | 123456 | 我的学校的名字好长好长好长好长好长好长好长好长好长好长 | 3054117680@qq.com ]
+20240518 12:58:48.156 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${register} | ${ff} ]
+20240518 12:58:48.158 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.
+20240518 12:58:55.630 - DEBUG - Opened browser with session id 5643e2de-d7b2-4d38-b767-2f40ede29fcc.
+20240518 12:58:55.631 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (7474)
+20240518 12:58:55.631 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uname} ]
+20240518 12:58:55.633 - INFO - Typing text '20021209' into text field 'name = user_id'.
+20240518 12:58:57.090 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (1457)
+20240518 12:58:57.091 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = nick | ${nickname} ]
+20240518 12:58:57.107 - INFO - Typing text 'nickname' into text field 'name = nick'.
+20240518 12:58:57.743 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (652)
+20240518 12:58:57.743 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = password | ${pwd} ]
+20240518 12:58:57.745 - INFO - Typing text '123456' into text field 'name = password'.
+20240518 12:58:57.860 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (117)
+20240518 12:58:57.861 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = rptpassword | ${repeat} ]
+20240518 12:58:57.862 - INFO - Typing text '123456' into text field 'name = rptpassword'.
+20240518 12:58:58.261 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (399)
+20240518 12:58:58.261 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = school | ${school} ]
+20240518 12:58:58.262 - INFO - Typing text '我的学校的名字好长好长好长好长好长好长好长好长好长好长' into text field 'name = school'.
+20240518 12:58:58.414 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (153)
+20240518 12:58:58.414 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = email | ${email} ]
+20240518 12:58:58.416 - INFO - Typing text '3054117680@qq.com' into text field 'name = email'.
+20240518 12:58:58.508 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (93)
+20240518 12:58:58.508 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:58:58.509 - INFO - Clicking button 'name = submit'.
+20240518 12:58:58.949 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (439)
+20240518 12:58:58.949 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:58:58.950 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:58:58.952 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:58:59.081 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-5.png"><img src="selenium-screenshot-5.png" width="800px"></a>
+20240518 12:58:59.082 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: School Name Too Long!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:58:59.084 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: School Name Too Long!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:58:59.086 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (134)
+20240518 12:58:59.088 - INFO - ${alert} = False
+20240518 12:58:59.090 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (140)
+20240518 12:58:59.091 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${uname}登录成功 | ELSE | Log | 用户${uname}登陆失败 ]
+20240518 12:58:59.092 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${uname}登陆失败 ]
+20240518 12:58:59.093 - INFO - 用户20021209登陆失败
+20240518 12:58:59.094 - INFO - +------ END KEYWORD: BuiltIn.Log (2)
+20240518 12:58:59.095 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (3)
+20240518 12:58:59.095 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:58:59.096 - INFO - Returning from the enclosing user keyword.
+20240518 12:58:59.096 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 12:58:59.097 - INFO - ${alert} = False
+20240518 12:58:59.097 - INFO - +---- END KEYWORD: general.register (10943)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:59.098 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 12:58:59.099 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:58:59.099 - INFO - ${res} = False
+20240518 12:58:59.100 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (2)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:58:59.101 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:58:59.104 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:58:59.106 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (5)
+------------------------------------------------------------------------------
+20240518 12:58:59.150 - INFO - +--- END TEST: school_too_long (10954)
+------------------------------------------------------------------------------
+20240518 12:58:59.158 - INFO - +-- END SUITE: Lab6.WebAutomation.Register (44449)
+==============================================================================
+20240518 12:58:59.163 - INFO - +- END SUITE: Lab6.WebAutomation (44460)
+==============================================================================
+20240518 12:58:59.170 - INFO - + END SUITE: Lab6 (44495)
+==============================================================================

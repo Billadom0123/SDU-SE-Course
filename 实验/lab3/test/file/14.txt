@@ -1,0 +1,23 @@
+import subprocess
+
+def kill_process_on_port(port):
+    try:
+        # 使用lsof命令查找运行在指定端口上的进程
+        result = subprocess.run(['lsof', '-i', f':{port}', '-n', '-P'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        
+        if result.returncode == 0:
+            # 解析lsof命令的输出，提取进程ID
+            lines = result.stdout.strip().split('\n')
+            for line in lines:
+                if 'LISTEN' in line and '/pid' in line:
+                    pid = int(line.split('/pid')[0].split()[1])
+                    # 使用kill命令杀死进程
+                    subprocess.run(['kill', str(pid)])
+                    return f"进程 {pid} 已被杀死。"
+        else:
+            return "没有找到运行在端口 {port} 上的进程。"
+    except Exception as e:
+        return f"发生错误：{e}"
+
+# 使用示例，杀死运行在3306端口上的进程
+print(kill_process_on_port(3306))

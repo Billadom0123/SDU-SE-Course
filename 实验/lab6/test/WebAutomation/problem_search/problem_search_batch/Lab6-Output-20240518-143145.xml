@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20240518 14:31:46.547" rpa="false" schemaversion="4">
+<suite id="s1" name="Lab6" source="D:\workSpace\st\lab6">
+<suite id="s1-s1" name="WebAutomation" source="D:\workSpace\st\lab6\WebAutomation">
+<suite id="s1-s1-s1" name="ProblemSearch" source="D:\workSpace\st\lab6\WebAutomation\ProblemSearch.robot">
+<test id="s1-s1-s1-t1" name="ByExistID" line="8">
+<kw name="problem search" library="general">
+<arg>\</arg>
+<arg>1000</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${problemset}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 14:31:47.186" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/problemset.php'.</msg>
+<status status="PASS" starttime="20240518 14:31:47.185" endtime="20240518 14:31:53.700"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = search</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 14:31:53.705" level="INFO">Typing text '' into text field 'name = search'.</msg>
+<status status="PASS" starttime="20240518 14:31:53.703" endtime="20240518 14:31:53.935"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = id</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 14:31:53.937" level="INFO">Typing text '1000' into text field 'name = id'.</msg>
+<status status="PASS" starttime="20240518 14:31:53.936" endtime="20240518 14:31:54.009"/>
+</kw>
+<if>
+<branch type="IF" condition="'${id}' != '${EMPTY}'">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:id</arg>
+<arg>\\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240518 14:31:54.011" endtime="20240518 14:31:54.073"/>
+</kw>
+<status status="PASS" starttime="20240518 14:31:54.010" endtime="20240518 14:31:54.073"/>
+</branch>
+<branch type="ELSE">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:search</arg>
+<arg>\\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240518 14:31:54.074" endtime="20240518 14:31:54.075"/>
+</kw>
+<status status="NOT RUN" starttime="20240518 14:31:54.074" endtime="20240518 14:31:54.075"/>
+</branch>
+<status status="PASS" starttime="20240518 14:31:54.010" endtime="20240518 14:31:54.075"/>
+</if>
+<status status="PASS" starttime="20240518 14:31:47.183" endtime="20240518 14:31:54.076"/>
+</kw>
+<tag>Problem</tag>
+<status status="PASS" starttime="20240518 14:31:47.182" endtime="20240518 14:31:54.076"/>
+</test>
+<test id="s1-s1-s1-t2" name="ByNotExistID" line="12">
+<kw name="problem search" library="general">
+<arg>\</arg>
+<arg>999</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${problemset}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 14:31:54.080" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/problemset.php'.</msg>
+<status status="PASS" starttime="20240518 14:31:54.079" endtime="20240518 14:31:59.950"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = search</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 14:31:59.953" level="INFO">Typing text '' into text field 'name = search'.</msg>
+<status status="PASS" starttime="20240518 14:31:59.951" endtime="20240518 14:32:00.202"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = id</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 14:32:00.205" level="INFO">Typing text '999' into text field 'name = id'.</msg>
+<status status="PASS" starttime="20240518 14:32:00.203" endtime="20240518 14:32:00.295"/>
+</kw>
+<if>
+<branch type="IF" condition="'${id}' != '${EMPTY}'">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:id</arg>
+<arg>\\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240518 14:32:00.299" endtime="20240518 14:32:00.337"/>
+</kw>
+<status status="PASS" starttime="20240518 14:32:00.296" endtime="20240518 14:32:00.337"/>
+</branch>
+<branch type="ELSE">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:search</arg>
+<arg>\\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240518 14:32:00.339" endtime="20240518 14:32:00.339"/>
+</kw>
+<status status="NOT RUN" starttime="20240518 14:32:00.338" endtime="20240518 14:32:00.339"/>
+</branch>
+<status status="PASS" starttime="20240518 14:32:00.296" endtime="20240518 14:32:00.340"/>
+</if>
+<status status="PASS" starttime="20240518 14:31:54.077" endtime="20240518 14:32:00.340"/>
+</kw>
+<tag>Problem</tag>
+<status status="PASS" starttime="20240518 14:31:54.077" endtime="20240518 14:32:00.341"/>
+</test>
+<test id="s1-s1-s1-t3" name="FuzzyByTitle" line="16">
+<kw name="problem search" library="general">
+<arg>算法</arg>
+<arg>\</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${problemset}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 14:32:00.348" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/problemset.php'.</msg>
+<status status="PASS" starttime="20240518 14:32:00.346" endtime="20240518 14:32:06.369"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = search</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 14:32:06.372" level="INFO">Typing text '算法' into text field 'name = search'.</msg>
+<status status="PASS" starttime="20240518 14:32:06.369" endtime="20240518 14:32:06.635"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = id</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 14:32:06.637" level="INFO">Typing text '' into text field 'name = id'.</msg>
+<status status="PASS" starttime="20240518 14:32:06.635" endtime="20240518 14:32:06.683"/>
+</kw>
+<if>
+<branch type="IF" condition="'${id}' != '${EMPTY}'">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:id</arg>
+<arg>\\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240518 14:32:06.686" endtime="20240518 14:32:06.687"/>
+</kw>
+<status status="NOT RUN" starttime="20240518 14:32:06.684" endtime="20240518 14:32:06.687"/>
+</branch>
+<branch type="ELSE">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:search</arg>
+<arg>\\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240518 14:32:06.689" endtime="20240518 14:32:06.742"/>
+</kw>
+<status status="PASS" starttime="20240518 14:32:06.688" endtime="20240518 14:32:06.743"/>
+</branch>
+<status status="PASS" starttime="20240518 14:32:06.684" endtime="20240518 14:32:06.743"/>
+</if>
+<status status="PASS" starttime="20240518 14:32:00.344" endtime="20240518 14:32:06.743"/>
+</kw>
+<tag>Problem</tag>
+<status status="PASS" starttime="20240518 14:32:00.342" endtime="20240518 14:32:06.744"/>
+</test>
+<test id="s1-s1-s1-t4" name="PreciseByTitle" line="20">
+<kw name="problem search" library="general">
+<arg>迷宫问题</arg>
+<arg>\</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${problemset}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 14:32:06.750" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/problemset.php'.</msg>
+<status status="PASS" starttime="20240518 14:32:06.748" endtime="20240518 14:32:12.829"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = search</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 14:32:12.835" level="INFO">Typing text '迷宫问题' into text field 'name = search'.</msg>
+<status status="PASS" starttime="20240518 14:32:12.832" endtime="20240518 14:32:13.138"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = id</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 14:32:13.141" level="INFO">Typing text '' into text field 'name = id'.</msg>
+<status status="PASS" starttime="20240518 14:32:13.139" endtime="20240518 14:32:13.189"/>
+</kw>
+<if>
+<branch type="IF" condition="'${id}' != '${EMPTY}'">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:id</arg>
+<arg>\\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240518 14:32:13.192" endtime="20240518 14:32:13.192"/>
+</kw>
+<status status="NOT RUN" starttime="20240518 14:32:13.189" endtime="20240518 14:32:13.193"/>
+</branch>
+<branch type="ELSE">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:search</arg>
+<arg>\\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240518 14:32:13.194" endtime="20240518 14:32:13.260"/>
+</kw>
+<status status="PASS" starttime="20240518 14:32:13.193" endtime="20240518 14:32:13.261"/>
+</branch>
+<status status="PASS" starttime="20240518 14:32:13.189" endtime="20240518 14:32:13.261"/>
+</if>
+<status status="PASS" starttime="20240518 14:32:06.747" endtime="20240518 14:32:13.262"/>
+</kw>
+<tag>Problem</tag>
+<status status="PASS" starttime="20240518 14:32:06.745" endtime="20240518 14:32:13.263"/>
+</test>
+<test id="s1-s1-s1-t5" name="None" line="24">
+<kw name="problem search" library="general">
+<arg>\</arg>
+<arg>\</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${problemset}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 14:32:13.268" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/problemset.php'.</msg>
+<status status="PASS" starttime="20240518 14:32:13.266" endtime="20240518 14:32:19.502"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = search</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 14:32:19.505" level="INFO">Typing text '' into text field 'name = search'.</msg>
+<status status="PASS" starttime="20240518 14:32:19.503" endtime="20240518 14:32:19.811"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = id</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 14:32:19.814" level="INFO">Typing text '' into text field 'name = id'.</msg>
+<status status="PASS" starttime="20240518 14:32:19.812" endtime="20240518 14:32:19.850"/>
+</kw>
+<if>
+<branch type="IF" condition="'${id}' != '${EMPTY}'">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:id</arg>
+<arg>\\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240518 14:32:19.854" endtime="20240518 14:32:19.854"/>
+</kw>
+<status status="NOT RUN" starttime="20240518 14:32:19.851" endtime="20240518 14:32:19.855"/>
+</branch>
+<branch type="ELSE">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name:search</arg>
+<arg>\\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240518 14:32:19.856" endtime="20240518 14:32:19.956"/>
+</kw>
+<status status="PASS" starttime="20240518 14:32:19.855" endtime="20240518 14:32:19.957"/>
+</branch>
+<status status="PASS" starttime="20240518 14:32:19.851" endtime="20240518 14:32:19.958"/>
+</if>
+<status status="PASS" starttime="20240518 14:32:13.265" endtime="20240518 14:32:19.958"/>
+</kw>
+<tag>Problem</tag>
+<status status="PASS" starttime="20240518 14:32:13.264" endtime="20240518 14:32:19.959"/>
+</test>
+<status status="PASS" starttime="20240518 14:31:46.642" endtime="20240518 14:32:19.961"/>
+</suite>
+<status status="PASS" starttime="20240518 14:31:46.640" endtime="20240518 14:32:19.964"/>
+</suite>
+<status status="PASS" starttime="20240518 14:31:46.581" endtime="20240518 14:32:19.966"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0" skip="0">Problem</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Lab6">Lab6</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1" name="WebAutomation">Lab6.WebAutomation</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1-s1" name="ProblemSearch">Lab6.WebAutomation.ProblemSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

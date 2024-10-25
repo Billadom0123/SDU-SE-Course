@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20240518 12:58:14.604" rpa="false" schemaversion="4">
+<suite id="s1" name="Lab6" source="D:\workSpace\st\lab6">
+<suite id="s1-s1" name="WebAutomation" source="D:\workSpace\st\lab6\WebAutomation">
+<suite id="s1-s1-s1" name="Register" source="D:\workSpace\st\lab6\WebAutomation\Register.robot">
+<test id="s1-s1-s1-t1" name="success" line="8">
+<kw name="register" library="general">
+<var>${alert}</var>
+<arg>20021209</arg>
+<arg>nickname</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<arg>sdu</arg>
+<arg>3054117680@qq.com</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${register}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 12:58:14.935" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.</msg>
+<status status="PASS" starttime="20240518 12:58:14.933" endtime="20240518 12:58:20.182"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:20.185" level="INFO">Typing text '20021209' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 12:58:20.183" endtime="20240518 12:58:20.391"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = nick</arg>
+<arg>${nickname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:20.392" level="INFO">Typing text 'nickname' into text field 'name = nick'.</msg>
+<status status="PASS" starttime="20240518 12:58:20.391" endtime="20240518 12:58:20.462"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:20.464" level="INFO">Typing text '123456' into text field 'name = password'.</msg>
+<status status="PASS" starttime="20240518 12:58:20.462" endtime="20240518 12:58:20.500"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = rptpassword</arg>
+<arg>${repeat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:20.502" level="INFO">Typing text '123456' into text field 'name = rptpassword'.</msg>
+<status status="PASS" starttime="20240518 12:58:20.501" endtime="20240518 12:58:20.643"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = school</arg>
+<arg>${school}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:20.645" level="INFO">Typing text 'sdu' into text field 'name = school'.</msg>
+<status status="PASS" starttime="20240518 12:58:20.643" endtime="20240518 12:58:20.711"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:20.716" level="INFO">Typing text '3054117680@qq.com' into text field 'name = email'.</msg>
+<status status="PASS" starttime="20240518 12:58:20.714" endtime="20240518 12:58:20.771"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name = submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:20.772" level="INFO">Clicking button 'name = submit'.</msg>
+<status status="PASS" starttime="20240518 12:58:20.772" endtime="20240518 12:58:21.002"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${alert}</var>
+<arg>Execute Javascript</arg>
+<arg>return !!window.alert</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>return !!window.alert</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240518 12:58:21.004" level="INFO">Executing JavaScript:
+return !!window.alert
+Without any arguments.</msg>
+<status status="PASS" starttime="20240518 12:58:21.003" endtime="20240518 12:58:21.010"/>
+</kw>
+<msg timestamp="20240518 12:58:21.010" level="INFO">${alert} = True</msg>
+<status status="PASS" starttime="20240518 12:58:21.003" endtime="20240518 12:58:21.010"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>Log</arg>
+<arg>用户${uname}登录成功</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>用户${uname}登陆失败</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>用户${uname}登录成功</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240518 12:58:21.016" level="INFO">用户20021209登录成功</msg>
+<status status="PASS" starttime="20240518 12:58:21.013" endtime="20240518 12:58:21.017"/>
+</kw>
+<status status="PASS" starttime="20240518 12:58:21.010" endtime="20240518 12:58:21.018"/>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<arg>${alert}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<msg timestamp="20240518 12:58:21.019" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20240518 12:58:21.018" endtime="20240518 12:58:21.019"/>
+</kw>
+<msg timestamp="20240518 12:58:21.020" level="INFO">${alert} = True</msg>
+<status status="PASS" starttime="20240518 12:58:14.933" endtime="20240518 12:58:21.020"/>
+</kw>
+<kw name="Convert To Boolean" library="BuiltIn">
+<var>${res}</var>
+<arg>True</arg>
+<doc>Converts the given item to Boolean true or false.</doc>
+<msg timestamp="20240518 12:58:21.022" level="INFO">${res} = True</msg>
+<status status="PASS" starttime="20240518 12:58:21.021" endtime="20240518 12:58:21.022"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>${res}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240518 12:58:21.022" endtime="20240518 12:58:21.023"/>
+</kw>
+<tag>Register</tag>
+<status status="PASS" starttime="20240518 12:58:14.924" endtime="20240518 12:58:21.024"/>
+</test>
+<test id="s1-s1-s1-t2" name="uname_format_err" line="14">
+<kw name="register" library="general">
+<var>${alert}</var>
+<arg>안녕하세요</arg>
+<arg>nickname</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<arg>sdu</arg>
+<arg>3054117680@qq.com</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${register}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 12:58:21.029" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.</msg>
+<status status="PASS" starttime="20240518 12:58:21.026" endtime="20240518 12:58:26.311"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:26.313" level="INFO">Typing text '안녕하세요' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 12:58:26.312" endtime="20240518 12:58:26.570"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = nick</arg>
+<arg>${nickname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:26.571" level="INFO">Typing text 'nickname' into text field 'name = nick'.</msg>
+<status status="PASS" starttime="20240518 12:58:26.570" endtime="20240518 12:58:26.645"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:26.647" level="INFO">Typing text '123456' into text field 'name = password'.</msg>
+<status status="PASS" starttime="20240518 12:58:26.646" endtime="20240518 12:58:26.707"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = rptpassword</arg>
+<arg>${repeat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:26.709" level="INFO">Typing text '123456' into text field 'name = rptpassword'.</msg>
+<status status="PASS" starttime="20240518 12:58:26.708" endtime="20240518 12:58:26.814"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = school</arg>
+<arg>${school}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:26.829" level="INFO">Typing text 'sdu' into text field 'name = school'.</msg>
+<status status="PASS" starttime="20240518 12:58:26.829" endtime="20240518 12:58:26.884"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:26.890" level="INFO">Typing text '3054117680@qq.com' into text field 'name = email'.</msg>
+<status status="PASS" starttime="20240518 12:58:26.885" endtime="20240518 12:58:26.955"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name = submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:26.956" level="INFO">Clicking button 'name = submit'.</msg>
+<status status="PASS" starttime="20240518 12:58:26.955" endtime="20240518 12:58:27.144"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${alert}</var>
+<arg>Execute Javascript</arg>
+<arg>return !!window.alert</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>return !!window.alert</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240518 12:58:27.145" level="INFO">Executing JavaScript:
+return !!window.alert
+Without any arguments.</msg>
+<msg timestamp="20240518 12:58:27.224" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240518 12:58:27.225" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: User ID can only contain NUMBERs &amp; LETTERs!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+</msg>
+<status status="FAIL" starttime="20240518 12:58:27.144" endtime="20240518 12:58:27.378"/>
+</kw>
+<msg timestamp="20240518 12:58:27.379" level="INFO">${alert} = False</msg>
+<status status="PASS" starttime="20240518 12:58:27.144" endtime="20240518 12:58:27.379"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>Log</arg>
+<arg>用户${uname}登录成功</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>用户${uname}登陆失败</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>用户${uname}登陆失败</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240518 12:58:27.380" level="INFO">用户안녕하세요登陆失败</msg>
+<status status="PASS" starttime="20240518 12:58:27.380" endtime="20240518 12:58:27.381"/>
+</kw>
+<status status="PASS" starttime="20240518 12:58:27.379" endtime="20240518 12:58:27.381"/>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<arg>${alert}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<msg timestamp="20240518 12:58:27.382" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20240518 12:58:27.382" endtime="20240518 12:58:27.382"/>
+</kw>
+<msg timestamp="20240518 12:58:27.383" level="INFO">${alert} = False</msg>
+<status status="PASS" starttime="20240518 12:58:21.025" endtime="20240518 12:58:27.383"/>
+</kw>
+<kw name="Convert To Boolean" library="BuiltIn">
+<var>${res}</var>
+<arg>False</arg>
+<doc>Converts the given item to Boolean true or false.</doc>
+<msg timestamp="20240518 12:58:27.385" level="INFO">${res} = False</msg>
+<status status="PASS" starttime="20240518 12:58:27.383" endtime="20240518 12:58:27.385"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>${res}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240518 12:58:27.387" endtime="20240518 12:58:27.388"/>
+</kw>
+<tag>Register</tag>
+<status status="PASS" starttime="20240518 12:58:21.025" endtime="20240518 12:58:27.389"/>
+</test>
+<test id="s1-s1-s1-t3" name="uname_too_short" line="20">
+<kw name="register" library="general">
+<var>${alert}</var>
+<arg>1</arg>
+<arg>nickname</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<arg>sdu</arg>
+<arg>3054117680@qq.com</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${register}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 12:58:27.392" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.</msg>
+<status status="PASS" starttime="20240518 12:58:27.391" endtime="20240518 12:58:32.767"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:32.768" level="INFO">Typing text '1' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 12:58:32.767" endtime="20240518 12:58:32.974"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = nick</arg>
+<arg>${nickname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:32.977" level="INFO">Typing text 'nickname' into text field 'name = nick'.</msg>
+<status status="PASS" starttime="20240518 12:58:32.975" endtime="20240518 12:58:33.032"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:33.034" level="INFO">Typing text '123456' into text field 'name = password'.</msg>
+<status status="PASS" starttime="20240518 12:58:33.032" endtime="20240518 12:58:33.095"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = rptpassword</arg>
+<arg>${repeat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:33.097" level="INFO">Typing text '123456' into text field 'name = rptpassword'.</msg>
+<status status="PASS" starttime="20240518 12:58:33.096" endtime="20240518 12:58:33.205"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = school</arg>
+<arg>${school}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:33.208" level="INFO">Typing text 'sdu' into text field 'name = school'.</msg>
+<status status="PASS" starttime="20240518 12:58:33.206" endtime="20240518 12:58:33.239"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:33.240" level="INFO">Typing text '3054117680@qq.com' into text field 'name = email'.</msg>
+<status status="PASS" starttime="20240518 12:58:33.239" endtime="20240518 12:58:33.293"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name = submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:33.295" level="INFO">Clicking button 'name = submit'.</msg>
+<status status="PASS" starttime="20240518 12:58:33.294" endtime="20240518 12:58:33.500"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${alert}</var>
+<arg>Execute Javascript</arg>
+<arg>return !!window.alert</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>return !!window.alert</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240518 12:58:33.501" level="INFO">Executing JavaScript:
+return !!window.alert
+Without any arguments.</msg>
+<msg timestamp="20240518 12:58:33.569" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240518 12:58:33.569" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog:  用户名至少3位字符!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+</msg>
+<status status="FAIL" starttime="20240518 12:58:33.500" endtime="20240518 12:58:33.572"/>
+</kw>
+<msg timestamp="20240518 12:58:33.573" level="INFO">${alert} = False</msg>
+<status status="PASS" starttime="20240518 12:58:33.500" endtime="20240518 12:58:33.573"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>Log</arg>
+<arg>用户${uname}登录成功</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>用户${uname}登陆失败</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>用户${uname}登陆失败</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240518 12:58:33.577" level="INFO">用户1登陆失败</msg>
+<status status="PASS" starttime="20240518 12:58:33.576" endtime="20240518 12:58:33.578"/>
+</kw>
+<status status="PASS" starttime="20240518 12:58:33.574" endtime="20240518 12:58:33.579"/>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<arg>${alert}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<msg timestamp="20240518 12:58:33.581" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20240518 12:58:33.580" endtime="20240518 12:58:33.581"/>
+</kw>
+<msg timestamp="20240518 12:58:33.582" level="INFO">${alert} = False</msg>
+<status status="PASS" starttime="20240518 12:58:27.390" endtime="20240518 12:58:33.583"/>
+</kw>
+<kw name="Convert To Boolean" library="BuiltIn">
+<var>${res}</var>
+<arg>False</arg>
+<doc>Converts the given item to Boolean true or false.</doc>
+<msg timestamp="20240518 12:58:33.584" level="INFO">${res} = False</msg>
+<status status="PASS" starttime="20240518 12:58:33.583" endtime="20240518 12:58:33.584"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>${res}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240518 12:58:33.585" endtime="20240518 12:58:33.586"/>
+</kw>
+<tag>Register</tag>
+<status status="PASS" starttime="20240518 12:58:27.389" endtime="20240518 12:58:33.586"/>
+</test>
+<test id="s1-s1-s1-t4" name="pwd_too_short" line="26">
+<kw name="register" library="general">
+<var>${alert}</var>
+<arg>20021209</arg>
+<arg>nickname</arg>
+<arg>123</arg>
+<arg>123</arg>
+<arg>sdu</arg>
+<arg>3054117680@qq.com</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${register}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 12:58:33.591" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.</msg>
+<status status="PASS" starttime="20240518 12:58:33.590" endtime="20240518 12:58:39.523"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:39.526" level="INFO">Typing text '20021209' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 12:58:39.524" endtime="20240518 12:58:39.716"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = nick</arg>
+<arg>${nickname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:39.719" level="INFO">Typing text 'nickname' into text field 'name = nick'.</msg>
+<status status="PASS" starttime="20240518 12:58:39.717" endtime="20240518 12:58:39.803"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:39.804" level="INFO">Typing text '123' into text field 'name = password'.</msg>
+<status status="PASS" starttime="20240518 12:58:39.803" endtime="20240518 12:58:39.834"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = rptpassword</arg>
+<arg>${repeat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:39.836" level="INFO">Typing text '123' into text field 'name = rptpassword'.</msg>
+<status status="PASS" starttime="20240518 12:58:39.835" endtime="20240518 12:58:39.905"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = school</arg>
+<arg>${school}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:39.908" level="INFO">Typing text 'sdu' into text field 'name = school'.</msg>
+<status status="PASS" starttime="20240518 12:58:39.906" endtime="20240518 12:58:40.043"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:40.045" level="INFO">Typing text '3054117680@qq.com' into text field 'name = email'.</msg>
+<status status="PASS" starttime="20240518 12:58:40.044" endtime="20240518 12:58:40.093"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name = submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:40.094" level="INFO">Clicking button 'name = submit'.</msg>
+<status status="PASS" starttime="20240518 12:58:40.094" endtime="20240518 12:58:40.325"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${alert}</var>
+<arg>Execute Javascript</arg>
+<arg>return !!window.alert</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>return !!window.alert</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240518 12:58:40.326" level="INFO">Executing JavaScript:
+return !!window.alert
+Without any arguments.</msg>
+<msg timestamp="20240518 12:58:40.414" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240518 12:58:40.415" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: 密码至少6位! 
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+</msg>
+<status status="FAIL" starttime="20240518 12:58:40.325" endtime="20240518 12:58:40.420"/>
+</kw>
+<msg timestamp="20240518 12:58:40.420" level="INFO">${alert} = False</msg>
+<status status="PASS" starttime="20240518 12:58:40.325" endtime="20240518 12:58:40.421"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>Log</arg>
+<arg>用户${uname}登录成功</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>用户${uname}登陆失败</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>用户${uname}登陆失败</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240518 12:58:40.423" level="INFO">用户20021209登陆失败</msg>
+<status status="PASS" starttime="20240518 12:58:40.422" endtime="20240518 12:58:40.423"/>
+</kw>
+<status status="PASS" starttime="20240518 12:58:40.421" endtime="20240518 12:58:40.424"/>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<arg>${alert}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<msg timestamp="20240518 12:58:40.425" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20240518 12:58:40.425" endtime="20240518 12:58:40.425"/>
+</kw>
+<msg timestamp="20240518 12:58:40.426" level="INFO">${alert} = False</msg>
+<status status="PASS" starttime="20240518 12:58:33.588" endtime="20240518 12:58:40.426"/>
+</kw>
+<kw name="Convert To Boolean" library="BuiltIn">
+<var>${res}</var>
+<arg>False</arg>
+<doc>Converts the given item to Boolean true or false.</doc>
+<msg timestamp="20240518 12:58:40.428" level="INFO">${res} = False</msg>
+<status status="PASS" starttime="20240518 12:58:40.427" endtime="20240518 12:58:40.428"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>${res}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240518 12:58:40.429" endtime="20240518 12:58:40.430"/>
+</kw>
+<tag>Register</tag>
+<status status="PASS" starttime="20240518 12:58:33.587" endtime="20240518 12:58:40.431"/>
+</test>
+<test id="s1-s1-s1-t5" name="pwd_rpt_err" line="32">
+<kw name="register" library="general">
+<var>${alert}</var>
+<arg>20021209</arg>
+<arg>nickname</arg>
+<arg>123456</arg>
+<arg>1234567</arg>
+<arg>sdu</arg>
+<arg>3054117680@qq.com</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${register}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 12:58:40.439" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.</msg>
+<status status="PASS" starttime="20240518 12:58:40.437" endtime="20240518 12:58:46.860"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:46.863" level="INFO">Typing text '20021209' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 12:58:46.861" endtime="20240518 12:58:47.183"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = nick</arg>
+<arg>${nickname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:47.185" level="INFO">Typing text 'nickname' into text field 'name = nick'.</msg>
+<status status="PASS" starttime="20240518 12:58:47.184" endtime="20240518 12:58:47.241"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:47.244" level="INFO">Typing text '123456' into text field 'name = password'.</msg>
+<status status="PASS" starttime="20240518 12:58:47.242" endtime="20240518 12:58:47.330"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = rptpassword</arg>
+<arg>${repeat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:47.333" level="INFO">Typing text '1234567' into text field 'name = rptpassword'.</msg>
+<status status="PASS" starttime="20240518 12:58:47.331" endtime="20240518 12:58:47.537"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = school</arg>
+<arg>${school}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:47.545" level="INFO">Typing text 'sdu' into text field 'name = school'.</msg>
+<status status="PASS" starttime="20240518 12:58:47.539" endtime="20240518 12:58:47.660"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:47.666" level="INFO">Typing text '3054117680@qq.com' into text field 'name = email'.</msg>
+<status status="PASS" starttime="20240518 12:58:47.663" endtime="20240518 12:58:47.762"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name = submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:47.763" level="INFO">Clicking button 'name = submit'.</msg>
+<status status="PASS" starttime="20240518 12:58:47.762" endtime="20240518 12:58:48.054"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${alert}</var>
+<arg>Execute Javascript</arg>
+<arg>return !!window.alert</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>return !!window.alert</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240518 12:58:48.058" level="INFO">Executing JavaScript:
+return !!window.alert
+Without any arguments.</msg>
+<msg timestamp="20240518 12:58:48.141" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240518 12:58:48.142" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: 两次输入的密码不一致!!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+</msg>
+<status status="FAIL" starttime="20240518 12:58:48.056" endtime="20240518 12:58:48.145"/>
+</kw>
+<msg timestamp="20240518 12:58:48.146" level="INFO">${alert} = False</msg>
+<status status="PASS" starttime="20240518 12:58:48.054" endtime="20240518 12:58:48.146"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>Log</arg>
+<arg>用户${uname}登录成功</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>用户${uname}登陆失败</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>用户${uname}登陆失败</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240518 12:58:48.148" level="INFO">用户20021209登陆失败</msg>
+<status status="PASS" starttime="20240518 12:58:48.148" endtime="20240518 12:58:48.148"/>
+</kw>
+<status status="PASS" starttime="20240518 12:58:48.147" endtime="20240518 12:58:48.149"/>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<arg>${alert}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<msg timestamp="20240518 12:58:48.149" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20240518 12:58:48.149" endtime="20240518 12:58:48.150"/>
+</kw>
+<msg timestamp="20240518 12:58:48.150" level="INFO">${alert} = False</msg>
+<status status="PASS" starttime="20240518 12:58:40.436" endtime="20240518 12:58:48.150"/>
+</kw>
+<kw name="Convert To Boolean" library="BuiltIn">
+<var>${res}</var>
+<arg>False</arg>
+<doc>Converts the given item to Boolean true or false.</doc>
+<msg timestamp="20240518 12:58:48.151" level="INFO">${res} = False</msg>
+<status status="PASS" starttime="20240518 12:58:48.151" endtime="20240518 12:58:48.151"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>${res}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240518 12:58:48.152" endtime="20240518 12:58:48.152"/>
+</kw>
+<tag>Register</tag>
+<status status="PASS" starttime="20240518 12:58:40.434" endtime="20240518 12:58:48.153"/>
+</test>
+<test id="s1-s1-s1-t6" name="school_too_long" line="38">
+<kw name="register" library="general">
+<var>${alert}</var>
+<arg>20021209</arg>
+<arg>nickname</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<arg>我的学校的名字好长好长好长好长好长好长好长好长好长好长</arg>
+<arg>3054117680@qq.com</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${register}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 12:58:48.158" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/registerpage.php'.</msg>
+<status status="PASS" starttime="20240518 12:58:48.156" endtime="20240518 12:58:55.630"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:55.633" level="INFO">Typing text '20021209' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 12:58:55.631" endtime="20240518 12:58:57.088"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = nick</arg>
+<arg>${nickname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:57.107" level="INFO">Typing text 'nickname' into text field 'name = nick'.</msg>
+<status status="PASS" starttime="20240518 12:58:57.090" endtime="20240518 12:58:57.742"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:57.745" level="INFO">Typing text '123456' into text field 'name = password'.</msg>
+<status status="PASS" starttime="20240518 12:58:57.743" endtime="20240518 12:58:57.860"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = rptpassword</arg>
+<arg>${repeat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:57.862" level="INFO">Typing text '123456' into text field 'name = rptpassword'.</msg>
+<status status="PASS" starttime="20240518 12:58:57.861" endtime="20240518 12:58:58.260"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = school</arg>
+<arg>${school}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:58.262" level="INFO">Typing text '我的学校的名字好长好长好长好长好长好长好长好长好长好长' into text field 'name = school'.</msg>
+<status status="PASS" starttime="20240518 12:58:58.261" endtime="20240518 12:58:58.414"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:58.416" level="INFO">Typing text '3054117680@qq.com' into text field 'name = email'.</msg>
+<status status="PASS" starttime="20240518 12:58:58.414" endtime="20240518 12:58:58.507"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name = submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 12:58:58.509" level="INFO">Clicking button 'name = submit'.</msg>
+<status status="PASS" starttime="20240518 12:58:58.508" endtime="20240518 12:58:58.947"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${alert}</var>
+<arg>Execute Javascript</arg>
+<arg>return !!window.alert</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>return !!window.alert</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240518 12:58:58.952" level="INFO">Executing JavaScript:
+return !!window.alert
+Without any arguments.</msg>
+<msg timestamp="20240518 12:58:59.081" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240518 12:58:59.082" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: School Name Too Long!
+
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+</msg>
+<status status="FAIL" starttime="20240518 12:58:58.950" endtime="20240518 12:58:59.084"/>
+</kw>
+<msg timestamp="20240518 12:58:59.088" level="INFO">${alert} = False</msg>
+<status status="PASS" starttime="20240518 12:58:58.949" endtime="20240518 12:58:59.089"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>Log</arg>
+<arg>用户${uname}登录成功</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>用户${uname}登陆失败</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>用户${uname}登陆失败</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240518 12:58:59.093" level="INFO">用户20021209登陆失败</msg>
+<status status="PASS" starttime="20240518 12:58:59.092" endtime="20240518 12:58:59.094"/>
+</kw>
+<status status="PASS" starttime="20240518 12:58:59.091" endtime="20240518 12:58:59.094"/>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<arg>${alert}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<msg timestamp="20240518 12:58:59.096" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20240518 12:58:59.095" endtime="20240518 12:58:59.096"/>
+</kw>
+<msg timestamp="20240518 12:58:59.097" level="INFO">${alert} = False</msg>
+<status status="PASS" starttime="20240518 12:58:48.154" endtime="20240518 12:58:59.097"/>
+</kw>
+<kw name="Convert To Boolean" library="BuiltIn">
+<var>${res}</var>
+<arg>False</arg>
+<doc>Converts the given item to Boolean true or false.</doc>
+<msg timestamp="20240518 12:58:59.099" level="INFO">${res} = False</msg>
+<status status="PASS" starttime="20240518 12:58:59.098" endtime="20240518 12:58:59.100"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${alert}</arg>
+<arg>${res}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240518 12:58:59.100" endtime="20240518 12:58:59.105"/>
+</kw>
+<tag>Register</tag>
+<status status="PASS" starttime="20240518 12:58:48.153" endtime="20240518 12:58:59.107"/>
+</test>
+<status status="PASS" starttime="20240518 12:58:14.702" endtime="20240518 12:58:59.151"/>
+</suite>
+<status status="PASS" starttime="20240518 12:58:14.700" endtime="20240518 12:58:59.160"/>
+</suite>
+<status status="PASS" starttime="20240518 12:58:14.669" endtime="20240518 12:58:59.164"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="6" fail="0" skip="0">Register</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Lab6">Lab6</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="WebAutomation">Lab6.WebAutomation</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1-s1" name="Register">Lab6.WebAutomation.Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

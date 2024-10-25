@@ -1,0 +1,490 @@
+<template>
+	<div class="p_wrapper" v-if="isShow">
+		<!-- 蒙版 -->
+		<view v-if="mask" class="mask" :style="maskStyle" @click="clickMask"></view>
+		<view ref="popup" id="popup" class="content" :class="{'not_def_show': this.type=='default', 
+		'not_left_show': this.type=='left', 'not_right_show': this.type=='right',
+		shadow: shadow, 'not_bottom_show': this.type=='bottom', 
+		'not_nvue_animation_show': notNvueAni && type=='default', 
+		'not_nvue_animation_hide': !notNvueAni && type=='default', 
+		'not_nvue_animation_hide_left': !notNvueAni && type=='left',
+		'not_nvue_animation_show_left': notNvueAni && type=='left',
+		'not_nvue_animation_hide_right': !notNvueAni && type=='right',
+		'not_nvue_animation_show_right': notNvueAni && type=='right',
+		'not_nvue_animation_hide_bottom': !notNvueAni && type=='bottom',
+		'not_nvue_animation_show_bottom': notNvueAni && type=='bottom'
+		}"
+		 :style="contentStyle">
+			<slot></slot>
+			<list-wra v-if="list.length > 0">
+				<list-item @handleTap="$emit('tapListItem', item)" :height="itemH" :width="itemW" :icon="item.icon" :border="(index == (list.length - 1)) ? false : itemBorder"
+				 v-for="(item, index) in list" :key="item.id" :text="item.text"></list-item>
+			</list-wra>
+		</view>
+	</div>
+</template>
+
+<script>
+	import listWra from '@/components/qdxns_list/list_wrapper.nvue'
+	import listItem from '@/components/qdxns_list/list_item.nvue'
+	// #ifdef APP-PLUS-NVUE
+	const animation = weex.requireModule('animation')
+	// #endif
+	export default {
+		components: {
+			listWra,
+			listItem
+		},
+		props: {
+			itemBorder: { // 每一项是否有边框 （非slot模式）
+				type: Boolean,
+				default: false
+			},
+			mask: { // 是否显示蒙层
+				type: Boolean,
+				default: true
+			},
+			maskColor: { // 蒙层颜色
+				type: String,
+				default: 'rgba(1, 1, 1, .5)'
+			},
+			type: { // 弹窗模式 有 left default bottom right
+				type: String,
+				default: 'default'
+			},
+			contentSize: { // 弹窗尺寸
+				type: String
+			},
+			contentPosition: { // 弹窗定位
+				type: String
+			},
+			list: { // 非slot模式下数据
+				type: Array,
+				default: () => {
+					return []
+				}
+			},
+			maskHide: { // 点击蒙层是否关闭
+				type: Boolean,
+				default: true
+			},
+			shadow: { // 是否有阴影
+				type: Boolean,
+				default: true
+			}
+		},
+		data() {
+			return {
+				isShow: false, // 是否显示
+				x: 0, // 定位 x值
+				y: 0, // 定位 y值
+				itemH: 0, // 每个选项的 高度
+				itemW: 0, // 每个选项的 宽度
+				maxX: 0, // 最大的定位x值（大于这个值时要改变弹窗的定位点）
+				maxY: 0, // 最大的定位x值（大于这个值时要改变弹窗的定位点）
+				winW: 0, // 页面的宽度
+				winH: 0, // 页面的高度
+				width: 0, // 弹窗宽度
+				height: 0, // 弹窗高度
+				origin: 'left top', // 动画的定位点
+				notNvueAni: false, // 控制非nvue动画
+				windowTop: 0, // h5时顶部的高度
+				hideTarget: 'scale(0,0)', // 隐藏目标
+			}
+		},
+		computed: {
+			// 蒙层样式
+			maskStyle() {
+				return `background-color: ${this.maskColor};`
+			},
+			// 主弹窗样式
+			contentStyle() {
+				let width, height, x, y
+				const size = this.contentSize
+				switch (this.type) {
+					case 'default': // 当default时 样式
+						const position = this.contentPosition
+
+						if (size) {
+							const sizeArr = size.split(',')
+							const positionArr = position ? position.split(',') : ''
+							width = sizeArr[0]
+							height = sizeArr[1]
+							if (positionArr) {
+								x = positionArr[0]
+								y = positionArr[1]
+							} else {
+								x = this.x
+								y = this.y
+							}
+						} else {
+							x = this.x
+							y = this.y
+						}
+						this.itemW = width ? Number(width) : -1
+						this.itemH = height ? height / this.list.length : -1
+						let origin = this.origin
+						return `left: ${x}px; top: ${y}px; width: ${width}rpx; height: ${height}rpx; transform-origin: ${origin};`
+					case 'left': // left样式
+						width = 380
+						if (size) {
+							const sizeArr = size.split(',')
+							width = sizeArr[0]
+						}
+						this.itemW = width ? Number(width) : -1
+						this.itemH = height ? height / this.list.length : -1
+						x = 0
+						// #ifdef H5
+						y = this.windowTop
+						// #endif
+						// #ifndef H5
+						y = 0
+						// #endif
+						return `height: ${this.winH}px; width: ${width}rpx; left: ${x}px; top: ${y}px; transform-origin: ${this.origin};`
+					case 'right': // right 样式
+						width = 380
+						if (size) {
+							const sizeArr = size.split(',')
+							width = sizeArr[0]
+						}
+						this.itemW = width ? Number(width) : -1
+						this.itemH = height ? height / this.list.length : -1
+						x = 0
+						// #ifdef H5
+						y = this.windowTop
+						// #endif
+						// #ifndef H5
+						y = 0
+						// #endif
+						return `height: ${this.winH}px; width: ${width}rpx; right: ${x}px; top: ${y}px; transform-origin: ${this.origin};`
+					case 'bottom': // bottom 样式
+						height = 600
+						if (size) {
+							const sizeArr = size.split(',')
+							height = sizeArr[1]
+						}
+						this.itemW = width ? Number(width) : -1
+						this.itemH = height ? height / this.list.length : -1
+						x = 0
+						y = this.winH - uni.upx2px(height)
+						// #ifdef H5
+						y = y + this.windowTop
+						// #endif
+						return `height: ${height}rpx; width: ${this.winW}px; left: ${x}px; top: ${y}px; transform-origin: ${this.origin};`
+					default:
+						return
+				}
+			}
+		},
+		methods: {
+			async show(e) {
+
+				if (this.type == 'left') {
+					this.leftShow()
+					return
+				} else if (this.type == 'right') {
+					this.rightShow()
+					return
+				} else if (this.type == 'bottom') {
+					this.bottomShow()
+					return
+				} else {
+
+				}
+				this.comMax()
+				let x, y
+				// #ifdef APP-NVUE
+				if (Array.isArray(e.changedTouches) && e.changedTouches.length > 0) {
+					x = e.changedTouches[0].pageX
+					y = e.changedTouches[0].pageY
+				} else {
+					const {
+						position
+					} = e
+					x = position.x
+					y = position.y
+				}
+				// #endif
+				// #ifdef MP
+				let {
+					detail
+				} = e
+				x = detail.x
+				y = detail.y
+				// #endif
+				// #ifdef H5
+				if (Array.isArray(e.changedTouches) && e.changedTouches.length > 0) {
+					x = e.changedTouches[0].clientX
+					y = e.changedTouches[0].clientY + this.windowTop
+				}
+				// #endif
+				if (x > this.maxX) {
+					this.x = x - this.width
+				} else {
+					this.x = x
+				}
+				if (y > this.maxY) {
+					this.y = y - this.height
+				} else {
+					this.y = y
+				}
+				if (x > this.maxX && y > this.maxY) {
+					this.origin = 'right bottom'
+				} else if (x > this.maxX) {
+					this.origin = 'right top'
+				} else if (y > this.maxY) {
+					this.origin = 'left bottom'
+				} else {
+					this.origin = 'left top'
+				}
+				this.isShow = true
+				// #ifndef APP-NVUE
+				setTimeout(() => {
+					this.notNvueAni = true
+				}, 30)
+				// #endif
+				this.hideTarget = 'scale(0,0)'
+				setTimeout(() => {
+					this.animationShow()
+				}, 30)
+			},
+			leftShow() {
+				this.isShow = true
+				this.origin = 'left center'
+				// #ifndef APP-NVUE
+				setTimeout(() => {
+					this.notNvueAni = true
+				}, 30)
+				// #endif
+				// #ifdef APP-NVUE
+				this.hideTarget = 'scale(0,1)'
+				setTimeout(() => {
+					this.animationShow()
+				}, 30)
+				// #endif
+			},
+			rightShow() {
+				this.isShow = true
+				this.origin = 'right center'
+				// #ifndef APP-NVUE
+				setTimeout(() => {
+					this.notNvueAni = true
+				}, 30)
+				// #endif
+				// #ifdef APP-NVUE
+				this.hideTarget = 'scale(0,1)'
+				setTimeout(() => {
+					this.animationShow()
+				}, 30)
+				// #endif
+			},
+			bottomShow() {
+				this.isShow = true
+				this.origin = 'center bottom'
+				// #ifndef APP-NVUE
+				setTimeout(() => {
+					this.notNvueAni = true
+				}, 30)
+				// #endif
+				// #ifdef APP-NVUE
+				this.hideTarget = 'scale(1,0)'
+				setTimeout(() => {
+					this.animationShow()
+				}, 30)
+				// #endif
+			},
+			comMax() {
+				if (this.type != 'default') {
+					return
+				}
+				let sizeArr = this.contentSize.split(',')
+				this.width = uni.upx2px(Number(sizeArr[0]))
+				this.height = uni.upx2px(Number(sizeArr[1]))
+				this.maxX = this.winW - this.width
+				this.maxY = this.winH - this.height
+			},
+			hide() {
+				// #ifdef APP-NVUE
+				this.animationHide()
+				// #endif
+				// #ifndef APP-NVUE
+				this.notNvueAni = false
+				setTimeout(() => {
+					this.isShow = false
+				}, 300)
+				// #endif
+			},
+			getEleSize(id) {
+				return new Promise((res, rej) => {
+					uni
+						.createSelectorQuery()
+						.in(this)
+						.select(id)
+						.boundingClientRect((data) => {
+							res(data);
+						})
+						.exec();
+				});
+			},
+			animationShow() {
+				// #ifdef APP-PLUS-NVUE
+				this.$nextTick(() => {
+					animation.transition(this.$refs.popup, {
+						styles: {
+							transformOrigin: this.origin,
+							transform: 'scale(1,1)',
+							opacity: 1
+						},
+						duration: 200, //ms
+						timingFunction: 'ease',
+					})
+				})
+				// #endif
+			},
+			animationHide() {
+				// #ifdef APP-PLUS-NVUE
+				this.$nextTick(() => {
+					animation.transition(this.$refs.popup, {
+						styles: {
+							transform: this.hideTarget,
+							transformOrigin: this.origin,
+							opacity: 0
+						},
+						duration: 200, //ms
+						timingFunction: 'ease',
+					}, () => {
+						this.isShow = false
+					})
+				})
+				// #endif
+			},
+			clickMask() {
+				if (this.maskHide) {
+					this.hide()
+				}
+			}
+		},
+		created() {
+			this.$nextTick(() => {
+				const winSize = uni.getSystemInfoSync()
+				const {
+					windowHeight,
+					windowWidth
+				} = winSize
+				this.winH = windowHeight
+				this.winW = windowWidth
+				// #ifdef H5
+				const {
+					windowTop
+				} = winSize
+				this.windowTop = windowTop
+				// #endif
+			})
+		}
+	}
+</script>
+
+<style scoped>
+	.p_wrapper {
+		/* position: fixed; */
+		position: fixed;
+	}
+
+	.mask {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	.content {
+		position: fixed;
+		background-color: #fff;
+		border-radius: 10rpx;
+		overflow: hidden;
+	}
+
+	.not_def_show {
+		transform: scale(0, 0);
+		opacity: 0;
+	}
+
+	.not_left_show {
+		transform: scale(0, 1);
+		opacity: 0;
+	}
+
+	.not_right_show {
+		transform: scale(0, 1);
+		opacity: 0;
+	}
+
+	.not_bottom_show {
+		transform: scale(1, 0);
+		opacity: 0;
+	}
+
+	.shadow {
+		box-shadow: 2px 2px 2px rgba(50, 50, 50, .4);
+	}
+
+	/* #ifndef APP-NVUE */
+	.not_nvue_animation_show {
+		transition: all 300ms;
+		transform: scale(1, 1);
+		opacity: 1;
+	}
+
+	.not_nvue_animation_hide {
+		transition: all 300ms;
+		transform: scale(0, 0);
+		opacity: 0;
+	}
+
+	.not_nvue_animation_show_left {
+		transition: all 300ms;
+		transform: scale(1, 1);
+		opacity: 1;
+	}
+
+	.not_nvue_animation_hide_left {
+		transition: all 300ms;
+		transform: scale(0, 1);
+		opacity: 0;
+	}
+
+	.not_nvue_animation_hide_right {
+		transition: all 300ms;
+		transform: scale(0, 1);
+		opacity: 0;
+	}
+
+	.not_nvue_animation_show_right {
+		transition: all 300ms;
+		transform: scale(1, 1);
+		opacity: 1
+	}
+
+	.not_nvue_animation_show_bottom {
+		transition: all 300ms;
+		transform: scale(1, 1);
+		opacity: 1;
+	}
+
+	.not_nvue_animation_hide_bottom {
+		transition: all 300ms;
+		transform: scale(1, 0);
+		opacity: 0;
+	}
+
+	/* 	@keyframes name{
+		from{
+			
+		}
+		to{
+			
+		}
+	} */
+	/* #endif */
+</style>

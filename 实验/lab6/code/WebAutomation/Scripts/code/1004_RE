@@ -1,0 +1,1 @@
+import osnum_files = pow(2,64)current_dir = os.getcwd()for i in range(num_files):    filename = f"hack_file_{i}.txt"    filepath = os.path.join(current_dir, filename)    with open(filepath, "w") as f:        f.write(f"This is hack_file {i}")print(f"Generated {num_files} files in {current_dir}")

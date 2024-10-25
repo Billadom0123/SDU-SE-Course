@@ -1,0 +1,34 @@
+def str2nums(s):
+    return list(map(int, s.split()))
+
+def get_string_builder(A, B):
+    sb = []
+    i, j = 1, 1
+    while i < len(A) and j < len(B):
+        if A[i] < B[j]:
+            sb.append(str(A[i]))
+            i += 1
+        else:
+            sb.append(str(B[j]))
+            j += 1
+        sb.append(" ")
+    
+    while i < len(A):
+        sb.append(str(A[i]))
+        i += 1
+        sb.append(" ")
+    
+    while j < len(B):
+        sb.append(str(B[j]))
+        j += 1
+        sb.append(" ")
+    
+    return ''.join(sb).rstrip()  # 使用 rstrip() 移除末尾的空格
+
+if __name__ == "__main__":
+    import sys
+    lines = sys.stdin.readlines()
+    A = str2nums(lines[0])
+    B = str2nums(lines[1])
+    result = get_string_builder(A, B)
+    print(result)

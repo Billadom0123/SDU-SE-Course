@@ -1,0 +1,31 @@
+command: robot -A C:\Users\ADMINI~1\AppData\Local\Temp\RIDEclsp5xu9.d\argfile.txt --listener D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py:52496:False D:\workSpace\st\lab6
+
+TestRunnerAgent: Running under CPython 3.11.0
+
+================================================================================================================
+Lab6                                                                                                            
+================================================================================================================
+Lab6.Demo                                                                                                       
+================================================================================================================
+Lab6.Demo.Demo Suite                                                                                            
+================================================================================================================
+logSomething                                                                                            | PASS |
+----------------------------------------------------------------------------------------------------------------
+Lab6.Demo.Demo Suite                                                                                    | PASS |
+1 test, 1 passed, 0 failed
+================================================================================================================
+Lab6.Demo                                                                                               | PASS |
+1 test, 1 passed, 0 failed
+================================================================================================================
+Lab6                                                                                                    | PASS |
+1 test, 1 passed, 0 failed
+================================================================================================================
+Debug:   D:\workSpace\st\lab6\demo\target\demo\demo1\Lab6-Message-20240517-095712.log
+Output:  D:\workSpace\st\lab6\demo\target\demo\demo1\Lab6-Output-20240517-095712.xml
+Log:     D:\workSpace\st\lab6\demo\target\demo\demo1\Lab6-Log-20240517-095712.html
+
+Report:  D:\workSpace\st\lab6\demo\target\demo\demo1\Lab6-Report-20240517-095712.html
+
+
+
+Test finished 20240517 09:57:13

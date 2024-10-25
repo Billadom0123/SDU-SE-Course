@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20240518 16:18:41.851" rpa="false" schemaversion="4">
+<suite id="s1" name="Lab6" source="D:\workSpace\st\lab6">
+<suite id="s1-s1" name="WebAutomation" source="D:\workSpace\st\lab6\WebAutomation">
+<suite id="s1-s1-s1" name="StatusCheck" source="D:\workSpace\st\lab6\WebAutomation\StatusCheck.robot">
+<test id="s1-s1-s1-t1" name="ByID" line="8">
+<kw name="status check" library="general">
+<arg>1000</arg>
+<arg>\</arg>
+<arg>0</arg>
+<arg>0</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${status}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 16:18:42.207" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/status.php'.</msg>
+<status status="PASS" starttime="20240518 16:18:42.206" endtime="20240518 16:18:47.799"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = problem_id</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:18:47.803" level="INFO">Typing text '1000' into text field 'name = problem_id'.</msg>
+<status status="PASS" starttime="20240518 16:18:47.800" endtime="20240518 16:18:48.103"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:18:48.105" level="INFO">Typing text '' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 16:18:48.104" endtime="20240518 16:18:48.172"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name = language</arg>
+<arg>${lang}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240518 16:18:48.175" level="INFO">Selecting options from selection list 'name = language' by index 0.</msg>
+<status status="PASS" starttime="20240518 16:18:48.174" endtime="20240518 16:18:48.294"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name = jresult</arg>
+<arg>${res}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240518 16:18:48.296" level="INFO">Selecting options from selection list 'name = jresult' by index 0.</msg>
+<status status="PASS" starttime="20240518 16:18:48.295" endtime="20240518 16:18:48.378"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>tag = button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 16:18:48.380" level="INFO">Clicking button 'tag = button'.</msg>
+<status status="PASS" starttime="20240518 16:18:48.379" endtime="20240518 16:18:48.733"/>
+</kw>
+<status status="PASS" starttime="20240518 16:18:42.204" endtime="20240518 16:18:48.733"/>
+</kw>
+<tag>Status</tag>
+<status status="PASS" starttime="20240518 16:18:42.204" endtime="20240518 16:18:48.734"/>
+</test>
+<test id="s1-s1-s1-t2" name="ByUID" line="12">
+<kw name="status check" library="general">
+<arg>\</arg>
+<arg>202100300063</arg>
+<arg>0</arg>
+<arg>0</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${status}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 16:18:48.742" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/status.php'.</msg>
+<status status="PASS" starttime="20240518 16:18:48.740" endtime="20240518 16:18:55.655"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = problem_id</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:18:55.659" level="INFO">Typing text '' into text field 'name = problem_id'.</msg>
+<status status="PASS" starttime="20240518 16:18:55.657" endtime="20240518 16:18:56.051"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:18:56.053" level="INFO">Typing text '202100300063' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 16:18:56.052" endtime="20240518 16:18:56.227"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name = language</arg>
+<arg>${lang}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240518 16:18:56.231" level="INFO">Selecting options from selection list 'name = language' by index 0.</msg>
+<status status="PASS" starttime="20240518 16:18:56.228" endtime="20240518 16:18:56.346"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name = jresult</arg>
+<arg>${res}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240518 16:18:56.348" level="INFO">Selecting options from selection list 'name = jresult' by index 0.</msg>
+<status status="PASS" starttime="20240518 16:18:56.346" endtime="20240518 16:18:56.430"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>tag = button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 16:18:56.432" level="INFO">Clicking button 'tag = button'.</msg>
+<status status="PASS" starttime="20240518 16:18:56.431" endtime="20240518 16:18:56.926"/>
+</kw>
+<status status="PASS" starttime="20240518 16:18:48.738" endtime="20240518 16:18:56.926"/>
+</kw>
+<tag>Status</tag>
+<status status="PASS" starttime="20240518 16:18:48.737" endtime="20240518 16:18:56.927"/>
+</test>
+<test id="s1-s1-s1-t3" name="ByLang" line="16">
+<kw name="status check" library="general">
+<arg>\</arg>
+<arg>\</arg>
+<arg>3</arg>
+<arg>0</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${status}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 16:18:56.935" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/status.php'.</msg>
+<status status="PASS" starttime="20240518 16:18:56.932" endtime="20240518 16:19:04.226"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = problem_id</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:19:04.229" level="INFO">Typing text '' into text field 'name = problem_id'.</msg>
+<status status="PASS" starttime="20240518 16:19:04.227" endtime="20240518 16:19:04.554"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:19:04.556" level="INFO">Typing text '' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 16:19:04.555" endtime="20240518 16:19:04.651"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name = language</arg>
+<arg>${lang}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240518 16:19:04.653" level="INFO">Selecting options from selection list 'name = language' by index 3.</msg>
+<status status="PASS" starttime="20240518 16:19:04.651" endtime="20240518 16:19:05.044"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name = jresult</arg>
+<arg>${res}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240518 16:19:05.046" level="INFO">Selecting options from selection list 'name = jresult' by index 0.</msg>
+<status status="PASS" starttime="20240518 16:19:05.044" endtime="20240518 16:19:05.195"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>tag = button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 16:19:05.197" level="INFO">Clicking button 'tag = button'.</msg>
+<status status="PASS" starttime="20240518 16:19:05.195" endtime="20240518 16:19:05.531"/>
+</kw>
+<status status="PASS" starttime="20240518 16:18:56.930" endtime="20240518 16:19:05.532"/>
+</kw>
+<tag>Status</tag>
+<status status="PASS" starttime="20240518 16:18:56.929" endtime="20240518 16:19:05.533"/>
+</test>
+<test id="s1-s1-s1-t4" name="ByRes" line="21">
+<kw name="status check" library="general">
+<arg>\</arg>
+<arg>\</arg>
+<arg>0</arg>
+<arg>1</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${status}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 16:19:05.545" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/status.php'.</msg>
+<status status="PASS" starttime="20240518 16:19:05.541" endtime="20240518 16:19:12.839"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = problem_id</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:19:12.843" level="INFO">Typing text '' into text field 'name = problem_id'.</msg>
+<status status="PASS" starttime="20240518 16:19:12.841" endtime="20240518 16:19:13.257"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:19:13.259" level="INFO">Typing text '' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 16:19:13.257" endtime="20240518 16:19:13.397"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name = language</arg>
+<arg>${lang}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240518 16:19:13.400" level="INFO">Selecting options from selection list 'name = language' by index 0.</msg>
+<status status="PASS" starttime="20240518 16:19:13.398" endtime="20240518 16:19:13.498"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name = jresult</arg>
+<arg>${res}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240518 16:19:13.501" level="INFO">Selecting options from selection list 'name = jresult' by index 1.</msg>
+<status status="PASS" starttime="20240518 16:19:13.499" endtime="20240518 16:19:14.017"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>tag = button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 16:19:14.019" level="INFO">Clicking button 'tag = button'.</msg>
+<status status="PASS" starttime="20240518 16:19:14.018" endtime="20240518 16:19:14.516"/>
+</kw>
+<status status="PASS" starttime="20240518 16:19:05.538" endtime="20240518 16:19:14.517"/>
+</kw>
+<tag>Status</tag>
+<status status="PASS" starttime="20240518 16:19:05.536" endtime="20240518 16:19:14.518"/>
+</test>
+<test id="s1-s1-s1-t5" name="ByAll" line="26">
+<kw name="status check" library="general">
+<arg>1008</arg>
+<arg>202100300063</arg>
+<arg>3</arg>
+<arg>1</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${status}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 16:19:14.526" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/status.php'.</msg>
+<status status="PASS" starttime="20240518 16:19:14.523" endtime="20240518 16:19:22.814"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = problem_id</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:19:22.819" level="INFO">Typing text '1008' into text field 'name = problem_id'.</msg>
+<status status="PASS" starttime="20240518 16:19:22.817" endtime="20240518 16:19:23.261"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = user_id</arg>
+<arg>${uid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:19:23.264" level="INFO">Typing text '202100300063' into text field 'name = user_id'.</msg>
+<status status="PASS" starttime="20240518 16:19:23.262" endtime="20240518 16:19:23.385"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name = language</arg>
+<arg>${lang}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240518 16:19:23.388" level="INFO">Selecting options from selection list 'name = language' by index 3.</msg>
+<status status="PASS" starttime="20240518 16:19:23.386" endtime="20240518 16:19:23.663"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name = jresult</arg>
+<arg>${res}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20240518 16:19:23.667" level="INFO">Selecting options from selection list 'name = jresult' by index 1.</msg>
+<status status="PASS" starttime="20240518 16:19:23.665" endtime="20240518 16:19:24.008"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>tag = button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 16:19:24.009" level="INFO">Clicking button 'tag = button'.</msg>
+<status status="PASS" starttime="20240518 16:19:24.009" endtime="20240518 16:19:24.315"/>
+</kw>
+<status status="PASS" starttime="20240518 16:19:14.522" endtime="20240518 16:19:24.315"/>
+</kw>
+<tag>Status</tag>
+<status status="PASS" starttime="20240518 16:19:14.520" endtime="20240518 16:19:24.316"/>
+</test>
+<status status="PASS" starttime="20240518 16:18:41.921" endtime="20240518 16:19:24.319"/>
+</suite>
+<status status="PASS" starttime="20240518 16:18:41.918" endtime="20240518 16:19:24.396"/>
+</suite>
+<status status="PASS" starttime="20240518 16:18:41.888" endtime="20240518 16:19:24.399"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0" skip="0">Status</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Lab6">Lab6</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1" name="WebAutomation">Lab6.WebAutomation</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1-s1" name="StatusCheck">Lab6.WebAutomation.StatusCheck</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

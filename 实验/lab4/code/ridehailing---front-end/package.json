@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "uni-read-pages": "^1.0.5",
+    "uni-simple-router": "^2.0.8-beta.4",
+    "vconsole": "^3.15.1",
+    "vuex": "^4.1.0"
+  }
+}

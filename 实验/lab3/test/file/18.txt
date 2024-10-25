@@ -1,0 +1,52 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <map>
+#include <vector>
+
+std::vector<int> str2nums(const std::string& s) {
+    std::istringstream iss(s);
+    std::vector<int> nums;
+    int num;
+    while (iss >> num) {
+        nums.push_back(num);
+    }
+    return nums;
+}
+
+std::string getStringBuilder(const std::vector<int>& A, const std::vector<int>& B) {
+    std::map<int, int> map;
+    addCo(map, A);
+    addCo(map, B);
+
+    std::string sb;
+    for (const auto& kv : map) {
+        if (kv.second != 0) {
+            sb += std::to_string(kv.second) + " " + std::to_string(kv.first) + " ";
+        }
+    }
+
+    return sb;
+}
+
+void addCo(std::map<int, int>& map, const std::vector<int>& nums) {
+    for (size_t i = 0; i < nums.size(); i += 2) {
+        int co = nums[i];
+        int pos = nums[i + 1];
+        map[pos] += co;
+    }
+}
+
+int main() {
+    std::string line;
+    while (std::getline(std::cin, line)) {
+        if (line.empty()) {
+            break;
+        }
+        auto A = str2nums(line);
+        std::getline(std::cin, line);
+        auto B = str2nums(line);
+        std::cout << getStringBuilder(A, B) << std::endl;
+    }
+    return 0;
+}

@@ -1,0 +1,143 @@
+==============================================================================
+20240518 16:18:41.918 - INFO - + START SUITE: Lab6 [ ]
+==============================================================================
+20240518 16:18:41.921 - INFO - +- START SUITE: Lab6.WebAutomation [ ]
+==============================================================================
+20240518 16:18:42.203 - INFO - +-- START SUITE: Lab6.WebAutomation.StatusCheck [ ]
+==============================================================================
+20240518 16:18:42.204 - INFO - +--- START TEST: ByID [ ]
+------------------------------------------------------------------------------
+20240518 16:18:42.205 - INFO - +---- START KEYWORD: general.status check [ 1000 | \ | 0 | 0 ]
+20240518 16:18:42.206 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${status} | ${ff} ]
+20240518 16:18:42.207 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/status.php'.
+20240518 16:18:47.799 - DEBUG - Opened browser with session id c9f0be5e-29bc-473f-8fd9-c3f18281d38e.
+20240518 16:18:47.800 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5593)
+20240518 16:18:47.800 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = problem_id | ${id} ]
+20240518 16:18:47.803 - INFO - Typing text '1000' into text field 'name = problem_id'.
+20240518 16:18:48.104 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (303)
+20240518 16:18:48.104 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uid} ]
+20240518 16:18:48.105 - INFO - Typing text '' into text field 'name = user_id'.
+20240518 16:18:48.173 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (68)
+20240518 16:18:48.174 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ name = language | ${lang} ]
+20240518 16:18:48.175 - INFO - Selecting options from selection list 'name = language' by index 0.
+20240518 16:18:48.294 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (120)
+20240518 16:18:48.295 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ name = jresult | ${res} ]
+20240518 16:18:48.296 - INFO - Selecting options from selection list 'name = jresult' by index 0.
+20240518 16:18:48.378 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (83)
+20240518 16:18:48.379 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ tag = button ]
+20240518 16:18:48.380 - INFO - Clicking button 'tag = button'.
+20240518 16:18:48.733 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (354)
+20240518 16:18:48.734 - INFO - +---- END KEYWORD: general.status check (6529)
+------------------------------------------------------------------------------
+20240518 16:18:48.736 - INFO - +--- END TEST: ByID (6530)
+------------------------------------------------------------------------------
+20240518 16:18:48.737 - INFO - +--- START TEST: ByUID [ ]
+------------------------------------------------------------------------------
+20240518 16:18:48.738 - INFO - +---- START KEYWORD: general.status check [ \ | 202100300063 | 0 | 0 ]
+20240518 16:18:48.740 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${status} | ${ff} ]
+20240518 16:18:48.742 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/status.php'.
+20240518 16:18:55.655 - DEBUG - Opened browser with session id 642a02b8-52df-435c-8c9a-fd6d86ceebe3.
+20240518 16:18:55.656 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (6915)
+20240518 16:18:55.657 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = problem_id | ${id} ]
+20240518 16:18:55.659 - INFO - Typing text '' into text field 'name = problem_id'.
+20240518 16:18:56.051 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (394)
+20240518 16:18:56.052 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uid} ]
+20240518 16:18:56.053 - INFO - Typing text '202100300063' into text field 'name = user_id'.
+20240518 16:18:56.227 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (175)
+20240518 16:18:56.228 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ name = language | ${lang} ]
+20240518 16:18:56.231 - INFO - Selecting options from selection list 'name = language' by index 0.
+20240518 16:18:56.346 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (118)
+20240518 16:18:56.346 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ name = jresult | ${res} ]
+20240518 16:18:56.348 - INFO - Selecting options from selection list 'name = jresult' by index 0.
+20240518 16:18:56.431 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (84)
+20240518 16:18:56.431 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ tag = button ]
+20240518 16:18:56.432 - INFO - Clicking button 'tag = button'.
+20240518 16:18:56.926 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (495)
+20240518 16:18:56.927 - INFO - +---- END KEYWORD: general.status check (8188)
+------------------------------------------------------------------------------
+20240518 16:18:56.928 - INFO - +--- END TEST: ByUID (8190)
+------------------------------------------------------------------------------
+20240518 16:18:56.929 - INFO - +--- START TEST: ByLang [ ]
+------------------------------------------------------------------------------
+20240518 16:18:56.930 - INFO - +---- START KEYWORD: general.status check [ \ | \ | 3 | 0 ]
+20240518 16:18:56.933 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${status} | ${ff} ]
+20240518 16:18:56.935 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/status.php'.
+20240518 16:19:04.225 - DEBUG - Opened browser with session id 9bbb4ffe-f5f9-48fe-a260-5177f66ed048.
+20240518 16:19:04.226 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (7294)
+20240518 16:19:04.227 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = problem_id | ${id} ]
+20240518 16:19:04.229 - INFO - Typing text '' into text field 'name = problem_id'.
+20240518 16:19:04.554 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (327)
+20240518 16:19:04.555 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uid} ]
+20240518 16:19:04.556 - INFO - Typing text '' into text field 'name = user_id'.
+20240518 16:19:04.651 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (96)
+20240518 16:19:04.651 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ name = language | ${lang} ]
+20240518 16:19:04.653 - INFO - Selecting options from selection list 'name = language' by index 3.
+20240518 16:19:05.044 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (393)
+20240518 16:19:05.044 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ name = jresult | ${res} ]
+20240518 16:19:05.046 - INFO - Selecting options from selection list 'name = jresult' by index 0.
+20240518 16:19:05.195 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (151)
+20240518 16:19:05.195 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ tag = button ]
+20240518 16:19:05.197 - INFO - Clicking button 'tag = button'.
+20240518 16:19:05.532 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (336)
+20240518 16:19:05.533 - INFO - +---- END KEYWORD: general.status check (8602)
+------------------------------------------------------------------------------
+20240518 16:19:05.535 - INFO - +--- END TEST: ByLang (8604)
+------------------------------------------------------------------------------
+20240518 16:19:05.536 - INFO - +--- START TEST: ByRes [ ]
+------------------------------------------------------------------------------
+20240518 16:19:05.538 - INFO - +---- START KEYWORD: general.status check [ \ | \ | 0 | 1 ]
+20240518 16:19:05.541 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${status} | ${ff} ]
+20240518 16:19:05.545 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/status.php'.
+20240518 16:19:12.838 - DEBUG - Opened browser with session id 53a7d722-753a-43f4-9493-5e5f254c45ce.
+20240518 16:19:12.840 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (7298)
+20240518 16:19:12.841 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = problem_id | ${id} ]
+20240518 16:19:12.843 - INFO - Typing text '' into text field 'name = problem_id'.
+20240518 16:19:13.257 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (416)
+20240518 16:19:13.257 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uid} ]
+20240518 16:19:13.259 - INFO - Typing text '' into text field 'name = user_id'.
+20240518 16:19:13.398 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (140)
+20240518 16:19:13.398 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ name = language | ${lang} ]
+20240518 16:19:13.400 - INFO - Selecting options from selection list 'name = language' by index 0.
+20240518 16:19:13.499 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (100)
+20240518 16:19:13.499 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ name = jresult | ${res} ]
+20240518 16:19:13.501 - INFO - Selecting options from selection list 'name = jresult' by index 1.
+20240518 16:19:14.017 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (518)
+20240518 16:19:14.018 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ tag = button ]
+20240518 16:19:14.019 - INFO - Clicking button 'tag = button'.
+20240518 16:19:14.517 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (498)
+20240518 16:19:14.518 - INFO - +---- END KEYWORD: general.status check (8979)
+------------------------------------------------------------------------------
+20240518 16:19:14.519 - INFO - +--- END TEST: ByRes (8982)
+------------------------------------------------------------------------------
+20240518 16:19:14.521 - INFO - +--- START TEST: ByAll [ ]
+------------------------------------------------------------------------------
+20240518 16:19:14.522 - INFO - +---- START KEYWORD: general.status check [ 1008 | 202100300063 | 3 | 1 ]
+20240518 16:19:14.524 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${status} | ${ff} ]
+20240518 16:19:14.526 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/status.php'.
+20240518 16:19:22.814 - DEBUG - Opened browser with session id 59978ac5-6a4d-4405-abb1-06b730b87681.
+20240518 16:19:22.816 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (8291)
+20240518 16:19:22.817 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = problem_id | ${id} ]
+20240518 16:19:22.819 - INFO - Typing text '1008' into text field 'name = problem_id'.
+20240518 16:19:23.262 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (444)
+20240518 16:19:23.262 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = user_id | ${uid} ]
+20240518 16:19:23.264 - INFO - Typing text '202100300063' into text field 'name = user_id'.
+20240518 16:19:23.386 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (123)
+20240518 16:19:23.386 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ name = language | ${lang} ]
+20240518 16:19:23.388 - INFO - Selecting options from selection list 'name = language' by index 3.
+20240518 16:19:23.664 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (277)
+20240518 16:19:23.665 - INFO - +----- START KEYWORD: SeleniumLibrary.Select From List By Index [ name = jresult | ${res} ]
+20240518 16:19:23.667 - INFO - Selecting options from selection list 'name = jresult' by index 1.
+20240518 16:19:24.009 - INFO - +----- END KEYWORD: SeleniumLibrary.Select From List By Index (343)
+20240518 16:19:24.009 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ tag = button ]
+20240518 16:19:24.009 - INFO - Clicking button 'tag = button'.
+20240518 16:19:24.315 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (306)
+20240518 16:19:24.316 - INFO - +---- END KEYWORD: general.status check (9793)
+------------------------------------------------------------------------------
+20240518 16:19:24.318 - INFO - +--- END TEST: ByAll (9796)
+------------------------------------------------------------------------------
+20240518 16:19:24.396 - INFO - +-- END SUITE: Lab6.WebAutomation.StatusCheck (42398)
+==============================================================================
+20240518 16:19:24.399 - INFO - +- END SUITE: Lab6.WebAutomation (42478)
+==============================================================================
+20240518 16:19:24.402 - INFO - + END SUITE: Lab6 (42511)
+==============================================================================

@@ -1,0 +1,148 @@
+==============================================================================
+20240518 14:31:46.639 - INFO - + START SUITE: Lab6 [ ]
+==============================================================================
+20240518 14:31:46.642 - INFO - +- START SUITE: Lab6.WebAutomation [ ]
+==============================================================================
+20240518 14:31:47.181 - INFO - +-- START SUITE: Lab6.WebAutomation.ProblemSearch [ ]
+==============================================================================
+20240518 14:31:47.182 - INFO - +--- START TEST: ByExistID [ ]
+------------------------------------------------------------------------------
+20240518 14:31:47.183 - INFO - +---- START KEYWORD: general.problem search [ \ | 1000 ]
+20240518 14:31:47.185 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${problemset} | ${ff} ]
+20240518 14:31:47.186 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/problemset.php'.
+20240518 14:31:53.700 - DEBUG - Opened browser with session id df0d2420-c31b-49ae-ba32-d43c69df639c.
+20240518 14:31:53.701 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (6515)
+20240518 14:31:53.703 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = search | ${title} ]
+20240518 14:31:53.705 - INFO - Typing text '' into text field 'name = search'.
+20240518 14:31:53.936 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (232)
+20240518 14:31:53.936 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = id | ${id} ]
+20240518 14:31:53.937 - INFO - Typing text '1000' into text field 'name = id'.
+20240518 14:31:54.009 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (73)
+20240518 14:31:54.010 - INFO - +----- START IF/ELSE ROOT:  [ ]
+20240518 14:31:54.011 - INFO - +------ START IF: '${id}' != '${EMPTY}' [ ]
+20240518 14:31:54.011 - INFO - +------- START KEYWORD: SeleniumLibrary.Press Key [ name:id | \\\13 ]
+20240518 14:31:54.073 - INFO - +------- END KEYWORD: SeleniumLibrary.Press Key (62)
+20240518 14:31:54.074 - INFO - +------ END IF: '${id}' != '${EMPTY}' (63)
+20240518 14:31:54.074 - INFO - +------ START ELSE:  [ ]
+20240518 14:31:54.075 - INFO - +------- START KEYWORD: SeleniumLibrary.Press Key [ name:search | \\\13 ]
+20240518 14:31:54.075 - INFO - +------- END KEYWORD: SeleniumLibrary.Press Key (1)
+20240518 14:31:54.075 - INFO - +------ END ELSE:  (1)
+20240518 14:31:54.076 - INFO - +----- END IF/ELSE ROOT:  (65)
+20240518 14:31:54.076 - INFO - +---- END KEYWORD: general.problem search (6893)
+------------------------------------------------------------------------------
+20240518 14:31:54.076 - INFO - +--- END TEST: ByExistID (6894)
+------------------------------------------------------------------------------
+20240518 14:31:54.077 - INFO - +--- START TEST: ByNotExistID [ ]
+------------------------------------------------------------------------------
+20240518 14:31:54.077 - INFO - +---- START KEYWORD: general.problem search [ \ | 999 ]
+20240518 14:31:54.079 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${problemset} | ${ff} ]
+20240518 14:31:54.080 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/problemset.php'.
+20240518 14:31:59.949 - DEBUG - Opened browser with session id 6bf0c1a9-2676-445d-8c71-20ef321419fa.
+20240518 14:31:59.951 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5871)
+20240518 14:31:59.951 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = search | ${title} ]
+20240518 14:31:59.953 - INFO - Typing text '' into text field 'name = search'.
+20240518 14:32:00.203 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (251)
+20240518 14:32:00.203 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = id | ${id} ]
+20240518 14:32:00.205 - INFO - Typing text '999' into text field 'name = id'.
+20240518 14:32:00.296 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (92)
+20240518 14:32:00.296 - INFO - +----- START IF/ELSE ROOT:  [ ]
+20240518 14:32:00.298 - INFO - +------ START IF: '${id}' != '${EMPTY}' [ ]
+20240518 14:32:00.299 - INFO - +------- START KEYWORD: SeleniumLibrary.Press Key [ name:id | \\\13 ]
+20240518 14:32:00.337 - INFO - +------- END KEYWORD: SeleniumLibrary.Press Key (38)
+20240518 14:32:00.338 - INFO - +------ END IF: '${id}' != '${EMPTY}' (41)
+20240518 14:32:00.338 - INFO - +------ START ELSE:  [ ]
+20240518 14:32:00.339 - INFO - +------- START KEYWORD: SeleniumLibrary.Press Key [ name:search | \\\13 ]
+20240518 14:32:00.339 - INFO - +------- END KEYWORD: SeleniumLibrary.Press Key (0)
+20240518 14:32:00.340 - INFO - +------ END ELSE:  (1)
+20240518 14:32:00.340 - INFO - +----- END IF/ELSE ROOT:  (44)
+20240518 14:32:00.341 - INFO - +---- END KEYWORD: general.problem search (6263)
+------------------------------------------------------------------------------
+20240518 14:32:00.342 - INFO - +--- END TEST: ByNotExistID (6264)
+------------------------------------------------------------------------------
+20240518 14:32:00.343 - INFO - +--- START TEST: FuzzyByTitle [ ]
+------------------------------------------------------------------------------
+20240518 14:32:00.344 - INFO - +---- START KEYWORD: general.problem search [ 算法 | \ ]
+20240518 14:32:00.346 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${problemset} | ${ff} ]
+20240518 14:32:00.348 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/problemset.php'.
+20240518 14:32:06.368 - DEBUG - Opened browser with session id b2718c2f-2024-49d4-b79f-9db4035bf681.
+20240518 14:32:06.369 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (6023)
+20240518 14:32:06.369 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = search | ${title} ]
+20240518 14:32:06.372 - INFO - Typing text '算法' into text field 'name = search'.
+20240518 14:32:06.635 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (266)
+20240518 14:32:06.635 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = id | ${id} ]
+20240518 14:32:06.637 - INFO - Typing text '' into text field 'name = id'.
+20240518 14:32:06.683 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (48)
+20240518 14:32:06.684 - INFO - +----- START IF/ELSE ROOT:  [ ]
+20240518 14:32:06.685 - INFO - +------ START IF: '${id}' != '${EMPTY}' [ ]
+20240518 14:32:06.686 - INFO - +------- START KEYWORD: SeleniumLibrary.Press Key [ name:id | \\\13 ]
+20240518 14:32:06.687 - INFO - +------- END KEYWORD: SeleniumLibrary.Press Key (1)
+20240518 14:32:06.688 - INFO - +------ END IF: '${id}' != '${EMPTY}' (3)
+20240518 14:32:06.688 - INFO - +------ START ELSE:  [ ]
+20240518 14:32:06.689 - INFO - +------- START KEYWORD: SeleniumLibrary.Press Key [ name:search | \\\13 ]
+20240518 14:32:06.742 - INFO - +------- END KEYWORD: SeleniumLibrary.Press Key (53)
+20240518 14:32:06.743 - INFO - +------ END ELSE:  (55)
+20240518 14:32:06.743 - INFO - +----- END IF/ELSE ROOT:  (59)
+20240518 14:32:06.744 - INFO - +---- END KEYWORD: general.problem search (6399)
+------------------------------------------------------------------------------
+20240518 14:32:06.745 - INFO - +--- END TEST: FuzzyByTitle (6402)
+------------------------------------------------------------------------------
+20240518 14:32:06.746 - INFO - +--- START TEST: PreciseByTitle [ ]
+------------------------------------------------------------------------------
+20240518 14:32:06.747 - INFO - +---- START KEYWORD: general.problem search [ 迷宫问题 | \ ]
+20240518 14:32:06.748 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${problemset} | ${ff} ]
+20240518 14:32:06.750 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/problemset.php'.
+20240518 14:32:12.828 - DEBUG - Opened browser with session id 9ee9ed58-2408-451b-a264-623e28a21f61.
+20240518 14:32:12.832 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (6081)
+20240518 14:32:12.833 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = search | ${title} ]
+20240518 14:32:12.835 - INFO - Typing text '迷宫问题' into text field 'name = search'.
+20240518 14:32:13.139 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (306)
+20240518 14:32:13.139 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = id | ${id} ]
+20240518 14:32:13.141 - INFO - Typing text '' into text field 'name = id'.
+20240518 14:32:13.189 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (50)
+20240518 14:32:13.189 - INFO - +----- START IF/ELSE ROOT:  [ ]
+20240518 14:32:13.191 - INFO - +------ START IF: '${id}' != '${EMPTY}' [ ]
+20240518 14:32:13.192 - INFO - +------- START KEYWORD: SeleniumLibrary.Press Key [ name:id | \\\13 ]
+20240518 14:32:13.193 - INFO - +------- END KEYWORD: SeleniumLibrary.Press Key (0)
+20240518 14:32:13.193 - INFO - +------ END IF: '${id}' != '${EMPTY}' (4)
+20240518 14:32:13.193 - INFO - +------ START ELSE:  [ ]
+20240518 14:32:13.194 - INFO - +------- START KEYWORD: SeleniumLibrary.Press Key [ name:search | \\\13 ]
+20240518 14:32:13.261 - INFO - +------- END KEYWORD: SeleniumLibrary.Press Key (66)
+20240518 14:32:13.261 - INFO - +------ END ELSE:  (68)
+20240518 14:32:13.261 - INFO - +----- END IF/ELSE ROOT:  (72)
+20240518 14:32:13.262 - INFO - +---- END KEYWORD: general.problem search (6515)
+------------------------------------------------------------------------------
+20240518 14:32:13.263 - INFO - +--- END TEST: PreciseByTitle (6518)
+------------------------------------------------------------------------------
+20240518 14:32:13.264 - INFO - +--- START TEST: None [ ]
+------------------------------------------------------------------------------
+20240518 14:32:13.265 - INFO - +---- START KEYWORD: general.problem search [ \ | \ ]
+20240518 14:32:13.266 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${problemset} | ${ff} ]
+20240518 14:32:13.268 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/problemset.php'.
+20240518 14:32:19.501 - DEBUG - Opened browser with session id 24f4c755-4865-4ea6-a8c9-b748d6759ab4.
+20240518 14:32:19.503 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (6236)
+20240518 14:32:19.503 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = search | ${title} ]
+20240518 14:32:19.505 - INFO - Typing text '' into text field 'name = search'.
+20240518 14:32:19.812 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (308)
+20240518 14:32:19.812 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = id | ${id} ]
+20240518 14:32:19.814 - INFO - Typing text '' into text field 'name = id'.
+20240518 14:32:19.851 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (38)
+20240518 14:32:19.851 - INFO - +----- START IF/ELSE ROOT:  [ ]
+20240518 14:32:19.853 - INFO - +------ START IF: '${id}' != '${EMPTY}' [ ]
+20240518 14:32:19.854 - INFO - +------- START KEYWORD: SeleniumLibrary.Press Key [ name:id | \\\13 ]
+20240518 14:32:19.855 - INFO - +------- END KEYWORD: SeleniumLibrary.Press Key (0)
+20240518 14:32:19.855 - INFO - +------ END IF: '${id}' != '${EMPTY}' (4)
+20240518 14:32:19.855 - INFO - +------ START ELSE:  [ ]
+20240518 14:32:19.856 - INFO - +------- START KEYWORD: SeleniumLibrary.Press Key [ name:search | \\\13 ]
+20240518 14:32:19.957 - INFO - +------- END KEYWORD: SeleniumLibrary.Press Key (100)
+20240518 14:32:19.958 - INFO - +------ END ELSE:  (102)
+20240518 14:32:19.958 - INFO - +----- END IF/ELSE ROOT:  (107)
+20240518 14:32:19.959 - INFO - +---- END KEYWORD: general.problem search (6693)
+------------------------------------------------------------------------------
+20240518 14:32:19.960 - INFO - +--- END TEST: None (6695)
+------------------------------------------------------------------------------
+20240518 14:32:19.963 - INFO - +-- END SUITE: Lab6.WebAutomation.ProblemSearch (33319)
+==============================================================================
+20240518 14:32:19.966 - INFO - +- END SUITE: Lab6.WebAutomation (33324)
+==============================================================================
+20240518 14:32:19.968 - INFO - + END SUITE: Lab6 (33385)
+==============================================================================

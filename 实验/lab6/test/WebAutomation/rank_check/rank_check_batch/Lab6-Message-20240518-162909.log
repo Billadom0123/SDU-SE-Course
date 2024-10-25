@@ -1,0 +1,47 @@
+==============================================================================
+20240518 16:29:10.663 - INFO - + START SUITE: Lab6 [ ]
+==============================================================================
+20240518 16:29:10.665 - INFO - +- START SUITE: Lab6.WebAutomation [ ]
+==============================================================================
+20240518 16:29:11.268 - INFO - +-- START SUITE: Lab6.WebAutomation.RankCheck [ ]
+==============================================================================
+20240518 16:29:11.269 - INFO - +--- START TEST: AccurateID [ ]
+------------------------------------------------------------------------------
+20240518 16:29:11.270 - INFO - +---- START KEYWORD: general.rank check [ 202100300063 ]
+20240518 16:29:11.279 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${rank} | ${ff} ]
+20240518 16:29:11.279 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/ranklist.php'.
+20240518 16:29:17.444 - DEBUG - Opened browser with session id 7d45d4b0-ad69-48ab-b2f6-9daffc1afdc1.
+20240518 16:29:17.445 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (6165)
+20240518 16:29:17.445 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = prefix | ${uid} ]
+20240518 16:29:17.447 - INFO - Typing text '202100300063' into text field 'name = prefix'.
+20240518 16:29:17.732 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (286)
+20240518 16:29:17.732 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ tag = button ]
+20240518 16:29:17.733 - INFO - Clicking button 'tag = button'.
+20240518 16:29:17.974 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (242)
+20240518 16:29:17.975 - INFO - +---- END KEYWORD: general.rank check (6705)
+------------------------------------------------------------------------------
+20240518 16:29:17.976 - INFO - +--- END TEST: AccurateID (6706)
+------------------------------------------------------------------------------
+20240518 16:29:17.977 - INFO - +--- START TEST: FuzzyID [ ]
+------------------------------------------------------------------------------
+20240518 16:29:17.978 - INFO - +---- START KEYWORD: general.rank check [ 2021 ]
+20240518 16:29:17.979 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${rank} | ${ff} ]
+20240518 16:29:17.980 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/ranklist.php'.
+20240518 16:29:23.951 - DEBUG - Opened browser with session id 49d2ac9c-2cd9-49a2-8ee4-6d85fdaedfb0.
+20240518 16:29:23.952 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5972)
+20240518 16:29:23.953 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ name = prefix | ${uid} ]
+20240518 16:29:23.955 - INFO - Typing text '2021' into text field 'name = prefix'.
+20240518 16:29:24.275 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (322)
+20240518 16:29:24.276 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ tag = button ]
+20240518 16:29:24.277 - INFO - Clicking button 'tag = button'.
+20240518 16:29:24.542 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (266)
+20240518 16:29:24.543 - INFO - +---- END KEYWORD: general.rank check (6565)
+------------------------------------------------------------------------------
+20240518 16:29:24.545 - INFO - +--- END TEST: FuzzyID (6568)
+------------------------------------------------------------------------------
+20240518 16:29:24.549 - INFO - +-- END SUITE: Lab6.WebAutomation.RankCheck (13881)
+==============================================================================
+20240518 16:29:24.552 - INFO - +- END SUITE: Lab6.WebAutomation (13887)
+==============================================================================
+20240518 16:29:24.556 - INFO - + END SUITE: Lab6 (13953)
+==============================================================================

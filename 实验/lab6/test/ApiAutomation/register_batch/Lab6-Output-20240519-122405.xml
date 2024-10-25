@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20240519 12:24:05.781" rpa="false" schemaversion="4">
+<suite id="s1" name="Lab6" source="D:\workSpace\st\lab6">
+<suite id="s1-s1" name="ApiAutomation" source="D:\workSpace\st\lab6\ApiAutomation">
+<suite id="s1-s1-s1" name="Register" source="D:\workSpace\st\lab6\ApiAutomation\Register.robot">
+<test id="s1-s1-s1-t1" name="success" line="8">
+<kw name="register" library="general">
+<arg>200203214</arg>
+<arg>hahahah</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<arg>sdu</arg>
+<arg>3054117680@qq.com</arg>
+<arg>-2</arg>
+<tag>PostRegister</tag>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${payload}</var>
+<arg>user_id=${uid}</arg>
+<arg>nick=${name}</arg>
+<arg>password=${pwd}</arg>
+<arg>rptpassword=${rpt}</arg>
+<arg>school=${school}</arg>
+<arg>email=${email}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240519 12:24:06.147" level="INFO">${payload} = {'user_id': '200203214', 'nick': 'hahahah', 'password': '123456', 'rptpassword': '123456', 'school': 'sdu', 'email': '3054117680@qq.com'}</msg>
+<status status="PASS" starttime="20240519 12:24:06.146" endtime="20240519 12:24:06.148"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${ip}/register.php</arg>
+<arg>data=${payload}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20240519 12:24:06.160" level="INFO">POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '102', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=200203214&amp;nick=hahahah&amp;password=123456&amp;rptpassword=123456&amp;school=sdu&amp;email=3054117680%40qq.com 
+ </msg>
+<msg timestamp="20240519 12:24:06.160" level="INFO">POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=pvdivg0p6r1at8qlbrsuq5ikts; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=&lt;script&gt;history.go(-2);&lt;/script&gt;
+ 
+ </msg>
+<msg timestamp="20240519 12:24:06.160" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.148" endtime="20240519 12:24:06.160"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240519 12:24:06.161" level="INFO">&lt;script&gt;history.go(-2);&lt;/script&gt;
+</msg>
+<status status="PASS" starttime="20240519 12:24:06.161" endtime="20240519 12:24:06.162"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240519 12:24:06.162" endtime="20240519 12:24:06.162"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${bytes_seq}</var>
+<arg>'${should_contain}'.encode('utf-8')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240519 12:24:06.163" level="INFO">${bytes_seq} = -2</msg>
+<status status="PASS" starttime="20240519 12:24:06.162" endtime="20240519 12:24:06.163"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response.content}</arg>
+<arg>${bytes_seq}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240519 12:24:06.163" endtime="20240519 12:24:06.164"/>
+</kw>
+<status status="PASS" starttime="20240519 12:24:06.145" endtime="20240519 12:24:06.164"/>
+</kw>
+<tag>PostRegister</tag>
+<status status="PASS" starttime="20240519 12:24:06.144" endtime="20240519 12:24:06.164"/>
+</test>
+<test id="s1-s1-s1-t2" name="uname_format_err" line="12">
+<kw name="register" library="general">
+<arg>안녕하세요</arg>
+<arg>hahahah</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<arg>sdu</arg>
+<arg>3054117680@qq.com</arg>
+<arg>alert</arg>
+<tag>PostRegister</tag>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${payload}</var>
+<arg>user_id=${uid}</arg>
+<arg>nick=${name}</arg>
+<arg>password=${pwd}</arg>
+<arg>rptpassword=${rpt}</arg>
+<arg>school=${school}</arg>
+<arg>email=${email}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240519 12:24:06.166" level="INFO">${payload} = {'user_id': '안녕하세요', 'nick': 'hahahah', 'password': '123456', 'rptpassword': '123456', 'school': 'sdu', 'email': '3054117680@qq.com'}</msg>
+<status status="PASS" starttime="20240519 12:24:06.166" endtime="20240519 12:24:06.166"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${ip}/register.php</arg>
+<arg>data=${payload}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20240519 12:24:06.175" level="INFO">POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '138', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94&amp;nick=hahahah&amp;password=123456&amp;rptpassword=123456&amp;school=sdu&amp;email=3054117680%40qq.com 
+ </msg>
+<msg timestamp="20240519 12:24:06.175" level="INFO">POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=vs5rrqt1fa70tbi756hjs8t145; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=&lt;script language='javascript'&gt;
+alert('User ID can only contain NUMBERs &amp; LETTERs!\n');
+ history.go(-1);
+&lt;/script&gt; 
+ </msg>
+<msg timestamp="20240519 12:24:06.176" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.167" endtime="20240519 12:24:06.176"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240519 12:24:06.178" level="INFO">&lt;script language='javascript'&gt;
+alert('User ID can only contain NUMBERs &amp; LETTERs!\n');
+ history.go(-1);
+&lt;/script&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.176" endtime="20240519 12:24:06.178"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240519 12:24:06.178" endtime="20240519 12:24:06.178"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${bytes_seq}</var>
+<arg>'${should_contain}'.encode('utf-8')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240519 12:24:06.179" level="INFO">${bytes_seq} = alert</msg>
+<status status="PASS" starttime="20240519 12:24:06.179" endtime="20240519 12:24:06.179"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response.content}</arg>
+<arg>${bytes_seq}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240519 12:24:06.179" endtime="20240519 12:24:06.180"/>
+</kw>
+<status status="PASS" starttime="20240519 12:24:06.165" endtime="20240519 12:24:06.180"/>
+</kw>
+<tag>PostRegister</tag>
+<status status="PASS" starttime="20240519 12:24:06.164" endtime="20240519 12:24:06.180"/>
+</test>
+<test id="s1-s1-s1-t3" name="uname_too_short" line="16">
+<kw name="register" library="general">
+<arg>1</arg>
+<arg>hahahah</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<arg>sdu</arg>
+<arg>3054117680@qq.com</arg>
+<arg>alert</arg>
+<tag>PostRegister</tag>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${payload}</var>
+<arg>user_id=${uid}</arg>
+<arg>nick=${name}</arg>
+<arg>password=${pwd}</arg>
+<arg>rptpassword=${rpt}</arg>
+<arg>school=${school}</arg>
+<arg>email=${email}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240519 12:24:06.182" level="INFO">${payload} = {'user_id': '1', 'nick': 'hahahah', 'password': '123456', 'rptpassword': '123456', 'school': 'sdu', 'email': '3054117680@qq.com'}</msg>
+<status status="PASS" starttime="20240519 12:24:06.182" endtime="20240519 12:24:06.182"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${ip}/register.php</arg>
+<arg>data=${payload}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20240519 12:24:06.191" level="INFO">POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '94', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=1&amp;nick=hahahah&amp;password=123456&amp;rptpassword=123456&amp;school=sdu&amp;email=3054117680%40qq.com 
+ </msg>
+<msg timestamp="20240519 12:24:06.191" level="INFO">POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=7eg8gdqlriq4nvvlsoeor8evb9; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=&lt;script language='javascript'&gt;
+alert(' User ID should be NO less than 3 chars !\n');
+ history.go(-1);
+&lt;/script&gt; 
+ </msg>
+<msg timestamp="20240519 12:24:06.191" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.183" endtime="20240519 12:24:06.192"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240519 12:24:06.193" level="INFO">&lt;script language='javascript'&gt;
+alert(' User ID should be NO less than 3 chars !\n');
+ history.go(-1);
+&lt;/script&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.192" endtime="20240519 12:24:06.193"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240519 12:24:06.193" endtime="20240519 12:24:06.195"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${bytes_seq}</var>
+<arg>'${should_contain}'.encode('utf-8')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240519 12:24:06.195" level="INFO">${bytes_seq} = alert</msg>
+<status status="PASS" starttime="20240519 12:24:06.195" endtime="20240519 12:24:06.195"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response.content}</arg>
+<arg>${bytes_seq}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240519 12:24:06.196" endtime="20240519 12:24:06.197"/>
+</kw>
+<status status="PASS" starttime="20240519 12:24:06.181" endtime="20240519 12:24:06.197"/>
+</kw>
+<tag>PostRegister</tag>
+<status status="PASS" starttime="20240519 12:24:06.181" endtime="20240519 12:24:06.197"/>
+</test>
+<test id="s1-s1-s1-t4" name="pwd_too_short" line="20">
+<kw name="register" library="general">
+<arg>20020429</arg>
+<arg>hahahah</arg>
+<arg>123</arg>
+<arg>123</arg>
+<arg>sdu</arg>
+<arg>3054117680@qq.com</arg>
+<arg>alert</arg>
+<tag>PostRegister</tag>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${payload}</var>
+<arg>user_id=${uid}</arg>
+<arg>nick=${name}</arg>
+<arg>password=${pwd}</arg>
+<arg>rptpassword=${rpt}</arg>
+<arg>school=${school}</arg>
+<arg>email=${email}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240519 12:24:06.200" level="INFO">${payload} = {'user_id': '20020429', 'nick': 'hahahah', 'password': '123', 'rptpassword': '123', 'school': 'sdu', 'email': '3054117680@qq.com'}</msg>
+<status status="PASS" starttime="20240519 12:24:06.199" endtime="20240519 12:24:06.200"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${ip}/register.php</arg>
+<arg>data=${payload}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20240519 12:24:06.209" level="INFO">POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '95', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=20020429&amp;nick=hahahah&amp;password=123&amp;rptpassword=123&amp;school=sdu&amp;email=3054117680%40qq.com 
+ </msg>
+<msg timestamp="20240519 12:24:06.209" level="INFO">POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=vbmttk0p0isj3n2vh5knidovfs; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=&lt;script language='javascript'&gt;
+alert('Password should be NO less than 6 chars ! \n');
+ history.go(-1);
+&lt;/script&gt; 
+ </msg>
+<msg timestamp="20240519 12:24:06.209" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.200" endtime="20240519 12:24:06.209"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240519 12:24:06.211" level="INFO">&lt;script language='javascript'&gt;
+alert('Password should be NO less than 6 chars ! \n');
+ history.go(-1);
+&lt;/script&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.210" endtime="20240519 12:24:06.212"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240519 12:24:06.212" endtime="20240519 12:24:06.212"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${bytes_seq}</var>
+<arg>'${should_contain}'.encode('utf-8')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240519 12:24:06.213" level="INFO">${bytes_seq} = alert</msg>
+<status status="PASS" starttime="20240519 12:24:06.212" endtime="20240519 12:24:06.213"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response.content}</arg>
+<arg>${bytes_seq}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240519 12:24:06.213" endtime="20240519 12:24:06.214"/>
+</kw>
+<status status="PASS" starttime="20240519 12:24:06.198" endtime="20240519 12:24:06.214"/>
+</kw>
+<tag>PostRegister</tag>
+<status status="PASS" starttime="20240519 12:24:06.198" endtime="20240519 12:24:06.215"/>
+</test>
+<test id="s1-s1-s1-t5" name="pwd_rpt_err" line="24">
+<kw name="register" library="general">
+<arg>20020529</arg>
+<arg>hahahah</arg>
+<arg>123456</arg>
+<arg>1234567</arg>
+<arg>sdu</arg>
+<arg>3054117680@qq.com</arg>
+<arg>alert</arg>
+<tag>PostRegister</tag>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${payload}</var>
+<arg>user_id=${uid}</arg>
+<arg>nick=${name}</arg>
+<arg>password=${pwd}</arg>
+<arg>rptpassword=${rpt}</arg>
+<arg>school=${school}</arg>
+<arg>email=${email}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240519 12:24:06.217" level="INFO">${payload} = {'user_id': '20020529', 'nick': 'hahahah', 'password': '123456', 'rptpassword': '1234567', 'school': 'sdu', 'email': '3054117680@qq.com'}</msg>
+<status status="PASS" starttime="20240519 12:24:06.216" endtime="20240519 12:24:06.217"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${ip}/register.php</arg>
+<arg>data=${payload}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20240519 12:24:06.224" level="INFO">POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '102', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=20020529&amp;nick=hahahah&amp;password=123456&amp;rptpassword=1234567&amp;school=sdu&amp;email=3054117680%40qq.com 
+ </msg>
+<msg timestamp="20240519 12:24:06.224" level="INFO">POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=norg4vqks10tte20n6ldkqlvm9; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=&lt;script language='javascript'&gt;
+alert('The second password is different with the first one !!\n');
+ history.go(-1);
+&lt;/script&gt; 
+ </msg>
+<msg timestamp="20240519 12:24:06.224" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.217" endtime="20240519 12:24:06.225"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240519 12:24:06.226" level="INFO">&lt;script language='javascript'&gt;
+alert('The second password is different with the first one !!\n');
+ history.go(-1);
+&lt;/script&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.225" endtime="20240519 12:24:06.226"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240519 12:24:06.226" endtime="20240519 12:24:06.227"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${bytes_seq}</var>
+<arg>'${should_contain}'.encode('utf-8')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240519 12:24:06.227" level="INFO">${bytes_seq} = alert</msg>
+<status status="PASS" starttime="20240519 12:24:06.227" endtime="20240519 12:24:06.227"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response.content}</arg>
+<arg>${bytes_seq}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240519 12:24:06.228" endtime="20240519 12:24:06.228"/>
+</kw>
+<status status="PASS" starttime="20240519 12:24:06.216" endtime="20240519 12:24:06.228"/>
+</kw>
+<tag>PostRegister</tag>
+<status status="PASS" starttime="20240519 12:24:06.215" endtime="20240519 12:24:06.229"/>
+</test>
+<test id="s1-s1-s1-t6" name="school_too_long" line="28">
+<kw name="register" library="general">
+<arg>20020629</arg>
+<arg>hahahah</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<arg>我的学校的名字好长好长好长好长好长好长好长好长好长好长</arg>
+<arg>3054117680@qq.com</arg>
+<arg>alert</arg>
+<tag>PostRegister</tag>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${payload}</var>
+<arg>user_id=${uid}</arg>
+<arg>nick=${name}</arg>
+<arg>password=${pwd}</arg>
+<arg>rptpassword=${rpt}</arg>
+<arg>school=${school}</arg>
+<arg>email=${email}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240519 12:24:06.230" level="INFO">${payload} = {'user_id': '20020629', 'nick': 'hahahah', 'password': '123456', 'rptpassword': '123456', 'school': '我的学校的名字好长好长好长好长好长好长好长好长好长好长', 'email': '3054117680@qq.com'}</msg>
+<status status="PASS" starttime="20240519 12:24:06.230" endtime="20240519 12:24:06.231"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${ip}/register.php</arg>
+<arg>data=${payload}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20240519 12:24:06.239" level="INFO">POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '341', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=20020629&amp;nick=hahahah&amp;password=123456&amp;rptpassword=123456&amp;school=%E6%88%91%E7%9A%84%E5%AD%A6%E6%A0%A1%E7%9A%84%E5%90%8D%E5%AD%97%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF&amp;email=3054117680%40qq.com 
+ </msg>
+<msg timestamp="20240519 12:24:06.240" level="INFO">POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=ue18n4cv9ej0umfh7lo29slosn; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=&lt;script language='javascript'&gt;
+alert('School Name Too Long!\n');
+ history.go(-1);
+&lt;/script&gt; 
+ </msg>
+<msg timestamp="20240519 12:24:06.240" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.231" endtime="20240519 12:24:06.240"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240519 12:24:06.241" level="INFO">&lt;script language='javascript'&gt;
+alert('School Name Too Long!\n');
+ history.go(-1);
+&lt;/script&gt;</msg>
+<status status="PASS" starttime="20240519 12:24:06.240" endtime="20240519 12:24:06.241"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20240519 12:24:06.241" endtime="20240519 12:24:06.241"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${bytes_seq}</var>
+<arg>'${should_contain}'.encode('utf-8')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240519 12:24:06.242" level="INFO">${bytes_seq} = alert</msg>
+<status status="PASS" starttime="20240519 12:24:06.242" endtime="20240519 12:24:06.242"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response.content}</arg>
+<arg>${bytes_seq}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240519 12:24:06.243" endtime="20240519 12:24:06.244"/>
+</kw>
+<status status="PASS" starttime="20240519 12:24:06.229" endtime="20240519 12:24:06.244"/>
+</kw>
+<tag>PostRegister</tag>
+<status status="PASS" starttime="20240519 12:24:06.229" endtime="20240519 12:24:06.244"/>
+</test>
+<status status="PASS" starttime="20240519 12:24:05.957" endtime="20240519 12:24:06.245"/>
+</suite>
+<status status="PASS" starttime="20240519 12:24:05.841" endtime="20240519 12:24:06.246"/>
+</suite>
+<status status="PASS" starttime="20240519 12:24:05.816" endtime="20240519 12:24:06.246"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="6" fail="0" skip="0">PostRegister</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Lab6">Lab6</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="ApiAutomation">Lab6.ApiAutomation</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1-s1" name="Register">Lab6.ApiAutomation.Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,44 @@
+<template>
+	<div>
+		<text class="iconfont" :style="iconStyle">{{icon}}</text>
+	</div>
+</template>
+
+<script>
+	export default {
+		props: {
+			icon: {
+				type: String,
+				default: '\ue654' 
+			},
+			iconStyle: {
+				type: String,
+				default: ''
+			}
+		},
+		mounted() {
+			// #ifdef APP-PLUS-NVUE
+			// nvue加载图标库 
+			const domModule = weex.requireModule('dom')
+			domModule.addRule('fontFace', {
+				'fontFamily': "iconfont",
+				'src': "url('https://at.alicdn.com/t/font_1643689_dhao47fp2l.ttf')"
+			})
+			// #endif
+		}
+	}
+</script>
+
+<style scoped>
+	/*每个页面公共css */ 
+	/* #ifndef APP-NVUE */
+	@import "./static/iconfont.css";
+	/* #endif */
+	/* #ifdef APP-NVUE */
+	.iconfont {
+		font-family: iconfont;
+		font-size: 50upx;
+		color: #999999;
+	}
+	/* #endif */
+</style>

@@ -1,0 +1,229 @@
+==============================================================================
+20240519 12:24:05.841 - INFO - + START SUITE: Lab6 [ ]
+==============================================================================
+20240519 12:24:05.957 - INFO - +- START SUITE: Lab6.ApiAutomation [ ]
+==============================================================================
+20240519 12:24:06.144 - INFO - +-- START SUITE: Lab6.ApiAutomation.Register [ ]
+==============================================================================
+20240519 12:24:06.144 - INFO - +--- START TEST: success [ ]
+------------------------------------------------------------------------------
+20240519 12:24:06.145 - INFO - +---- START KEYWORD: general.register [ 200203214 | hahahah | 123456 | 123456 | sdu | 3054117680@qq.com | -2 ]
+20240519 12:24:06.147 - INFO - +----- START KEYWORD: BuiltIn.Create Dictionary [ user_id=${uid} | nick=${name} | password=${pwd} | rptpassword=${rpt} | school=${school} | email=${email} ]
+20240519 12:24:06.147 - INFO - ${payload} = {'user_id': '200203214', 'nick': 'hahahah', 'password': '123456', 'rptpassword': '123456', 'school': 'sdu', 'email': '3054117680@qq.com'}
+20240519 12:24:06.148 - INFO - +----- END KEYWORD: BuiltIn.Create Dictionary (2)
+20240519 12:24:06.148 - INFO - +----- START KEYWORD: RequestsLibrary.POST [ ${ip}/register.php | data=${payload} ]
+20240519 12:24:06.160 - INFO - POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '102', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=200203214&nick=hahahah&password=123456&rptpassword=123456&school=sdu&email=3054117680%40qq.com
+20240519 12:24:06.160 - INFO - POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=pvdivg0p6r1at8qlbrsuq5ikts; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=<script>history.go(-2);</script>
+20240519 12:24:06.160 - INFO - ${response} = <Response [200]>
+20240519 12:24:06.161 - INFO - +----- END KEYWORD: RequestsLibrary.POST (12)
+20240519 12:24:06.161 - INFO - +----- START KEYWORD: BuiltIn.Log [ ${response.content} ]
+20240519 12:24:06.161 - INFO - <script>history.go(-2);</script>
+20240519 12:24:06.162 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20240519 12:24:06.162 - INFO - +----- START KEYWORD: RequestsLibrary.Status Should Be [ 200 ]
+20240519 12:24:06.162 - INFO - +----- END KEYWORD: RequestsLibrary.Status Should Be (0)
+20240519 12:24:06.162 - INFO - +----- START KEYWORD: BuiltIn.Evaluate [ '${should_contain}'.encode('utf-8') ]
+20240519 12:24:06.163 - INFO - ${bytes_seq} = -2
+20240519 12:24:06.163 - INFO - +----- END KEYWORD: BuiltIn.Evaluate (1)
+20240519 12:24:06.163 - INFO - +----- START KEYWORD: BuiltIn.Should Contain [ ${response.content} | ${bytes_seq} ]
+20240519 12:24:06.164 - INFO - +----- END KEYWORD: BuiltIn.Should Contain (1)
+20240519 12:24:06.164 - INFO - +---- END KEYWORD: general.register (19)
+------------------------------------------------------------------------------
+20240519 12:24:06.164 - INFO - +--- END TEST: success (20)
+------------------------------------------------------------------------------
+20240519 12:24:06.164 - INFO - +--- START TEST: uname_format_err [ ]
+------------------------------------------------------------------------------
+20240519 12:24:06.165 - INFO - +---- START KEYWORD: general.register [ 안녕하세요 | hahahah | 123456 | 123456 | sdu | 3054117680@qq.com | alert ]
+20240519 12:24:06.166 - INFO - +----- START KEYWORD: BuiltIn.Create Dictionary [ user_id=${uid} | nick=${name} | password=${pwd} | rptpassword=${rpt} | school=${school} | email=${email} ]
+20240519 12:24:06.166 - INFO - ${payload} = {'user_id': '안녕하세요', 'nick': 'hahahah', 'password': '123456', 'rptpassword': '123456', 'school': 'sdu', 'email': '3054117680@qq.com'}
+20240519 12:24:06.167 - INFO - +----- END KEYWORD: BuiltIn.Create Dictionary (0)
+20240519 12:24:06.167 - INFO - +----- START KEYWORD: RequestsLibrary.POST [ ${ip}/register.php | data=${payload} ]
+20240519 12:24:06.175 - INFO - POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '138', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94&nick=hahahah&password=123456&rptpassword=123456&school=sdu&email=3054117680%40qq.com
+20240519 12:24:06.175 - INFO - POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=vs5rrqt1fa70tbi756hjs8t145; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=<script language='javascript'>
+alert('User ID can only contain NUMBERs & LETTERs!\n');
+ history.go(-1);
+</script>
+20240519 12:24:06.176 - INFO - ${response} = <Response [200]>
+20240519 12:24:06.176 - INFO - +----- END KEYWORD: RequestsLibrary.POST (9)
+20240519 12:24:06.176 - INFO - +----- START KEYWORD: BuiltIn.Log [ ${response.content} ]
+20240519 12:24:06.178 - INFO - <script language='javascript'>
+alert('User ID can only contain NUMBERs & LETTERs!\n');
+ history.go(-1);
+</script>
+20240519 12:24:06.178 - INFO - +----- END KEYWORD: BuiltIn.Log (2)
+20240519 12:24:06.178 - INFO - +----- START KEYWORD: RequestsLibrary.Status Should Be [ 200 ]
+20240519 12:24:06.179 - INFO - +----- END KEYWORD: RequestsLibrary.Status Should Be (0)
+20240519 12:24:06.179 - INFO - +----- START KEYWORD: BuiltIn.Evaluate [ '${should_contain}'.encode('utf-8') ]
+20240519 12:24:06.179 - INFO - ${bytes_seq} = alert
+20240519 12:24:06.179 - INFO - +----- END KEYWORD: BuiltIn.Evaluate (0)
+20240519 12:24:06.179 - INFO - +----- START KEYWORD: BuiltIn.Should Contain [ ${response.content} | ${bytes_seq} ]
+20240519 12:24:06.180 - INFO - +----- END KEYWORD: BuiltIn.Should Contain (1)
+20240519 12:24:06.180 - INFO - +---- END KEYWORD: general.register (15)
+------------------------------------------------------------------------------
+20240519 12:24:06.181 - INFO - +--- END TEST: uname_format_err (16)
+------------------------------------------------------------------------------
+20240519 12:24:06.181 - INFO - +--- START TEST: uname_too_short [ ]
+------------------------------------------------------------------------------
+20240519 12:24:06.181 - INFO - +---- START KEYWORD: general.register [ 1 | hahahah | 123456 | 123456 | sdu | 3054117680@qq.com | alert ]
+20240519 12:24:06.182 - INFO - +----- START KEYWORD: BuiltIn.Create Dictionary [ user_id=${uid} | nick=${name} | password=${pwd} | rptpassword=${rpt} | school=${school} | email=${email} ]
+20240519 12:24:06.182 - INFO - ${payload} = {'user_id': '1', 'nick': 'hahahah', 'password': '123456', 'rptpassword': '123456', 'school': 'sdu', 'email': '3054117680@qq.com'}
+20240519 12:24:06.182 - INFO - +----- END KEYWORD: BuiltIn.Create Dictionary (0)
+20240519 12:24:06.183 - INFO - +----- START KEYWORD: RequestsLibrary.POST [ ${ip}/register.php | data=${payload} ]
+20240519 12:24:06.191 - INFO - POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '94', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=1&nick=hahahah&password=123456&rptpassword=123456&school=sdu&email=3054117680%40qq.com
+20240519 12:24:06.191 - INFO - POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=7eg8gdqlriq4nvvlsoeor8evb9; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=<script language='javascript'>
+alert(' User ID should be NO less than 3 chars !\n');
+ history.go(-1);
+</script>
+20240519 12:24:06.191 - INFO - ${response} = <Response [200]>
+20240519 12:24:06.192 - INFO - +----- END KEYWORD: RequestsLibrary.POST (9)
+20240519 12:24:06.192 - INFO - +----- START KEYWORD: BuiltIn.Log [ ${response.content} ]
+20240519 12:24:06.193 - INFO - <script language='javascript'>
+alert(' User ID should be NO less than 3 chars !\n');
+ history.go(-1);
+</script>
+20240519 12:24:06.193 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20240519 12:24:06.194 - INFO - +----- START KEYWORD: RequestsLibrary.Status Should Be [ 200 ]
+20240519 12:24:06.195 - INFO - +----- END KEYWORD: RequestsLibrary.Status Should Be (2)
+20240519 12:24:06.195 - INFO - +----- START KEYWORD: BuiltIn.Evaluate [ '${should_contain}'.encode('utf-8') ]
+20240519 12:24:06.195 - INFO - ${bytes_seq} = alert
+20240519 12:24:06.196 - INFO - +----- END KEYWORD: BuiltIn.Evaluate (0)
+20240519 12:24:06.196 - INFO - +----- START KEYWORD: BuiltIn.Should Contain [ ${response.content} | ${bytes_seq} ]
+20240519 12:24:06.197 - INFO - +----- END KEYWORD: BuiltIn.Should Contain (1)
+20240519 12:24:06.197 - INFO - +---- END KEYWORD: general.register (16)
+------------------------------------------------------------------------------
+20240519 12:24:06.197 - INFO - +--- END TEST: uname_too_short (16)
+------------------------------------------------------------------------------
+20240519 12:24:06.198 - INFO - +--- START TEST: pwd_too_short [ ]
+------------------------------------------------------------------------------
+20240519 12:24:06.198 - INFO - +---- START KEYWORD: general.register [ 20020429 | hahahah | 123 | 123 | sdu | 3054117680@qq.com | alert ]
+20240519 12:24:06.199 - INFO - +----- START KEYWORD: BuiltIn.Create Dictionary [ user_id=${uid} | nick=${name} | password=${pwd} | rptpassword=${rpt} | school=${school} | email=${email} ]
+20240519 12:24:06.200 - INFO - ${payload} = {'user_id': '20020429', 'nick': 'hahahah', 'password': '123', 'rptpassword': '123', 'school': 'sdu', 'email': '3054117680@qq.com'}
+20240519 12:24:06.200 - INFO - +----- END KEYWORD: BuiltIn.Create Dictionary (1)
+20240519 12:24:06.201 - INFO - +----- START KEYWORD: RequestsLibrary.POST [ ${ip}/register.php | data=${payload} ]
+20240519 12:24:06.209 - INFO - POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '95', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=20020429&nick=hahahah&password=123&rptpassword=123&school=sdu&email=3054117680%40qq.com
+20240519 12:24:06.209 - INFO - POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=vbmttk0p0isj3n2vh5knidovfs; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=<script language='javascript'>
+alert('Password should be NO less than 6 chars ! \n');
+ history.go(-1);
+</script>
+20240519 12:24:06.209 - INFO - ${response} = <Response [200]>
+20240519 12:24:06.210 - INFO - +----- END KEYWORD: RequestsLibrary.POST (9)
+20240519 12:24:06.210 - INFO - +----- START KEYWORD: BuiltIn.Log [ ${response.content} ]
+20240519 12:24:06.211 - INFO - <script language='javascript'>
+alert('Password should be NO less than 6 chars ! \n');
+ history.go(-1);
+</script>
+20240519 12:24:06.212 - INFO - +----- END KEYWORD: BuiltIn.Log (2)
+20240519 12:24:06.212 - INFO - +----- START KEYWORD: RequestsLibrary.Status Should Be [ 200 ]
+20240519 12:24:06.212 - INFO - +----- END KEYWORD: RequestsLibrary.Status Should Be (0)
+20240519 12:24:06.212 - INFO - +----- START KEYWORD: BuiltIn.Evaluate [ '${should_contain}'.encode('utf-8') ]
+20240519 12:24:06.213 - INFO - ${bytes_seq} = alert
+20240519 12:24:06.213 - INFO - +----- END KEYWORD: BuiltIn.Evaluate (1)
+20240519 12:24:06.213 - INFO - +----- START KEYWORD: BuiltIn.Should Contain [ ${response.content} | ${bytes_seq} ]
+20240519 12:24:06.214 - INFO - +----- END KEYWORD: BuiltIn.Should Contain (1)
+20240519 12:24:06.214 - INFO - +---- END KEYWORD: general.register (16)
+------------------------------------------------------------------------------
+20240519 12:24:06.215 - INFO - +--- END TEST: pwd_too_short (17)
+------------------------------------------------------------------------------
+20240519 12:24:06.215 - INFO - +--- START TEST: pwd_rpt_err [ ]
+------------------------------------------------------------------------------
+20240519 12:24:06.216 - INFO - +---- START KEYWORD: general.register [ 20020529 | hahahah | 123456 | 1234567 | sdu | 3054117680@qq.com | alert ]
+20240519 12:24:06.216 - INFO - +----- START KEYWORD: BuiltIn.Create Dictionary [ user_id=${uid} | nick=${name} | password=${pwd} | rptpassword=${rpt} | school=${school} | email=${email} ]
+20240519 12:24:06.217 - INFO - ${payload} = {'user_id': '20020529', 'nick': 'hahahah', 'password': '123456', 'rptpassword': '1234567', 'school': 'sdu', 'email': '3054117680@qq.com'}
+20240519 12:24:06.217 - INFO - +----- END KEYWORD: BuiltIn.Create Dictionary (1)
+20240519 12:24:06.217 - INFO - +----- START KEYWORD: RequestsLibrary.POST [ ${ip}/register.php | data=${payload} ]
+20240519 12:24:06.224 - INFO - POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '102', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=20020529&nick=hahahah&password=123456&rptpassword=1234567&school=sdu&email=3054117680%40qq.com
+20240519 12:24:06.224 - INFO - POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=norg4vqks10tte20n6ldkqlvm9; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=<script language='javascript'>
+alert('The second password is different with the first one !!\n');
+ history.go(-1);
+</script>
+20240519 12:24:06.224 - INFO - ${response} = <Response [200]>
+20240519 12:24:06.225 - INFO - +----- END KEYWORD: RequestsLibrary.POST (8)
+20240519 12:24:06.225 - INFO - +----- START KEYWORD: BuiltIn.Log [ ${response.content} ]
+20240519 12:24:06.226 - INFO - <script language='javascript'>
+alert('The second password is different with the first one !!\n');
+ history.go(-1);
+</script>
+20240519 12:24:06.226 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20240519 12:24:06.226 - INFO - +----- START KEYWORD: RequestsLibrary.Status Should Be [ 200 ]
+20240519 12:24:06.227 - INFO - +----- END KEYWORD: RequestsLibrary.Status Should Be (1)
+20240519 12:24:06.227 - INFO - +----- START KEYWORD: BuiltIn.Evaluate [ '${should_contain}'.encode('utf-8') ]
+20240519 12:24:06.227 - INFO - ${bytes_seq} = alert
+20240519 12:24:06.227 - INFO - +----- END KEYWORD: BuiltIn.Evaluate (0)
+20240519 12:24:06.228 - INFO - +----- START KEYWORD: BuiltIn.Should Contain [ ${response.content} | ${bytes_seq} ]
+20240519 12:24:06.228 - INFO - +----- END KEYWORD: BuiltIn.Should Contain (0)
+20240519 12:24:06.229 - INFO - +---- END KEYWORD: general.register (12)
+------------------------------------------------------------------------------
+20240519 12:24:06.229 - INFO - +--- END TEST: pwd_rpt_err (14)
+------------------------------------------------------------------------------
+20240519 12:24:06.229 - INFO - +--- START TEST: school_too_long [ ]
+------------------------------------------------------------------------------
+20240519 12:24:06.229 - INFO - +---- START KEYWORD: general.register [ 20020629 | hahahah | 123456 | 123456 | 我的学校的名字好长好长好长好长好长好长好长好长好长好长 | 3054117680@qq.com | alert ]
+20240519 12:24:06.230 - INFO - +----- START KEYWORD: BuiltIn.Create Dictionary [ user_id=${uid} | nick=${name} | password=${pwd} | rptpassword=${rpt} | school=${school} | email=${email} ]
+20240519 12:24:06.230 - INFO - ${payload} = {'user_id': '20020629', 'nick': 'hahahah', 'password': '123456', 'rptpassword': '123456', 'school': '我的学校的名字好长好长好长好长好长好长好长好长好长好长', 'email': '3054117680@qq.com'}
+20240519 12:24:06.231 - INFO - +----- END KEYWORD: BuiltIn.Create Dictionary (1)
+20240519 12:24:06.231 - INFO - +----- START KEYWORD: RequestsLibrary.POST [ ${ip}/register.php | data=${payload} ]
+20240519 12:24:06.239 - INFO - POST Request : url=http://211.87.224.235:8800//register.php 
+ path_url=//register.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '341', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=user_id=20020629&nick=hahahah&password=123456&rptpassword=123456&school=%E6%88%91%E7%9A%84%E5%AD%A6%E6%A0%A1%E7%9A%84%E5%90%8D%E5%AD%97%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF%E5%A5%BD%E9%95%BF&email=3054117680%40qq.com
+20240519 12:24:06.240 - INFO - POST Response : url=http://211.87.224.235:8800//register.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 04:24:07 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'PHPSESSID=ue18n4cv9ej0umfh7lo29slosn; path=/', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'} 
+ body=<script language='javascript'>
+alert('School Name Too Long!\n');
+ history.go(-1);
+</script>
+20240519 12:24:06.240 - INFO - ${response} = <Response [200]>
+20240519 12:24:06.240 - INFO - +----- END KEYWORD: RequestsLibrary.POST (9)
+20240519 12:24:06.240 - INFO - +----- START KEYWORD: BuiltIn.Log [ ${response.content} ]
+20240519 12:24:06.241 - INFO - <script language='javascript'>
+alert('School Name Too Long!\n');
+ history.go(-1);
+</script>
+20240519 12:24:06.241 - INFO - +----- END KEYWORD: BuiltIn.Log (1)
+20240519 12:24:06.241 - INFO - +----- START KEYWORD: RequestsLibrary.Status Should Be [ 200 ]
+20240519 12:24:06.242 - INFO - +----- END KEYWORD: RequestsLibrary.Status Should Be (0)
+20240519 12:24:06.242 - INFO - +----- START KEYWORD: BuiltIn.Evaluate [ '${should_contain}'.encode('utf-8') ]
+20240519 12:24:06.242 - INFO - ${bytes_seq} = alert
+20240519 12:24:06.242 - INFO - +----- END KEYWORD: BuiltIn.Evaluate (0)
+20240519 12:24:06.243 - INFO - +----- START KEYWORD: BuiltIn.Should Contain [ ${response.content} | ${bytes_seq} ]
+20240519 12:24:06.244 - INFO - +----- END KEYWORD: BuiltIn.Should Contain (1)
+20240519 12:24:06.244 - INFO - +---- END KEYWORD: general.register (15)
+------------------------------------------------------------------------------
+20240519 12:24:06.244 - INFO - +--- END TEST: school_too_long (15)
+------------------------------------------------------------------------------
+20240519 12:24:06.245 - INFO - +-- END SUITE: Lab6.ApiAutomation.Register (288)
+==============================================================================
+20240519 12:24:06.246 - INFO - +- END SUITE: Lab6.ApiAutomation (405)
+==============================================================================
+20240519 12:24:06.247 - INFO - + END SUITE: Lab6 (430)
+==============================================================================

@@ -1,0 +1,100 @@
+<template>
+	<div @click.stop="tap" @longpress.prevent="longTap">
+		<view class="wrapper" :style="styleText" hover-class="active">
+			<view class="icon">
+				<m-icon :iconStyle="iconStyle" :icon="icon"></m-icon>
+			</view>
+			<text v-if="showText" class="title">{{title}}</text>
+		</view>
+	</div>
+</template>
+
+<script>
+	import mIcon from './icon.nvue'
+	export default {
+		components: {
+			mIcon
+		},
+		props: {
+			icon: {
+				type: String,
+				default: '\ue654'
+			},
+			styleText: {
+				type: String,
+				default: ''
+			},
+			title: {
+				type: String,
+				default: '图标按钮'
+			},
+			iconStyle: {
+				type: String
+			},
+			titleStyle: {
+				type: String,
+				default: ''
+			},
+			showText: {
+				type: Boolean,
+				default: true
+			}
+		},
+		computed: {},
+		data() {
+			return {
+				clickFlag: true
+			}
+		},
+		methods: {
+			tap(e) {
+				if (!this.clickFlag) {
+					this.clickFlag = true
+					return
+				}
+				this.$emit('handleTap', e)
+			},
+			longTap(e) {
+				this.clickFlag = false
+				this.$emit('handleLong', e)
+			}
+		}
+	}
+</script>
+
+<style scoped>
+	.wrapper {
+		padding-left: 16upx;
+		padding-top: 16upx;
+		padding-bottom: 16upx;
+		padding-right: 16upx;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.active {
+		background-color: rgba(222, 222, 222, .8);
+	}
+
+	.icon {
+		color: #333333;
+		text-align: center;
+		margin-bottom: 10upx;
+	}
+
+	.title {
+		color: #333333;
+		font-size: 24upx;
+		text-align: center;
+		lines: 1;
+		/* #ifndef APP-NVUE */
+		text-overflow: -o-ellipsis-lastline;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		line-clamp: 1;
+		-webkit-box-orient: vertical;
+		/* #endif */
+	}
+</style>

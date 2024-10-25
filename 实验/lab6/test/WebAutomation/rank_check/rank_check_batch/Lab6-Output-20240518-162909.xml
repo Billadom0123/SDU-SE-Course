@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20240518 16:29:10.541" rpa="false" schemaversion="4">
+<suite id="s1" name="Lab6" source="D:\workSpace\st\lab6">
+<suite id="s1-s1" name="WebAutomation" source="D:\workSpace\st\lab6\WebAutomation">
+<suite id="s1-s1-s1" name="RankCheck" source="D:\workSpace\st\lab6\WebAutomation\RankCheck.robot">
+<test id="s1-s1-s1-t1" name="AccurateID" line="8">
+<kw name="rank check" library="general">
+<arg>202100300063</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${rank}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 16:29:11.279" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/ranklist.php'.</msg>
+<status status="PASS" starttime="20240518 16:29:11.279" endtime="20240518 16:29:17.444"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = prefix</arg>
+<arg>${uid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:29:17.447" level="INFO">Typing text '202100300063' into text field 'name = prefix'.</msg>
+<status status="PASS" starttime="20240518 16:29:17.445" endtime="20240518 16:29:17.731"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>tag = button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 16:29:17.733" level="INFO">Clicking button 'tag = button'.</msg>
+<status status="PASS" starttime="20240518 16:29:17.732" endtime="20240518 16:29:17.974"/>
+</kw>
+<status status="PASS" starttime="20240518 16:29:11.270" endtime="20240518 16:29:17.975"/>
+</kw>
+<tag>Rank</tag>
+<status status="PASS" starttime="20240518 16:29:11.269" endtime="20240518 16:29:17.975"/>
+</test>
+<test id="s1-s1-s1-t2" name="FuzzyID" line="12">
+<kw name="rank check" library="general">
+<arg>2021</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${rank}</arg>
+<arg>${ff}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240518 16:29:17.980" level="INFO">Opening browser 'firefox' to base url 'http://211.87.224.235:8800/ranklist.php'.</msg>
+<status status="PASS" starttime="20240518 16:29:17.979" endtime="20240518 16:29:23.951"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = prefix</arg>
+<arg>${uid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240518 16:29:23.955" level="INFO">Typing text '2021' into text field 'name = prefix'.</msg>
+<status status="PASS" starttime="20240518 16:29:23.953" endtime="20240518 16:29:24.275"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>tag = button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240518 16:29:24.277" level="INFO">Clicking button 'tag = button'.</msg>
+<status status="PASS" starttime="20240518 16:29:24.276" endtime="20240518 16:29:24.542"/>
+</kw>
+<status status="PASS" starttime="20240518 16:29:17.978" endtime="20240518 16:29:24.543"/>
+</kw>
+<tag>Rank</tag>
+<status status="PASS" starttime="20240518 16:29:17.976" endtime="20240518 16:29:24.544"/>
+</test>
+<status status="PASS" starttime="20240518 16:29:10.665" endtime="20240518 16:29:24.546"/>
+</suite>
+<status status="PASS" starttime="20240518 16:29:10.663" endtime="20240518 16:29:24.550"/>
+</suite>
+<status status="PASS" starttime="20240518 16:29:10.600" endtime="20240518 16:29:24.553"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Rank</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Lab6">Lab6</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="WebAutomation">Lab6.WebAutomation</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="RankCheck">Lab6.WebAutomation.RankCheck</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,5 @@
+import os
+
+memory_size_bytes = 512 * 1024 * 1024
+
+large_data = b'x' * memory_size_bytes

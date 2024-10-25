@@ -1,0 +1,405 @@
+==============================================================================
+20240518 12:30:32.402 - INFO - + START SUITE: Lab6 [ ]
+==============================================================================
+20240518 12:30:32.402 - INFO - +- START SUITE: Lab6.WebAutomation [ ]
+==============================================================================
+20240518 12:30:32.651 - INFO - +-- START SUITE: Lab6.WebAutomation.Login [ ]
+==============================================================================
+20240518 12:30:32.651 - INFO - +--- START TEST: success [ ]
+------------------------------------------------------------------------------
+20240518 12:30:32.651 - INFO - +---- START KEYWORD: general.login [ 202100300063 | P20021209 ]
+20240518 12:30:32.651 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240518 12:30:32.651 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240518 12:30:37.662 - DEBUG - Opened browser with session id 4059a0a9-1d3d-4ba6-9608-7f7253547ed6.
+20240518 12:30:37.663 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5012)
+20240518 12:30:37.664 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240518 12:30:37.665 - INFO - Typing text '202100300063' into text field 'id = username'.
+20240518 12:30:37.918 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (253)
+20240518 12:30:37.918 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240518 12:30:37.919 - INFO - Typing password into text field 'id = password'.
+20240518 12:30:37.955 - INFO - Temporally setting log level to: NONE
+20240518 12:30:37.956 - INFO - Log level changed from INFO to NONE.
+20240518 12:30:37.982 - INFO - Log level changed from NONE to INFO.
+20240518 12:30:37.982 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (64)
+20240518 12:30:37.983 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:30:37.984 - INFO - Clicking button 'name = submit'.
+20240518 12:30:38.100 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (116)
+20240518 12:30:38.100 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:30:38.100 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:30:38.101 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:30:38.120 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (19)
+20240518 12:30:38.120 - INFO - ${alert} = True
+20240518 12:30:38.122 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (21)
+20240518 12:30:38.123 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240518 12:30:38.125 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登录成功 ]
+20240518 12:30:38.126 - INFO - 用户202100300063登录成功
+20240518 12:30:38.126 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 12:30:38.126 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (3)
+20240518 12:30:38.126 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:30:38.127 - INFO - Returning from the enclosing user keyword.
+20240518 12:30:38.127 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 12:30:38.127 - INFO - ${alert} = True
+20240518 12:30:38.127 - INFO - +---- END KEYWORD: general.login (5476)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:30:38.127 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ True ]
+20240518 12:30:38.128 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:30:38.128 - INFO - ${res} = True
+20240518 12:30:38.128 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:30:38.129 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:30:38.129 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:30:38.129 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (1)
+------------------------------------------------------------------------------
+20240518 12:30:38.130 - INFO - +--- END TEST: success (5478)
+------------------------------------------------------------------------------
+20240518 12:30:38.130 - INFO - +--- START TEST: pwd_err [ ]
+------------------------------------------------------------------------------
+20240518 12:30:38.131 - INFO - +---- START KEYWORD: general.login [ 202100300063 | pwderr ]
+20240518 12:30:38.131 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240518 12:30:38.132 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240518 12:30:43.296 - DEBUG - Opened browser with session id 51d35d43-3ec7-4264-b3c3-8d467cb3ec27.
+20240518 12:30:43.297 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5166)
+20240518 12:30:43.297 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240518 12:30:43.299 - INFO - Typing text '202100300063' into text field 'id = username'.
+20240518 12:30:43.542 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (244)
+20240518 12:30:43.542 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240518 12:30:43.545 - INFO - Typing password into text field 'id = password'.
+20240518 12:30:43.569 - INFO - Temporally setting log level to: NONE
+20240518 12:30:43.570 - INFO - Log level changed from INFO to NONE.
+20240518 12:30:43.592 - INFO - Log level changed from NONE to INFO.
+20240518 12:30:43.594 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (52)
+20240518 12:30:43.594 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:30:43.595 - INFO - Clicking button 'name = submit'.
+20240518 12:30:43.785 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (191)
+20240518 12:30:43.785 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:30:43.786 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:30:43.787 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:30:43.848 - WARN - Keyword 'Capture Page Screenshot' could not be run on failure: Message: [Exception... "Data conversion failed because significant data would be lost"  nsresult: "0x80460003 (NS_ERROR_LOSS_OF_SIGNIFICANT_DATA)"  location: "<unknown>"  data: no]
+20240518 12:30:43.849 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: UserName or Password Wrong!
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:30:43.851 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: UserName or Password Wrong!
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:30:43.852 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (66)
+20240518 12:30:43.852 - INFO - ${alert} = False
+20240518 12:30:43.853 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (68)
+20240518 12:30:43.853 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240518 12:30:43.854 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登陆失败 ]
+20240518 12:30:43.855 - INFO - 用户202100300063登陆失败
+20240518 12:30:43.856 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 12:30:43.856 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (3)
+20240518 12:30:43.856 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:30:43.857 - INFO - Returning from the enclosing user keyword.
+20240518 12:30:43.857 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 12:30:43.857 - INFO - ${alert} = False
+20240518 12:30:43.858 - INFO - +---- END KEYWORD: general.login (5727)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:30:43.859 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 12:30:43.860 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:30:43.860 - INFO - ${res} = False
+20240518 12:30:43.862 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (2)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:30:43.863 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:30:43.867 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:30:43.868 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (4)
+------------------------------------------------------------------------------
+20240518 12:30:43.869 - INFO - +--- END TEST: pwd_err (5738)
+------------------------------------------------------------------------------
+20240518 12:30:43.870 - INFO - +--- START TEST: uname_err [ ]
+------------------------------------------------------------------------------
+20240518 12:30:43.870 - INFO - +---- START KEYWORD: general.login [ 20210030000637 | P20021209 ]
+20240518 12:30:43.871 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240518 12:30:43.873 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240518 12:30:49.262 - DEBUG - Opened browser with session id 79fa89fe-c94d-4524-95bd-3611c9cdb179.
+20240518 12:30:49.263 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5392)
+20240518 12:30:49.264 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240518 12:30:49.268 - INFO - Typing text '20210030000637' into text field 'id = username'.
+20240518 12:30:49.518 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (253)
+20240518 12:30:49.518 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240518 12:30:49.519 - INFO - Typing password into text field 'id = password'.
+20240518 12:30:49.544 - INFO - Temporally setting log level to: NONE
+20240518 12:30:49.545 - INFO - Log level changed from INFO to NONE.
+20240518 12:30:49.574 - INFO - Log level changed from NONE to INFO.
+20240518 12:30:49.575 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (56)
+20240518 12:30:49.575 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:30:49.577 - INFO - Clicking button 'name = submit'.
+20240518 12:30:49.838 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (263)
+20240518 12:30:49.839 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:30:49.839 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:30:49.840 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:30:49.913 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-1.png"><img src="selenium-screenshot-1.png" width="800px"></a>
+20240518 12:30:49.913 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: UserName or Password Wrong!
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:30:49.916 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: UserName or Password Wrong!
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:30:49.918 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (77)
+20240518 12:30:49.918 - INFO - ${alert} = False
+20240518 12:30:49.918 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (79)
+20240518 12:30:49.919 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240518 12:30:49.920 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登陆失败 ]
+20240518 12:30:49.921 - INFO - 用户20210030000637登陆失败
+20240518 12:30:49.921 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 12:30:49.921 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (2)
+20240518 12:30:49.921 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:30:49.922 - INFO - Returning from the enclosing user keyword.
+20240518 12:30:49.922 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (1)
+20240518 12:30:49.922 - INFO - ${alert} = False
+20240518 12:30:49.923 - INFO - +---- END KEYWORD: general.login (6052)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:30:49.923 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 12:30:49.923 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:30:49.923 - INFO - ${res} = False
+20240518 12:30:49.924 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:30:49.924 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:30:49.924 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:30:49.924 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (0)
+------------------------------------------------------------------------------
+20240518 12:30:49.925 - INFO - +--- END TEST: uname_err (6056)
+------------------------------------------------------------------------------
+20240518 12:30:49.925 - INFO - +--- START TEST: uname_not_exist [ ]
+------------------------------------------------------------------------------
+20240518 12:30:49.926 - INFO - +---- START KEYWORD: general.login [ unamenotexist | P20021209 ]
+20240518 12:30:49.927 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240518 12:30:49.927 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240518 12:30:55.420 - DEBUG - Opened browser with session id 72b4c05c-f04b-46e5-be57-2fa5de5ff7b1.
+20240518 12:30:55.421 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5495)
+20240518 12:30:55.422 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240518 12:30:55.423 - INFO - Typing text 'unamenotexist' into text field 'id = username'.
+20240518 12:30:55.695 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (273)
+20240518 12:30:55.695 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240518 12:30:55.697 - INFO - Typing password into text field 'id = password'.
+20240518 12:30:55.735 - INFO - Temporally setting log level to: NONE
+20240518 12:30:55.735 - INFO - Log level changed from INFO to NONE.
+20240518 12:30:55.767 - INFO - Log level changed from NONE to INFO.
+20240518 12:30:55.768 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (72)
+20240518 12:30:55.768 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:30:55.769 - INFO - Clicking button 'name = submit'.
+20240518 12:30:56.009 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (241)
+20240518 12:30:56.010 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:30:56.010 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:30:56.011 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:30:56.067 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-2.png"><img src="selenium-screenshot-2.png" width="800px"></a>
+20240518 12:30:56.068 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: UserName or Password Wrong!
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:30:56.069 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: UserName or Password Wrong!
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:30:56.069 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (59)
+20240518 12:30:56.070 - INFO - ${alert} = False
+20240518 12:30:56.070 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (60)
+20240518 12:30:56.070 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240518 12:30:56.071 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登陆失败 ]
+20240518 12:30:56.073 - INFO - 用户unamenotexist登陆失败
+20240518 12:30:56.074 - INFO - +------ END KEYWORD: BuiltIn.Log (3)
+20240518 12:30:56.074 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (4)
+20240518 12:30:56.075 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:30:56.075 - INFO - Returning from the enclosing user keyword.
+20240518 12:30:56.076 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (0)
+20240518 12:30:56.076 - INFO - ${alert} = False
+20240518 12:30:56.076 - INFO - +---- END KEYWORD: general.login (6150)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:30:56.076 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 12:30:56.077 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:30:56.077 - INFO - ${res} = False
+20240518 12:30:56.077 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:30:56.077 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:30:56.078 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:30:56.078 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (1)
+------------------------------------------------------------------------------
+20240518 12:30:56.079 - INFO - +--- END TEST: uname_not_exist (6153)
+------------------------------------------------------------------------------
+20240518 12:30:56.080 - INFO - +--- START TEST: uname_format_err [ ]
+------------------------------------------------------------------------------
+20240518 12:30:56.080 - INFO - +---- START KEYWORD: general.login [ 안녕하세요 | P20021209 ]
+20240518 12:30:56.081 - INFO - +----- START KEYWORD: SeleniumLibrary.Open Browser [ ${login} | ${ff} ]
+20240518 12:30:56.082 - INFO - Opening browser 'firefox' to base url 'http://211.87.224.235:8800/loginpage.php'.
+20240518 12:31:01.665 - DEBUG - Opened browser with session id 942c61cb-c569-4193-83cb-1450747a1dd1.
+20240518 12:31:01.666 - INFO - +----- END KEYWORD: SeleniumLibrary.Open Browser (5584)
+20240518 12:31:01.666 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id = username | ${username} ]
+20240518 12:31:01.668 - INFO - Typing text '안녕하세요' into text field 'id = username'.
+20240518 12:31:01.964 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (298)
+20240518 12:31:01.965 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Password [ id = password | ${password} ]
+20240518 12:31:01.966 - INFO - Typing password into text field 'id = password'.
+20240518 12:31:02.023 - INFO - Temporally setting log level to: NONE
+20240518 12:31:02.023 - INFO - Log level changed from INFO to NONE.
+20240518 12:31:02.045 - INFO - Log level changed from NONE to INFO.
+20240518 12:31:02.047 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Password (81)
+20240518 12:31:02.047 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Button [ name = submit ]
+20240518 12:31:02.049 - INFO - Clicking button 'name = submit'.
+20240518 12:31:02.351 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Button (304)
+20240518 12:31:02.351 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword And Return Status [ Execute Javascript | return !!window.alert ]
+20240518 12:31:02.352 - INFO - +------ START KEYWORD: SeleniumLibrary.Execute Javascript [ return !!window.alert ]
+20240518 12:31:02.352 - INFO - Executing JavaScript:
+return !!window.alert
+Without any arguments.
+20240518 12:31:02.424 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-3.png"><img src="selenium-screenshot-3.png" width="800px"></a>
+20240518 12:31:02.424 - FAIL - UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: UserName or Password Wrong!
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:31:02.426 - DEBUG - Traceback (most recent call last):
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\__init__.py", line 520, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\robotlibcore.py", line 173, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\SeleniumLibrary\keywords\javascript.py", line 73, in execute_javascript
+    return self.driver.execute_script(js_code, *js_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "D:\workSpace\st\lab6\rf_venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: Dismissed user prompt dialog: UserName or Password Wrong!
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+UnexpectedAlertOpenError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:800:5
+GeckoDriver.prototype._handleUserPrompts@chrome://remote/content/marionette/driver.sys.mjs:2835:13
+20240518 12:31:02.427 - INFO - +------ END KEYWORD: SeleniumLibrary.Execute Javascript (74)
+20240518 12:31:02.427 - INFO - ${alert} = False
+20240518 12:31:02.428 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword And Return Status (77)
+20240518 12:31:02.429 - INFO - +----- START KEYWORD: BuiltIn.Run Keyword If [ ${alert} | Log | 用户${username}登录成功 | ELSE | Log | 用户${username}登陆失败 ]
+20240518 12:31:02.430 - INFO - +------ START KEYWORD: BuiltIn.Log [ 用户${username}登陆失败 ]
+20240518 12:31:02.431 - INFO - 用户안녕하세요登陆失败
+20240518 12:31:02.432 - INFO - +------ END KEYWORD: BuiltIn.Log (1)
+20240518 12:31:02.432 - INFO - +----- END KEYWORD: BuiltIn.Run Keyword If (4)
+20240518 12:31:02.433 - INFO - +----- START KEYWORD: BuiltIn.Return From Keyword [ ${alert} ]
+20240518 12:31:02.433 - INFO - Returning from the enclosing user keyword.
+20240518 12:31:02.434 - INFO - +----- END KEYWORD: BuiltIn.Return From Keyword (2)
+20240518 12:31:02.434 - INFO - ${alert} = False
+20240518 12:31:02.435 - INFO - +---- END KEYWORD: general.login (6354)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:31:02.435 - INFO - +---- START KEYWORD: BuiltIn.Convert To Boolean [ False ]
+20240518 12:31:02.436 - DEBUG - Argument types are:
+<class 'str'>
+20240518 12:31:02.436 - INFO - ${res} = False
+20240518 12:31:02.437 - INFO - +---- END KEYWORD: BuiltIn.Convert To Boolean (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240518 12:31:02.437 - INFO - +---- START KEYWORD: BuiltIn.Should Be Equal [ ${alert} | ${res} ]
+20240518 12:31:02.437 - DEBUG - Argument types are:
+<class 'bool'>
+<class 'bool'>
+20240518 12:31:02.438 - INFO - +---- END KEYWORD: BuiltIn.Should Be Equal (0)
+------------------------------------------------------------------------------
+20240518 12:31:02.438 - INFO - +--- END TEST: uname_format_err (6359)
+------------------------------------------------------------------------------
+20240518 12:31:02.442 - INFO - +-- END SUITE: Lab6.WebAutomation.Login (30037)
+==============================================================================
+20240518 12:31:02.448 - INFO - +- END SUITE: Lab6.WebAutomation (30041)
+==============================================================================
+20240518 12:31:02.452 - INFO - + END SUITE: Lab6 (30072)
+==============================================================================

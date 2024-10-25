@@ -1,0 +1,68 @@
+#include<iostream>
+#include<limits.h>
+ 
+using namespace std;
+const int maxn = 110;
+int n, w[maxn];//结点个数 和 权值数组
+string code[maxn];//存放编码  顺序就是元素输入权值的顺序(不是权值排序后的顺序)
+struct huffManNode {
+    int weight, lchild, rchild, parent;//需要知道父亲 以判断是否是叶子结点
+} HMNode[2 * maxn - 1];
+ 
+void Min(int index, int &s1, int &s2) {//查找范围[1,index]
+    int minw = INT_MAX;
+    for (int i = 1; i <= index; i++) {
+        if (HMNode[i].parent == 0 && HMNode[i].weight < minw) {
+            minw = HMNode[i].weight;
+            s1 = i;
+        }
+    }
+    minw = INT_MAX;
+    for (int i = 1; i <= index; i++) {
+        if (HMNode[i].parent == 0 && HMNode[i].weight < minw && i != s1) {
+            minw = HMNode[i].weight;
+            s2 = i;
+        }
+    }
+    if (s1 > s2) swap(s1, s2);//此句必要,保证树的结构的唯一性
+}
+ 
+void HuffManEncoding() {
+    if (n < 1) return;//一个结点 随便编码
+    int m = 2 * n - 1;//Huffman树总结点数
+    for (int i = 1; i <= n; i++) {
+        HMNode[i].weight = w[i];
+        HMNode[i].parent = HMNode[i].lchild = HMNode[i].rchild = 0;
+    }
+    int s1, s2;
+    for (int i = n + 1; i <= m; i++) {
+        Min(i - 1, s1, s2);
+        HMNode[i].lchild = s1;
+        HMNode[i].rchild = s2;
+        HMNode[i].parent = 0;
+        HMNode[s1].parent = HMNode[s2].parent = i;
+        HMNode[i].weight = HMNode[s1].weight + HMNode[s2].weight;
+    }
+    char *temp = new char[n];
+    int start;
+    for (int i = 1; i <= n; i++) {
+        start = n;
+        temp[--start] = '\0';      //f==0到根了
+        for (int j = i, f = HMNode[j].parent; f != 0; f = HMNode[j].parent) {//j是孩子 f是父亲 一直往上走 直到走到根
+            if (HMNode[f].lchild == j) temp[--start] = '0';//左0
+            else temp[--start] = '1';//右1
+            j = f;
+        }
+        code[i] = temp + start;
+    }
+    delete temp;
+}
+ 
+int main() {
+    while (cin >> n) {
+        for (int i = 1; i <= n; i++)cin >> w[i];
+        HuffManEncoding();
+        for (int i = 1; i <= n; i++) cout << code[i] << endl;
+    }
+    return 0;
+}
