@@ -1,0 +1,11 @@
+.idea
+target
+venv
+__pycache__
+*.iml
+resources
+test
+*.class
+data
+model
+pic

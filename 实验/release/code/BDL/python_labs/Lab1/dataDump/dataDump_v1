@@ -1,0 +1,95 @@
+import sys
+
+import happybase
+
+from Lab1.dataClean import idx_check as check
+from h5Reader import readHdf5 as Reader
+
+'''
+    args:
+        0 文件名
+        1 数据集路径
+        2 数据集名称长度
+        3:3+args[2]-1 数据集名称
+        3+args[2] 数据库地址以及端口号
+        3+args[2]+1 数据副本表名
+        3+args[2]+2 滑窗表名
+        3+args[2]+3 滑动窗口大小
+'''
+
+
+def generate_row_key(a, b, c):
+    key = (a << 32) | (b << 16) | c
+    return key
+
+
+if __name__ == "__main__":
+    args = sys.argv
+    cursor = 1
+
+    dataset_path = args[cursor]
+    cursor += 1
+    print('------Hdf5 file in ' + str(dataset_path))
+    print()
+
+    print('------DataSets in this hdf5 file:------')
+    Reader.listOfDataSet(dataset_path)
+    print()
+
+    print('------loading datasets------')
+    datasets_len = int(args[cursor])
+    cursor += 1
+    data, idx = Reader.readH5(dataset_path, args[cursor:cursor + datasets_len - 1])
+    print()
+    cursor = cursor + datasets_len
+
+    print('------checking idx consecutiveness------')
+    print(check.are_time_intervals_equal(idx))
+    print()
+
+    connection = happybase.Connection(args[cursor])
+    cursor += 1
+    if args[cursor] not in connection.tables():
+        connection.create_table(
+            args[cursor], {'y_label': dict(max_versions=10)}
+        )
+
+    duplicate = connection.table(args[cursor])
+    cursor += 1
+
+    print('------storing data to Hbase------')
+    x, y, z = data.shape
+
+    for i in range(x):
+        for j in range(y):
+            for k in range(z):
+                value = (data[i, j, k])
+
+                row_key = generate_row_key(i, j, k)
+                duplicate.put(row_key, {'y_label:value': value})
+    print()
+
+    print('------storing sliding windows to Hbase')
+    if args[cursor] not in connection.tables():
+        connection.create_table(
+            args[cursor],
+            {'y_label': dict(max_versions=10)}
+        )
+
+    meta_data = connection.table(args[cursor])
+    cursor += 1
+
+    window = int(args[cursor])
+    cursor += 1
+
+    meta_data.put("window_size", {"window_size": window})
+
+    for i in range(x - window):
+        for j in range(y):
+            for k in range(z):
+                value = data[i + window, j, k]
+
+                row_key = generate_row_key(i, j, k)
+                meta_data.put(row_key, {'y_label:value': value})
+
+    connection.close()
