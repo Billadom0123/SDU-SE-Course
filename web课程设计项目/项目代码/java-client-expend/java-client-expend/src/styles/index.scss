@@ -1,0 +1,266 @@
+body{
+  margin: 0;
+  height: 100%;
+}
+#app {
+  height: 100%;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+.navigation{
+ text-align: left;
+ font-size: 11px;
+}
+
+.app-container {
+ padding: 10px;
+}
+
+.form-inline-bottom{
+ padding: 10px;
+}
+.form-inline-query{
+ padding: 0px;
+}
+.query-container{
+ font-size: 10px;
+ text-align: center;
+ padding-bottom: 5px;
+ .el-button{
+   margin-bottom: 2px!important;
+   padding-bottom: 4px;
+   padding-top: 4px;
+   padding-right: 6px;
+   padding-left: 6px;
+   text-align: center;
+ }
+ .el-input__inner{
+   border:  1px solid rgb(64,158,255);
+
+ }
+}
+.el-input{
+ line-height: 30px;
+}
+.el-input__inner{
+ height: 30px;
+ line-height: 30px;
+}
+.el-input__icon {
+ line-height: 30px;
+}
+.form-div{
+ font-size: 10px;
+ margin-left:30%;
+ margin-right:30%;
+}
+.form-div1{
+ font-size: 10px;
+ margin-left:10%;
+ margin-right:10%;
+}
+
+
+.table-content{
+   font-size: 10px;
+   margin-top: 10px !important;
+   .el-button{
+     font-size: 10px;
+ }
+}
+
+.buttonCenter{
+ margin-top: 5px;
+ display: flex;
+ justify-content: center;
+ .el-button{
+   margin-left: 5px!important;
+   margin-bottom: 5px!important;
+ }
+}
+
+.editButton{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: #00b1e7;
+ color:  #ffffff;
+ border-radius: 28px;
+ font-size: 10px;
+ border: 2px solid #00467e;
+ text-align: center;
+ width: 100px;
+ height: 20px;
+ line-height: 20px;
+}
+.rowButton{
+ background: #00b1e7;
+ color:  #ffffff;
+ border-radius: 28px;
+ font-size: 10px;
+ border: 2px solid #00467e;
+ text-align: center;
+ width: 100px;
+ height: 20px;
+}
+.longButton{
+ background: #00b1e7;
+ color:  #ffffff;
+ border-radius: 28px;
+ font-size: 10px;
+ border: 2px solid #00467e;
+ text-align: center;
+ width: 150px;
+ height: 20px;
+}
+.centerButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.commButton{
+background: #007f48;
+color:  #ffffff;
+border-radius: 28px;
+font-size: 10px;
+border: 2px solid #009900;
+text-align: center;
+width: 100px;
+height: 20px ;
+}
+.deleteButton{
+ display: flex;
+   justify-content: center;
+   align-items: center;
+ background: #e2001a;
+ color:  #ffffff;
+ border-radius: 28px;
+ font-size: 15px;
+ border: 2px solid #A00000;
+ text-align: center;
+ width: 200px;
+ height: 20px;
+ line-height: 20px;
+}
+
+.twoButton{
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+}
+
+.el-table thead {
+ color: rgb(0,0,0) !important;
+ font-weight: bold !important;
+ font-size: 14px;
+}
+.el-table .cell {
+ word-break: keep-all;
+}
+.el-table__row{
+ color: rgb(0,0,0) !important;
+}
+.el-form-item__label {
+ color: rgb(0,0,0) !important;
+ font-weight: bold !important;
+}
+
+.content{
+  width:60%;
+  border-top: 1px solid #696969;
+  border-left: 1px solid #696969;
+  border-spacing: 0;/*去掉单元格间隙*/
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: serif;
+}
+.content tr {
+  font-family: serif;
+  width : 100% !important;
+  color: rgb(0,0,0) !important;
+  font-weight: bold !important;
+}
+.content td {
+  font-family: serif;
+  padding: 2px 2px;
+  border-bottom: 1px solid #696969;
+  border-right: 1px solid #696969;
+  text-align: center;
+  font-size: 14px;
+}
+.table_center{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.base_form {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+.query_twoLine {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 30px;
+}
+
+.query_oneLine {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.base_query_oneLine {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.query_left {
+  margin-left: 30px;
+}
+
+.query_right {
+  margin-right: 20px;
+}
+.marginl {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.blueButton {
+  background: #0067ff;
+  color: #ffffff;
+}
+
+.redButton {
+  background: rgb(250, 88, 30);
+  color: #ffffff;
+}
+
+.orangeButton {
+  background: rgb(250, 144, 30);
+  color: #ffffff;
+}
+
+.yellowButton {
+  background: rgb(252, 184, 0);
+  color: #ffffff;
+}
+
+.table_delete_button {
+  background: rgb(250, 88, 30);
+  color: #ffffff;
+}
+
+.table_edit_button {
+  background: rgb(252, 184, 0);
+  color: #ffffff;
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/web/java-server/java.db" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="200"/><column_width id="3" width="4374"/><column_width id="4" width="0"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">INSERT INTO user_type VALUES (3,&quot;ROLE_TEACHER&quot;);
+UPDATE user SET user_type_id=2 WHERE user_id=2 or user_id=3
+delete  from student
+insert into person values (2,NULL,NULL,&quot;lyh&quot;,&quot;202100300063&quot;,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)
+delete from score</sql><current_tab id="0"/></tab_sql></sqlb_project>

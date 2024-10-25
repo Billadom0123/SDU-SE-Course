@@ -1,0 +1,16 @@
+org.fatmansoft.teach
+org.fatmansoft.teach.config
+org.fatmansoft.teach.controllers
+org.fatmansoft.teach.models
+org.fatmansoft.teach.payload.request
+org.fatmansoft.teach.payload.response
+org.fatmansoft.teach.repository
+org.fatmansoft.teach.security
+org.fatmansoft.teach.security.jwt
+org.fatmansoft.teach.security.services
+org.fatmansoft.teach.service
+org.fatmansoft.teach.socket
+org.fatmansoft.teach.sqlite
+org.fatmansoft.teach.stream
+org.fatmansoft.teach.thread
+org.fatmansoft.teach.util

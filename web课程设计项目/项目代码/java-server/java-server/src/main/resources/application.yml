@@ -1,0 +1,13 @@
+spring:
+  mail:
+  host: smtp.qq.com                # 主机协议 如果是qq，那么不变，如果是163，将qq换成163
+  userName: 3054117680@qq.com  #邮箱账号，这里用的qq的
+  passWord: espbtlryobfwdgge #授权码，不是qq密码
+  default-encoding: UTF-8
+  properties:
+    mail:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+          required: true
