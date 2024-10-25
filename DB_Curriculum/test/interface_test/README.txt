@@ -1,0 +1,7 @@
+appendix:测试文件附录，通过postman导出
+documentation:测试过程文档
+请一定要将appendix的文件导入到postman这个软件中，
+如果没有postman，可以下载搜索安装一个
+appendix中的文件就是通过postman导出的,如果不通过
+postman打开,你可能无法复现接口测试的流程！
+postman中的websocket文件无法导出，请根据演示录屏中的界面进行创建

@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "9d8972dc-6641-49d7-abd7-2c8cd5ae31c3",
+		"name": "DB_curriculum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25130466"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "http://localhost:8081/api/user/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"phone\":\"13372100020\",\r\n\t\"code\":\"\",\r\n\t\"password\":\"1234567\",\r\n\t\"role_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/api/user/getTest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/user/getTest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"user",
+								"getTest"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "createCustomerRequest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "7b38cbe7749744e9a25b93c12fdd19bc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1687839914304286721,\r\n    \"priority\":0,\r\n    \"request_time\":\"2023-08-15T12:14:14.268Z\",\r\n    \"startX\":39.901,\r\n    \"startY\":116.395,\r\n    \"start_name\":\"起始点名称\",\r\n    \"desX\":39.901,\r\n    \"desY\":116.395,\r\n    \"des_name\":\"最终点位置\",\r\n    \"is_reservation\":true,\r\n    \"appointment_time\":\"2023-08-15T12:14:14.268Z\",\r\n    \"is_instead\":false,\r\n    \"customer_phone\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/request/customerRequest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"request",
+								"customerRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelRequest",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "7b38cbe7749744e9a25b93c12fdd19bc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/request/cancelRequest?reqId=1691830381706584065",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"request",
+								"cancelRequest"
+							],
+							"query": [
+								{
+									"key": "reqId",
+									"value": "1691830381706584065"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "driver",
+			"item": [
+				{
+					"name": "startBusiness",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "b911f68d6e67419faaadbf0b9080b6cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1688734750117007361,\r\n    \"curX\":39.901,\r\n    \"curY\":116.395\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/driver/startBusiness",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"driver",
+								"startBusiness"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmOrder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "b911f68d6e67419faaadbf0b9080b6cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/driver/confirmOrder?id=1688734750117007361&requestId=1698603193293164546&accept=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"driver",
+								"confirmOrder"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1688734750117007361"
+								},
+								{
+									"key": "requestId",
+									"value": "1698603193293164546"
+								},
+								{
+									"key": "accept",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receivePassenger",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "b911f68d6e67419faaadbf0b9080b6cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/driver/receivePassenger?id=1688734750117007361&reqId=1698603193293164546",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"driver",
+								"receivePassenger"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1688734750117007361"
+								},
+								{
+									"key": "reqId",
+									"value": "1698603193293164546"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "commitOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "b911f68d6e67419faaadbf0b9080b6cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1688734750117007361,\r\n    \"reqId\":1698603193293164546,\r\n    \"endX\":39.901,\r\n    \"endY\":116.395\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/driver/commitOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"driver",
+								"commitOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "endBusiness",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "b911f68d6e67419faaadbf0b9080b6cc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/driver/endBusiness?id=1688734750117007361",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"driver",
+								"endBusiness"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1688734750117007361"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicle",
+			"item": [
+				{
+					"name": "registerForVehicle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "b911f68d6e67419faaadbf0b9080b6cc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1688734750117007361,\r\n    \"number\":\"鲁H·UZ355\",\r\n    \"color\":\"灰黑色\",\r\n    \"type\":\"C1\",\r\n    \"brand\":\"奇瑞\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/vehicle/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"vehicle",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
