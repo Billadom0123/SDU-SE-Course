@@ -1,0 +1,74 @@
+/* 图片播放 */
+/* 图片轮播 */
+
+.box{
+    position: relative;
+    margin: 200px auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    list-style: none;
+    bottom: 85px;
+}
+.imglist ul{
+    width: 3200px;
+    height: 400px;
+    float: left;
+    position: absolute;
+}
+img{
+    width: 800px;
+    height: 400px;
+    float: left;
+}
+.lilist ul {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100px;
+    height: 20px;
+ 
+    bottom: 0px;
+    left: 50%;
+    
+    
+}
+.lilist ul li{
+    position: relative;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: antiquewhite;
+    border-radius: 100%;
+    
+}
+.arrow-l{
+    position: absolute;
+    width: 30px;
+    left: 0px;
+    top: 50%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color:rgb(129, 115, 115);
+    display: none;
+    opacity: 30%;
+}
+.arrow-r{
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: rgb(129, 115, 115);
+    right: 0px;
+    top: 50%;
+    line-height: 40px;
+    text-align: center;
+    display: none;
+    opacity: 30%;
+    
+}
+.lilist ul .current{
+    background-color:orange;
+}
+

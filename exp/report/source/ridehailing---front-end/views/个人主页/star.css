@@ -1,0 +1,71 @@
+.pingfen{
+    width: 500px;
+    height: 200px;
+    background: rgba(55, 58, 60, 01);;
+    margin: 150px auto;
+    border-radius: 5px;
+    position: relative;
+    top: 40px;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid rgb(225, 86, 113);
+    font-size: 30px;
+    color: rgb(225, 86, 113);
+    font-weight: bolder;
+    text-align: center;
+    line-height: 72px;
+
+
+}
+.content{
+    width: 100%;
+    height: 72px;
+}
+.stars{
+    width: 50%;
+    list-style: none;
+    margin: 0;
+    line-height: 67px;
+    color: #ccc;
+    margin-left: 30px;
+    float: left;
+}
+.stars span{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.stars span:after{
+    content: '☆';
+}
+.stars .show:after,.stars .show2:after{
+    content: '★';
+}
+.info{
+    float: left;
+    width: 60px;
+    height: 30px;
+    background:  #e15671; 
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 21px;
+    text-align: center;
+    line-height: 30px;
+    display: none;
+}
+.tips{
+    width: 100%;
+    height: 58px;
+    background:  rgba(55, 58, 60, 01);
+    color: #fff;
+    line-height: 58px;
+    text-align: center;
+}
+.show {
+        color: #e4c6e4;
+    }
+.show2{
+    color: #e15671; 
+}

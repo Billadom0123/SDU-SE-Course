@@ -1,0 +1,106 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index",
+			"style": {}
+		},
+		{
+		    "path": "pages/login/login",
+		    "style": {}
+		},
+		{
+		    "path": "pages/login/forget",
+		    "style": {}
+		}, 
+		{
+		    "path": "pages/login/register",
+		    "style": {}
+		},
+		{
+		    "path": "pages/customer/selectPosition",
+		    "style": {}
+		}
+	    ,
+		{
+		    "path": "pages/customer/cy-my",
+		    "style": {}
+		}
+		,
+		{
+		    "path": "pages/customer/myList",
+		    "style": {}
+		}
+		,
+		{
+		    "path": "pages/customer/evaluateOrder",
+		    "style": {}
+		}
+		,
+		{
+		    "path": "pages/customer/listEvaluateOrder",
+		    "style": {}
+		}
+		,
+		{
+            "path" : "pages/driver/uploadLicense",
+            "style" : {}                                                                            
+        },
+		{
+		    "path" : "pages/driver/registerVehicle",
+		    "style" : {}                                                                            
+		},
+		{
+            "path" : "pages/driver/startBusiness",
+            "style" : {}                                                                              
+        }
+        ,
+		{
+		    "path" : "pages/driver/myList",
+		    "style" : {}                                                                              
+		}
+		,
+		{
+            "path" : "pages/testTemp/updateLocationTest",
+            "style" : {}                                                                                     
+        },
+		{
+		    "path" : "pages/driver/cy-my",
+		    "style" : {}                                                                                     
+		}
+        ,
+		{
+            "path" : "pages/testTemp/MultiWebSocketTest",
+            "style" : {}                                                                           
+        }
+        ,{
+            "path" : "pages/testTemp/drivingRouteTest",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom" //取消默认的原生导航栏
+	},
+	"uniIdRouter": {},
+	"app-plus": {
+		"softinputMode": "adjustResize"
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

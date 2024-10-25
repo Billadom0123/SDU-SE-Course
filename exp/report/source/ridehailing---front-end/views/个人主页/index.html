@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+
+    <link rel="stylesheet" href="picture.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="star.css">
+   
+
+
+    <script src="./js/button.js"></script>
+    <script src="./js/picture.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="./js/roll.js"></script>
+    
+    
+
+</head>
+
+<body>
+   
+    <div class="header"> 
+            <span id="my">LSH</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#home">主页</a>   &nbsp;
+            <a href="#award">获奖经历</a>   &nbsp;
+            <a href="#hero">偶像</a>    &nbsp;
+            <a href="#music">喜欢的音乐</a> &nbsp;
+            <a href="#comment">评价</a>     &nbsp;
+        
+    </div>
+    
+    <div class="first" id="home">
+        <h1>Welcome! &nbsp; 李世会的个人主页</h1>
+    </div>
+    <div class="second" id="award">
+        
+        <div class="box">
+            <div class="imglist">
+                <ul>
+                    <li><img src="./images/1.jpg" alt=""></li>
+                    <li><img src="./images/2.jpg" alt=""></li>
+                    <li><img src="./images/3.jpg" alt=""></li>
+                    <li><img src="./images/4.JPG" alt=""></li>
+                </ul>
+            </div>
+            <div class="lilist">
+                <ul>
+                    
+                </ul>
+            </div>
+            <li class="arrow-l"><</li>
+            <li class="arrow-r">></li>
+        </div>
+    
+
+    </div>
+
+          
+                
+            
+    <div id="hero" class="third">
+       <img src="./images/偶像.png" alt="">
+       &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <img src="./images/动图.gif" alt="" class="kk" width="1080px">
+    </div>
+    <div id="music" class="forth">
+        <audio controls="controls" loop="loop">
+            <source src="./images/晴天.mp3" type="audio/mp3"></source>
+        </audio>
+
+    </div>
+    <div id="comment" class="fifth">
+         
+        <div class="pingfen">
+            
+            <div class="content">
+                <div class="stars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="info">优秀</div>
+            </div>
+            <div class="tips">小提示：点击星星就能打分
+            </div>
+         
+        </div>
+        <script type="text/javascript">
+            var stars=document.querySelectorAll('.stars span');
+            var info=document.querySelector('.info');
+            var grades = ["极差","差","一般","良好","优秀"];
+            var active=-1;  
+          
+            for(var i=0;i<stars.length;i++){
+              stars[i].index=i;
+              stars[i].onmouseover=function(){setStar(this.index);};
+              stars[i].onmouseout=function(){setStar(active);};
+              stars[i].onclick=setClick;
+            }
+          
+            function setStar(nub){
+              var name='';
+              name= nub<2?'show':'show2';
+              for(var i=0;i<stars.length;i++){
+                stars[i].className= i<=nub?name:'';
+              }
+              info.style.display= nub<0? 'none':'block';
+              info.innerHTML=grades[nub];
+            }
+          
+            function setClick(){
+              active=this.index;
+            }
+          </script>
+        <p>Design:李世会<br>
+            联系方式<br>
+             email:2645917928@qq.com<br> 
+             phone:1950186573</p>
+        
+        
+        
+
+    </div>
+   
+
+    
+</body>
+</html>
