@@ -1,4 +1,8 @@
-# Liyanhao1209/SDU-SE-Course
+# Billadom0123/SDU-SE-Course
+
+从Liyanhao1209/SDU-SE-Course fork出来的一个分支，希望能尽自己所能帮忙完善ww  
+
+以下为原仓库的readme  
 
 这是一个为分享山东大学软件学院本科四年部分课程的资料（含往年题/笔记/作业/实验(报告)/课设等）而创建的仓库。作者系2021级/2025届山软学生。
 
